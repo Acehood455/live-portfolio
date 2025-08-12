@@ -36,9 +36,14 @@ export default function Navbar() {
             <a href="#contact" className="group">
               <div className="inner">
                 {/* <button className="transition-colors duration-300 px-5 py-2 rounded-lg shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)] bg-gold text-text-900 group-hover:text-text-50 group-hover:bg-darkgold cursor-pointer"> */}
-                <button className=" px-5 py-2 bg-gold z-30  rounded-lg group-hover:text-text-50 shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-darkgold after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)]  text-text-900   cursor-pointer ">
+                {/* <button className=" px-5 py-2 bg-gold/70 bg-opacity-80 backdrop-blur-sm z-30  rounded-lg group-hover:text-text-50 shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-darkgold/70  after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)]  text-text-900   cursor-pointer ">
                    Contact Me
+                </button> */}
+                <button className="px-5 py-2 z-30 font-semibold  rounded-lg group-hover:text-text-50 shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-darkgold  after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-lg after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)] text-text-900 cursor-pointer">
+                  <div className="absolute inset-0 bg-gold/70 bg-opacity-80 backdrop-blur-sm"></div>
+                  <span className="relative z-10">Contact Me</span>
                 </button>
+
               </div>
             </a>
           </li>
@@ -48,7 +53,7 @@ export default function Navbar() {
       {/* Mobile Hamburger Button */}
       <button
         onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-16 right-3 z-50 md:hidden  bg-bg100/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3 shadow-lg text-text-900 hover:text-text-800 transition-colors duration-300"
+        className="fixed bottom-16 right-3 z-50 md:hidden  bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3 shadow-lg text-text-900 hover:text-text-800 transition-colors duration-300"
         aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
         {mobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
@@ -98,7 +103,7 @@ export default function Navbar() {
                 </clipPath>
               </defs>
               <foreignObject width="100%" height="100%" clipPath="url(#right__bottom__corner__menu)">
-                <div className="w-full h-full md:hidden bg-bg100/70 bg-opacity-80 backdrop-blur-sm" />
+                <div className="w-full h-full md:hidden bg-gold/70 bg-opacity-80 backdrop-blur-sm" />
               </foreignObject>
             </svg>
             <div className="flex flex-col items-center space-y-6 text-lg font-semibold p-6">
