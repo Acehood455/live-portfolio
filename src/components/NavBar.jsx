@@ -6,12 +6,12 @@ import { HiMenu, HiX } from "react-icons/hi";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
 
-  const links = ["About", "Projects", "Skills", ];
+  const links = ["About Me", "Skills", "Projects", ];
 
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="relative z-20 mx-auto md:mt-6 md:max-w-[70%] bg-bg100/50 backdrop-blur-sm bg-opacity-80 md:rounded-xl shadow-md px-6 py-1 flex justify-between items-center md:flex">
+      <nav className="z-20 fixed left-1/2 w-full -translate-x-1/2 md:mt-6 md:max-w-[90%] bg-bg100/50 backdrop-blur-sm bg-opacity-80 md:rounded-xl shadow-md px-6 py-1 flex justify-between items-center md:flex">
         <a
           href="#hero"
           className="text-text-900 text-lg md:text-xl font-semibold transition-transform duration-300 hover:scale-105"
@@ -53,7 +53,7 @@ export default function Navbar() {
       {/* Mobile Hamburger Button */}
       <button
         onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-16 right-3 z-50 md:hidden  bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3 shadow-lg text-text-900 hover:text-text-800 transition-colors duration-300"
+        className="fixed bottom-16 right-3 z-50 md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3  text-text-900 hover:text-text-800 transition-colors duration-300"
         aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
         {mobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
@@ -72,8 +72,8 @@ export default function Navbar() {
               stiffness: 300,
               damping: 25
             }}
-            className="fixed bottom-20 right-6 items-center flex flex-col
-            text-lg font-semibold md:hidden  w-48"
+            className="fixed md:hidden bottom-20 right-6 items-center flex flex-col
+            text-lg font-semibold w-48"
           >
             <svg className="absolute inset-0 w-full h-full">
               <defs>
@@ -103,7 +103,7 @@ export default function Navbar() {
                 </clipPath>
               </defs>
               <foreignObject width="100%" height="100%" clipPath="url(#right__bottom__corner__menu)">
-                <div className="w-full h-full md:hidden bg-gold/70 bg-opacity-80 backdrop-blur-sm" />
+                <div className="w-full h-full md:hidden z-60  shadow-[0px_4px_32px_0_rgba(211,187,54,.90)]  bg-gold/70 bg-opacity-80 backdrop-blur-sm drop-shadow-lg" />
               </foreignObject>
             </svg>
             <div className="flex flex-col items-center space-y-6 text-lg font-semibold p-6">
