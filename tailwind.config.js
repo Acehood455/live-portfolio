@@ -12,6 +12,8 @@ module.exports = {
         bg100: '#e0e0eb',
         gold: '#D3BB36',
         darkgold: '#2a2509',
+        purple: '#4d0070',
+        lightpurple: '#f7e5ff',
  'text': {
    50: 'var(--text-50)',
    100: 'var(--text-100)',
