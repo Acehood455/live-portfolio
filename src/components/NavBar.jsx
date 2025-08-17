@@ -336,7 +336,7 @@ export default function Navbar({ inNotch = false }) {
               stiffness: 300,
               damping: 25,
             }}
-            className="fixed md:hidden bottom-20 right-6 items-center flex flex-col text-lg font-semibold w-48"
+            className="fixed md:hidden bottom-20 right-9 items-center flex flex-col text-lg font-semibold w-48"
           >
             <svg className="absolute inset-0 w-full h-full">
               <defs>
