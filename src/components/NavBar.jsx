@@ -268,13 +268,13 @@ export default function Navbar({ inNotch = false }) {
 
   // base classes used in both modes; when inNotch we let parent control sizing
   const baseNavClasses =
-    "h-full w-full flex items-center justify-between px-4 inset-0 -z-50 bg-lightpurple/50 backdrop-blur-sm drop-shadow-lg";
+    "h-full w-full flex items-center justify-between px-4 inset-0 -z-50 bg-lightpurple/60 backdrop-blur-sm drop-shadow-lg";
 
   // visual surface for navbar (background + rounding). If it's in the notch,
   // we want rounded top and transparent bottom to sit nicely in the tab.
   const surfaceClasses = inNotch
-    ? "h-full w-full bg-lightpurple/50 shadow-md rounded-lg overflow-hidden relative"
-    : "w-full bg-lightpurple/50 backdrop-blur-sm shadow-md px-6 py-3 rounded-b-xl fixed top-0 left-0";
+    ? "h-full w-full  shadow-md rounded-lg overflow-hidden relative"
+    : "w-full  backdrop-blur-sm shadow-md px-6 py-3 rounded-b-xl fixed top-0 left-0";
 
   return (
     <>
@@ -282,7 +282,7 @@ export default function Navbar({ inNotch = false }) {
         <div className={baseNavClasses}>
           <a
             href="#hero"
-            className="text-text-900 text-base text-[clamp(1rem,1vw+0.5rem,2rem)] font-semibold transition-transform duration-200 hover:scale-105"
+            className="text-text-950 text-base text-[clamp(1.5rem,1vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-105"
           >
             Ace Taiwo
           </a>
@@ -292,19 +292,19 @@ export default function Navbar({ inNotch = false }) {
               <li key={section} className="group">
                 <a
                   href={`#${section.toLowerCase()}`}
-                  className="font-medium text-text-900 hover:text-text-800 relative"
+                  className="font-medium text-text-950 hover:text-text-900 relative"
                 >
                   {section}
-                  <span className="block h-0.5 bg-text-800 scale-x-0 origin-center transition-transform duration-300 group-hover:scale-x-100"></span>
+                  <span className="block h-0.5 bg-text-900 scale-x-0 origin-center transition-transform duration-300 group-hover:scale-x-100"></span>
                 </a>
               </li>
             ))}
 
             <li>
              <a href="#contact" className="group relative overflow-hidden">
-              <button className="px-4 py-2 z-30 font-semibold rounded-lg shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-darkgold after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-lg after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)] text-text-900 cursor-pointer">
+              <button className="px-4 py-2 z-30 font-semibold rounded-lg shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-darkgold after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-lg after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 group-hover:shadow-[0px_4px_32px_0_rgba(42,37,9,.70)] text-text-950 cursor-pointer">
                  <div className="absolute inset-0 bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-lg"></div>
-                 <span className="relative z-10 rounded-lg text-text-900 font-semibold group-hover:text-text-50">
+                 <span className="relative z-10 rounded-lg text-text-950 font-semibold group-hover:text-text-50">
                   Contact Me
                  </span>
               </button>
@@ -314,9 +314,10 @@ export default function Navbar({ inNotch = false }) {
         </div>
       </nav>
 
+      {/* Mobile Button */}
       <button
         onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-16 right-3 z-50 md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3  text-text-900 hover:text-text-800 transition-colors duration-300"
+        className="fixed bottom-14 right-5 z-50 md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold/70 backdrop-blur-sm rounded-full p-3  text-text-950 hover:text-text-900 transition-colors duration-300"
         aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
         {mobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
@@ -375,10 +376,10 @@ export default function Navbar({ inNotch = false }) {
                   key={section}
                   href={`#${section.toLowerCase()}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="hover:text-text-800 transition-colors duration-300 z-10 text-text-900"
+                  className="hover:text-text-900 transition-colors duration-300 z-10 text-text-950"
                 >
                   {section}
-                  <span className="block h-0.5 bg-text-900 scale-x-75 transition-transform duration-300 group-hover:scale-x-100"></span>
+                  <span className="block h-0.5 bg-text-950 scale-x-75 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </a>
               ))}
             </div>

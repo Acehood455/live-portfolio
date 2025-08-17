@@ -56,7 +56,7 @@ import Navbar from "../components/NavBar";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
-const NOTCH_X_END   = 0.65; // 60% across
+const NOTCH_X_END   = 0.63; // 60% across
 const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
 
 export default function Hero() {
@@ -69,9 +69,10 @@ export default function Hero() {
             <path
               d="
                 M 0.05 0.09
-                L 0.6 0.09
-                A 0.05 0.05 0 0 0 0.65 0.05
-                A 0.05 0.05 0 0 1 0.7 0
+                L 0.63 0.09
+                A 0.01 0.01 0 0 0 0.64 0.08
+                L 0.64 0.01
+                A 0.02 0.02 0 0 1 0.66 0
                 L 0.91 0
                 A 0.03 0.03 0 0 1 0.94 0.03
                 A 0.03 0.03 0 0 0 0.97 0.06
@@ -101,7 +102,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__corner__folder__look)">
-          <div className="w-full h-full bg-lightpurple/50 backdrop-blur-sm drop-shadow-lg" />
+          <div className="w-full h-full bg-lightpurple/60 backdrop-blur-sm drop-shadow-lg" />
         </foreignObject>
       </svg>
 
