@@ -7,7 +7,7 @@ import About from './section/About'
 const App = () => {
   return (
     <div className=''>
-      {/* <BackgroundVideo /> */}
+      <BackgroundVideo />
       {/* <Navbar /> */}
       <Hero />
       <About />

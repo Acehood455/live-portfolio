@@ -56,14 +56,14 @@ import Navbar from "../components/NavBar";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
-const NOTCH_X_END   = 0.63; // 60% across
+const NOTCH_X_END   = 0.65; // 60% across
 const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen md:mt-4 w-full md:max-w-[90%] md:mx-auto">
+    <section className="relative min-h-screen mt-2 md:mt-4 w-full max-w-[99%] md:max-w-[97%] mx-auto">
       {/* Background clipped shape (keeps objectBoundingBox coords like yours) */}
-      <svg className="absolute inset-0 w-full h-full z-0" preserveAspectRatio="none">
+      <svg className="absolute inset-0 w-full h-full -z-10" preserveAspectRatio="none">
         <defs>
           <clipPath id="hero__corner__folder__look" clipPathUnits="objectBoundingBox">
             <path
@@ -72,12 +72,26 @@ export default function Hero() {
                 L 0.6 0.09
                 A 0.05 0.05 0 0 0 0.65 0.05
                 A 0.05 0.05 0 0 1 0.7 0
-                L 0.97 0
-                A 0.03 0.03 0 0 1 1 0.03
+                L 0.91 0
+                A 0.03 0.03 0 0 1 0.94 0.03
+                A 0.03 0.03 0 0 0 0.97 0.06
+                A 0.03 0.03 0 0 1 1 0.09
+
+                L 1 0.50
+                A 0.01 0.01 0 0 1 0.99 0.51
+                L 0.99 0.90
+                A 0.01 0.01 0 0 1 1 0.91
+                
                 L 1 0.95
                 A 0.05 0.05 0 0 1 0.95 1
                 L 0.05 1
                 A 0.05 0.05 0 0 1 0 0.95
+
+                L 0 0.70
+                A 0.01 0.01 0 0 1 0.01 0.69
+                L 0.01 0.30
+                A 0.01 0.01 0 0 1 0.0 0.29
+                
                 L 0 0.12
                 A 0.03 0.03 0 0 1 0.03 0.09
                 Z
@@ -87,7 +101,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__corner__folder__look)">
-          <div className="w-full h-full bg-lightpurple/50 bg-opacity-80 backdrop-blur-sm drop-shadow-lg" />
+          <div className="w-full h-full bg-lightpurple/50 backdrop-blur-sm drop-shadow-lg" />
         </foreignObject>
       </svg>
 

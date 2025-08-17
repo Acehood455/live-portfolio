@@ -268,13 +268,13 @@ export default function Navbar({ inNotch = false }) {
 
   // base classes used in both modes; when inNotch we let parent control sizing
   const baseNavClasses =
-    "h-full w-full flex items-center justify-between px-4 ";
+    "h-full w-full flex items-center justify-between px-4 inset-0 -z-50 bg-lightpurple/50 backdrop-blur-sm drop-shadow-lg";
 
   // visual surface for navbar (background + rounding). If it's in the notch,
   // we want rounded top and transparent bottom to sit nicely in the tab.
   const surfaceClasses = inNotch
-    ? "h-full w-full bg-lightpurple/60 backdrop-blur-sm shadow-md rounded-bl-[25px] rounded-br-[30px] rounded-t-[25px] overflow-hidden relative"
-    : "w-full bg-lightpurple/70 backdrop-blur-sm shadow-md px-6 py-3 rounded-b-xl fixed top-0 left-0 z-50";
+    ? "h-full w-full bg-lightpurple/50 shadow-md rounded-lg overflow-hidden relative"
+    : "w-full bg-lightpurple/50 backdrop-blur-sm shadow-md px-6 py-3 rounded-b-xl fixed top-0 left-0";
 
   return (
     <>
@@ -311,42 +311,76 @@ export default function Navbar({ inNotch = false }) {
              </a>
            </li>
           </ul>
-
-          {/* Mobile button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen((s) => !s)}
-              className="p-2 rounded-full bg-gold/70 backdrop-blur-sm shadow-md"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <HiX size={18} /> : <HiMenu size={18} />}
-            </button>
-          </div>
         </div>
       </nav>
 
+      <button
+        onClick={() => setMobileMenuOpen((open) => !open)}
+        className="fixed bottom-16 right-3 z-50 md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold/70 bg-opacity-80 backdrop-blur-sm rounded-full p-3  text-text-900 hover:text-text-800 transition-colors duration-300"
+        aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+      >
+        {mobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+      </button>
+
       {/* Mobile overlay menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
+       <AnimatePresence>
+         {mobileMenuOpen && (
           <motion.div
-            key="mobile-menu"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 12 }}
-            transition={{ duration: 0.18 }}
-            className="md:hidden absolute left-0 right-0 mt-2 px-4"
-            style={{ zIndex: 60 }}
+            key="drawer"
+            initial={{ opacity: 0, scale: 0.2, x: 100, y: 100 }}
+            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+            exit={{ opacity: 0, scale: 0.2, x: 100, y: 100 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 25,
+            }}
+            className="fixed md:hidden bottom-20 right-6 items-center flex flex-col text-lg font-semibold w-48"
           >
-            <div className="bg-lightpurple/80 rounded-lg p-4 shadow-lg">
-              <ul className="flex flex-col gap-4 font-semibold">
-                {links.map((l) => (
-                  <li key={l}>
-                    <a href={`#${l.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)}>
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <svg className="absolute inset-0 w-full h-full">
+              <defs>
+                <clipPath
+                  id="right__bottom__corner__menu"
+                  clipPathUnits="objectBoundingBox"
+                >
+                  <path
+                    d="
+                      M 0.05 0                    
+                      L 0.95 0                    
+                      A 0.05 0.05 0 0 1 1 0.05    
+                      L 1 0.73                    
+                      A 0.05 0.05 0 0 1 0.95 0.78
+                      A 0.18 0.18 0 0 0 0.76 0.95 
+                      A 0.05 0.05 0 0 1 0.71 1
+                      L 0.05 1                 
+                      A 0.05 0.05 0 0 1 0 0.95    
+                      L 0 0.05                    
+                      A 0.05 0.05 0 0 1 0.05 0    
+                      Z
+                    "
+                  />
+                </clipPath>
+              </defs>
+              <foreignObject
+                width="100%"
+                height="100%"
+                clipPath="url(#right__bottom__corner__menu)"
+              >
+                <div className="w-full h-full md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold/70 bg-opacity-80 backdrop-blur-sm" />
+              </foreignObject>
+            </svg>
+            <div className="flex flex-col items-center space-y-6 text-lg font-semibold p-6">
+              {links.map((section) => (
+                <a
+                  key={section}
+                  href={`#${section.toLowerCase()}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="hover:text-text-800 transition-colors duration-300 z-10 text-text-900"
+                >
+                  {section}
+                  <span className="block h-0.5 bg-text-900 scale-x-75 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+              ))}
             </div>
           </motion.div>
         )}
