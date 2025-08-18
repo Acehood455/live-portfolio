@@ -61,7 +61,7 @@ const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen md:mt-4 w-full max-w-[99%] md:max-w-[97%] mx-auto">
+    <section className="relative min-h-screen mt-16 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
@@ -71,10 +71,10 @@ export default function Hero() {
           <clipPath id="hero__mobile" clipPathUnits="objectBoundingBox">
             <path
               d="
-                M 0.05 0.09
-                L 0.97 0.09
+                M 0.03 0
+                L 0.97 0
                 
-                A 0.03 0.03 0 0 1 1 0.12
+                A 0.03 0.03 0 0 1 1 0.03
 
                 L 1 0.50
                 A 0.01 0.01 0 0 1 0.99 0.51
@@ -91,8 +91,8 @@ export default function Hero() {
                 L 0.01 0.30
                 A 0.01 0.01 0 0 1 0.0 0.29
                 
-                L 0 0.12
-                A 0.03 0.03 0 0 1 0.03 0.09
+                L 0 0.03
+                A 0.03 0.03 0 0 1 0.03 0
                 Z
               "
             />
