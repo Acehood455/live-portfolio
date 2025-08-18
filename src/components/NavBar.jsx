@@ -268,13 +268,13 @@ export default function Navbar({ inNotch = false }) {
 
   // base classes used in both modes; when inNotch we let parent control sizing
   const baseNavClasses =
-    "h-full w-full flex items-center justify-between px-4 inset-0 -z-50 bg-cardColor backdrop-blur-sm drop-shadow-lg";
+    "h-full w-full flex items-center justify-between px-4 inset-0 -z-50 bg-cardColor backdrop-blur-sm rounded-lg";
 
   // visual surface for navbar (background + rounding). If it's in the notch,
   // we want rounded top and transparent bottom to sit nicely in the tab.
   const surfaceClasses = inNotch
     ? "h-full w-full rounded-lg overflow-hidden relative"
-    : "w-full  backdrop-blur-sm px-6 py-3  fixed top-0 left-0";
+    : "w-[95%] left-1/2 -translate-x-1/2  fixed top-2";
 
   return (
     <>
@@ -282,14 +282,14 @@ export default function Navbar({ inNotch = false }) {
         <div className={baseNavClasses}>
           <a
             href="#hero"
-            className="text-text text-base text-[clamp(1.5rem,1vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
+            className="text-text py-3 text-base text-[clamp(1.5rem,1vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
           >
             Ace Taiwo
           </a>
 
-          <ul className="hidden md:flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center space-x-6">
+          <ul className="flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center space-x-6">
             {links.map((section) => (
-              <li key={section} className="group">
+              <li key={section} className="group hidden md:flex">
                 <a
                   href={`#${section.toLowerCase()}`}
                   className="font-medium text-text transition-transform duration-200 hover:scale-90 relative"
