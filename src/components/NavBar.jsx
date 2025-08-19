@@ -30,7 +30,7 @@ export default function Navbar({ inNotch = false }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const surfaceClasses = "z-50 transition-all duration-500 rounded-lg";
+  const surfaceClasses = "z-50 transition-all duration-500 rounded-xl";
 
   // ✨ Style logic
   let style = {};
