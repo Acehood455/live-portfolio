@@ -87,20 +87,20 @@ export default function Navbar({ inNotch = false }) {
           <div className="flex flex-col">
             <a
               href="#"
-              className="text-text md:py-3 pt-1 text-base text-[clamp(1.5rem,1.5vw+0.5rem,2.5rem)] md:text-[clamp(1.6rem,1.5vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
+              className="text-text md:py-3 md:pt-1 text-base text-[clamp(1.5rem,1.5vw+0.5rem,2.5rem)] md:text-[clamp(1.6rem,1.5vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
             >
               Ace Taiwo
             </a>
             {/* Status under name on mobile only */}
             {/* Mobile Version */}
-            <div className="flex pb-1 items-center gap-2 md:hidden">
+            <div className="flex md:pb-1 items-center gap-2 md:hidden">
               {/* Purple pulsing dot */}
               <div className="relative flex items-center justify-center">
                 <span className="absolute inline-flex h-3 w-3 rounded-full bg-purple2 opacity-75 animate-ripple"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-purple3 animate-pulseDot"></span>
               </div>
               <span className="text-sm text-text font-light rounded-full px-1">
-                Open to Opportunities
+                Active
               </span>
               {/* <span className="text-sm text-text font-light bg-text/10 backdrop-blur-sm border border-text/20 rounded-full px-1 animate-pulse">
                 Open to Opportunities
