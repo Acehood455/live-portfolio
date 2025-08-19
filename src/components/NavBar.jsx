@@ -67,6 +67,8 @@ export default function Navbar({ inNotch = false }) {
         : "none",
       // borderRadius: "1rem", // optional, softer edges
       transition: "all 0.5s ease",
+      paddingTop: '0.25rem',
+      paddingBottom: '0.25rem',
     };
   }
   
