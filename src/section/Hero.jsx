@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
@@ -6,9 +6,26 @@ const NOTCH_X_START = 0; // 5% from left
 const NOTCH_X_END   = 0.63; // 60% across
 const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
 
+
+// === compute notch-derived positions once per render
+const NOTCH_RIGHT_PCT = NOTCH_X_END * 100;         // 63
+const NOTCH_MID_Y_PCT = (NOTCH_Y * 100) / 2;       // 3.75 (center of notch height)
+const GAP_FROM_NOTCH = 1.5;                          // % gap to the right of the notch
+const HERO_RIGHT_PADDING = 2;                      // % padding from hero's right edge
+
+
 export default function Hero() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // 🖱️ Track scroll
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <section className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
+    <section  className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
@@ -115,6 +132,47 @@ export default function Hero() {
         {/* Navbar must be able to fill this container (h-full w-full) */}
         <Navbar inNotch />
       </div>
+
+      {/* Status + Button aligned to the RIGHT EDGE of the notch, responsive */}
+      <div
+        className={`absolute z-30  items-center gap-3 lg:gap-4 whitespace-nowrap ${
+          scrolled ? "hidden" : "hidden md:flex"
+        }`}
+        style={{
+          top: `${NOTCH_MID_Y_PCT}%`,                          // vertically center to notch
+          left: `calc(${NOTCH_RIGHT_PCT}% + ${GAP_FROM_NOTCH}%)`, // start at notch right edge + small gap
+          right: `${HERO_RIGHT_PADDING}%`,                     // let it expand but keep padding on the right
+          transform: "translateY(-50%)",
+        }}
+      >
+        {/* Contact button */}
+        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)]">
+          <button className="px-4 py-2 font-semibold rounded-lg group-hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] group-hover:scale-105 relative cursor-pointer">
+            <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
+            <span className="relative z-10 text-background font-semibold">
+              Contact Me
+            </span>
+          </button>
+        </a>
+
+        {/* Purple dot + text */}
+        <div className="flex items-center gap-2">
+          <div className="relative flex items-center justify-center">
+            {/* Ripple glow */}
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="w-2 h-2 rounded-full bg-purple2 opacity-75 animate-ripple"></span>
+            </span>
+
+            {/* Solid pulsing dot */}
+            <span className="w-2 h-2 bg-purple3 rounded-full animate-pulseDot"></span>
+          </div>
+
+          <span className="text-text text-xs font-light text-[clamp(1rem,1vw+0.5rem,2rem)]">Open to Opportunities</span>
+        </div>
+      </div>
+
+
+
 
       {/* Example hero content below the notch */}
       {/* <div className="pt-6 md:pt-8"> 

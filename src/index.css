@@ -156,12 +156,28 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 
-/* .clipped_div {
-  width: 400px;
-  height: 200px;
-  background: linear-gradient(45deg, #ff00ff, #00ffff);
-  clip-path: path("M 7 5 L 85 5 A 2.5 2.5 0 0 0 87.5 2.5 A 2.5 2.5 0 0 1 90 0 L 97.5 0 A 2.5 2.5 0 0 1 100 2.5 L 100 25 A 2.5 2.5 0 0 1 97.5 27.5 L 80 27.5 A 2.5 2.5 0 0 0 77.5 30 L 77.5 35 A 2.5 2.5 0 0 1 75 37.5 L 10 37.5 A 2.5 2.5 0 0 1 7.5 35 L 7.5 20 A 2.5 2.5 0 0 0 5 17.5 L 2.5 17.5 A 2.5 2.5 0 0 1 0 15 L 0 7.5 A 2.5 2.5 0 0 1 2.5 5");
-  transform: scale(1);
-  transform-box: fill-box;
-} */
+.animate-ripple {
+  animation: ripple 1.5s infinite ease-out;
+}
+.animate-pulseDot {
+  animation: pulseDot 1.5s infinite ease-in-out;
+}
