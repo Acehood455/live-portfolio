@@ -8,7 +8,7 @@ const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen mt-16 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
+    <section className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
