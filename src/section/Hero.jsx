@@ -47,7 +47,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__mobile)">
-          <div className="w-full h-full bg-cardColor backdrop-blur-sm drop-shadow-lg" />
+          <div className="w-full h-full bg-cardColor" />
         </foreignObject>
       </svg>
       
@@ -91,7 +91,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__corner__folder__look)">
-          <div className="w-full h-full bg-cardColor backdrop-blur-sm drop-shadow-lg" />
+          <div className="w-full h-full bg-cardColor" />
         </foreignObject>
       </svg>
 

@@ -48,16 +48,16 @@ export default function Navbar({ inNotch = false }) {
       transition: "all 0.5s ease",
     };
   } else {
+    // Floating nav (desktop or mobile after scroll)
     style = {
       position: "fixed",
       top: scrolled ? "0.5rem" : "1rem",
       left: "50%",
       transform: "translateX(-50%)",
       width: scrolled ? (inNotch ? "70%" : "90%") : "95%",
-      backgroundColor: scrolled ? "rgba(40, 32, 44, 0.5)" : "rgba(13, 11, 15, 0.4)", // 👈 semi-transparent
-      backdropFilter: scrolled ? "blur(12px)" : "blur(0px)", // 👈 blur glass
-      WebkitBackdropFilter: scrolled ? "blur(12px)" : "blur(0px)", // Safari support
-      boxShadow: scrolled ? "0 4px 20px rgba(0,0,0,0.2)" : "none",
+      backgroundColor: scrolled ? "#28202c" : "#0d0b0f",
+      backdropFilter: scrolled ? "blur(8px)" : "blur(0px)",
+      boxShadow: scrolled ? "0 4px 16px rgba(0,0,0,0.1)" : "none",
       transition: "all 0.5s ease",
     };
   }
