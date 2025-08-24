@@ -67,8 +67,8 @@ export default function Navbar({ inNotch = false }) {
         : "none",
       // borderRadius: "1rem", // optional, softer edges
       transition: "all 0.5s ease",
-      paddingTop: '0.25rem',
-      paddingBottom: '0.25rem',
+      paddingTop: '0.15rem',
+      paddingBottom: '0.15rem',
     };
   }
   
@@ -100,7 +100,7 @@ export default function Navbar({ inNotch = false }) {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-purple3 animate-pulseDot"></span>
               </div>
               <span className="text-sm text-text font-light rounded-full px-1">
-                Active
+                Open
               </span>
               {/* <span className="text-sm text-text font-light bg-text/10 backdrop-blur-sm border border-text/20 rounded-full px-1 animate-pulse">
                 Open to Opportunities
@@ -124,13 +124,12 @@ export default function Navbar({ inNotch = false }) {
             ))}
 
             <li className={`block md:flex items-center gap-3  whitespace-nowrap md:${scrolled ? "block" : "hidden"}`}>
-              <a href="#contact" className="group relative overflow-hidden">
-                <button className="px-4 py-2 z-30 font-semibold rounded-lg group-hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] group-hover:scale-105 relative cursor-pointer">
+              {/* Contact button */}
+              <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-105 cursor-pointer">
                   <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
-                  <span className="relative z-10 rounded-lg text-background font-semibold">
+                  <span className="relative z-10 text-background font-semibold">
                     Contact Me
                   </span>
-                </button>
               </a>
 
               {/* Purple dot on floating navbar */}

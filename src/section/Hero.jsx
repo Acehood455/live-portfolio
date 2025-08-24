@@ -146,13 +146,11 @@ export default function Hero() {
         }}
       >
         {/* Contact button */}
-        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)]">
-          <button className="px-4 py-2 font-semibold rounded-lg group-hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] group-hover:scale-105 relative cursor-pointer">
+        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-105 cursor-pointer">
             <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
             <span className="relative z-10 text-background font-semibold">
               Contact Me
             </span>
-          </button>
         </a>
 
         {/* Purple dot + text */}
