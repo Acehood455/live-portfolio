@@ -236,7 +236,7 @@ export default function Hero() {
           </div>
 
           {/* Subheading */}
-          <p className="mt-2 text-xl md:text-5xl font-extrabold text-text max-w-2xl">
+          <p className="mt-2 text-2xl md:text-5xl font-extrabold text-text max-w-2xl">
             I build scalable, modern web apps — from intuitive frontends to robust backends.
           </p>
 
