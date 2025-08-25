@@ -165,14 +165,14 @@ export default function Hero() {
       </svg>
 
       {/* Mobile: full width */}
-      <div className="absolute z-10  w-full md:hidden">
+      <div className="absolute z-20  w-full md:hidden">
         <Navbar />
       </div>
 
       {/* NAVBAR container positioned exactly at the notch (percent-based) */}
       <div
         // Use percentages derived from objectBoundingBox coords so scaling matches the SVG
-        className="absolute z-10 hidden md:block"
+        className="absolute z-20 hidden md:block"
         style={{
           left: `${NOTCH_X_START * 100}%`,
           width: `${(NOTCH_X_END - NOTCH_X_START) * 100}%`,
@@ -198,7 +198,7 @@ export default function Hero() {
         }}
       >
         {/* Contact button */}
-        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-105 cursor-pointer">
+        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-95 hover:translate-y-0.5 duration-300 cursor-pointer">
             <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
             <span className="relative z-10 text-background font-semibold">
               Contact Me
@@ -224,12 +224,12 @@ export default function Hero() {
       {/* === New Hero Content === */}
       <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-20">
         {/* Heading */}
-        <h1 className="uppercase text-xs md:text-sm font-medium text-text leading-snug">
-          Full Stack Web Developer
+        <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text leading-snug">
+          Full Stack Developer
         </h1>
 
         {/* Subheading */}
-        <p className="mt-2 text-2xl md:text-4xl font-extrabold  text-text max-w-2xl">
+        <p className="mt-2 text-4xl md:text-6xl font-extrabold  text-text max-w-2xl">
           I build scalable, modern web apps from frontend to backend.
         </p>
 
@@ -243,13 +243,13 @@ export default function Hero() {
         <div className="mt-6 flex gap-4">
           <a
             href="/resume.pdf"
-            className="px-6 py-3 rounded-xl  bg-gold text-background font-medium hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+            className="px-6 py-3 rounded-xl bg-gold text-background font-medium hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
           >
             See My Work
           </a>
           <a
             href="/resume.pdf"
-            className="px-6 py-3 rounded-xl border border-gold text-text font-medium hover:bg-gold hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:text-background transition"
+            className="px-6 py-3 rounded-xl border border-gold text-text font-medium hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
           >
             Resume
           </a>
