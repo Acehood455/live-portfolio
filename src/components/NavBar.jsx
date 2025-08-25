@@ -125,7 +125,7 @@ export default function Navbar({ inNotch = false }) {
 
             <li className={`block md:flex items-center gap-3  whitespace-nowrap md:${scrolled ? "block" : "hidden"}`}>
               {/* Contact button */}
-              <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-105 cursor-pointer">
+              <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] cursor-pointer">
                   <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
                   <span className="relative z-10 text-background font-semibold">
                     Contact Me
@@ -152,10 +152,10 @@ export default function Navbar({ inNotch = false }) {
       {/* Mobile Button */}
       <button
         onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-10 right-6 z-50 md:hidden shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] bg-gold rounded-full p-3 text-background hover:text-text-900 transition-colors duration-300"
+        className="fixed bottom-8 right-5 z-50  md:hidden shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] bg-gold rounded-full p-3 text-background hover:text-text-900 transition-colors duration-300"
         aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
       >
-        {mobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+        {mobileMenuOpen ? <HiX size={20} /> : <HiMenu size={20} />}
       </button>
 
       {/* Mobile overlay menu */}
@@ -171,7 +171,7 @@ export default function Navbar({ inNotch = false }) {
               stiffness: 300,
               damping: 25,
             }}
-            className="fixed md:hidden bottom-14 right-9 items-center flex flex-col text-lg font-semibold w-48"
+            className="fixed md:hidden bottom-11 right-7 items-center flex flex-col text-lg font-semibold w-48"
           >
             <svg className="absolute inset-0 w-full h-full">
               <defs>
