@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
+import { TbNorthStar } from "react-icons/tb";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
@@ -217,45 +218,61 @@ export default function Hero() {
             <span className="w-2 h-2 bg-purple3 rounded-full animate-pulseDot"></span>
           </div>
 
-          <span className="text-text text-xs font-light text-[clamp(1rem,1vw+0.5rem,2rem)]">Open to Opportunities</span>
+          <span className="text-text text-xs font-light tracking-tighter text-[clamp(1rem,1vw+0.5rem,2rem)]">Open to Opportunities</span>
         </div>
       </div>
 
-      {/* === New Hero Content === */}
-      <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-14">
-        {/* Heading */}
-        <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text leading-snug">
-          Full Stack Developer
-        </h1>
 
-        {/* Subheading */}
-        <p className="mt-2 text-4xl md:text-6xl font-extrabold  text-text max-w-2xl">
-          I build scalable, modern web apps from frontend to backend.
-        </p>
 
-        {/* Intro */}
-        <p className="mt-2 text-base md:text-lg text-gray-400">
-          Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,
-          a developer based in Nigeria with a passion for code.
-        </p>
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center md:justify-between px-6 md:px-14 py-20 md:min-h-screen gap-6 md:gap-2">
+        {/* === Left: Hero Content === */}
+        <div className="flex flex-col justify-center items-start flex-1">
+          {/* Heading */}
+          <div className="flex items-center gap-2">
+            <TbNorthStar size={17} className="text-purple2" />
+            <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text leading-snug">
+              Full Stack Developer
+            </h1>
+          </div>
 
-        {/* CTA buttons */}
-        <div className="mt-6 flex gap-4">
-          <a
-            href="#projects"
-            className="px-4 py-2 md:px-6 md:py-3 rounded-xl bg-gold text-background font-semibold hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          >
-            See My Work
-          </a>
-          <a
-            href="/resume.pdf"
-            className="px-4 py-2 md:px-6 md:py-3 rounded-xl border border-gold text-text font-semibold hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          >
-            Resume
-          </a>
-          
+          {/* Subheading */}
+          <p className="mt-2 text-4xl md:text-6xl font-extrabold text-text max-w-2xl">
+            I build scalable, modern web apps from frontend to backend.
+          </p>
+
+          {/* Intro */}
+          <p className="mt-2 text-base md:text-lg text-gray-400">
+            Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,  
+            a developer based in Nigeria with a passion for code.
+          </p>
+
+          {/* CTA buttons */}
+          <div className="mt-6 flex gap-4">
+            <a
+              href="#projects"
+              className="px-4 py-2 md:px-6 md:py-3 rounded-xl bg-gold text-background font-semibold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+            >
+              See My Work
+            </a>
+            <a
+              href="/resume.pdf"
+              className="px-4 py-2 md:px-6 md:py-3 rounded-xl border border-gold text-text font-semibold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+            >
+              Resume
+            </a>
+          </div>
+        </div>
+
+        {/* === Right: Hero Image === */}
+        <div className="flex-1 flex justify-center md:justify-end">
+          <img
+            src="/images/heroImg.png"
+            alt="Ace Taiwo"
+            className="w-80 h-80 md:w-[50vw] md:h-[70vh] rounded-2xl object-cover shadow-lg"
+          />
         </div>
       </div>
+
     
     </section>
   );
