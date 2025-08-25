@@ -222,7 +222,7 @@ export default function Hero() {
       </div>
 
       {/* === New Hero Content === */}
-      <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-20">
+      <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-14">
         {/* Heading */}
         <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text leading-snug">
           Full Stack Developer
@@ -242,14 +242,14 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="mt-6 flex gap-4">
           <a
-            href="/resume.pdf"
-            className="px-6 py-3 rounded-xl bg-gold text-background font-medium hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+            href="#projects"
+            className="px-4 py-2 md:px-6 md:py-3 rounded-xl bg-gold text-background font-semibold hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
           >
             See My Work
           </a>
           <a
             href="/resume.pdf"
-            className="px-6 py-3 rounded-xl border border-gold text-text font-medium hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+            className="px-4 py-2 md:px-6 md:py-3 rounded-xl border border-gold text-text font-semibold hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
           >
             Resume
           </a>
