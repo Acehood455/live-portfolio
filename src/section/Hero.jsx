@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
-import { TbNorthStar } from "react-icons/tb";
+import { TbNorthStar, TbFileDownload } from "react-icons/tb";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
@@ -236,30 +236,32 @@ export default function Hero() {
           </div>
 
           {/* Subheading */}
-          <p className="mt-2 text-4xl md:text-6xl font-extrabold text-text max-w-2xl">
-            I build scalable, modern web apps from frontend to backend.
+          <p className="mt-2 text-xl md:text-5xl font-extrabold text-text max-w-2xl">
+            I build scalable, modern web apps — from intuitive frontends to robust backends.
           </p>
 
           {/* Intro */}
           <p className="mt-2 text-base md:text-lg text-gray-400">
             Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,  
-            a developer based in Nigeria with a passion for code.
+            a developer from Nigeria passionate about building impactful digital products.
           </p>
 
           {/* CTA buttons */}
-          <div className="mt-6 flex gap-4">
-            <a
-              href="#projects"
-              className="px-4 py-2 md:px-6 md:py-3 rounded-xl bg-gold text-background font-semibold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-            >
-              See My Work
-            </a>
-            <a
-              href="/resume.pdf"
-              className="px-4 py-2 md:px-6 md:py-3 rounded-xl border border-gold text-text font-semibold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-            >
-              Resume
-            </a>
+          <div className="mt-2 md:mt-6 flex gap-2 md:gap-4">
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-gold text-background font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+          >
+          <p className="hidden md:flex">See</p>My Work
+          <img src="/images/arrow-down.svg" alt="arrow" className=" size-4 md:size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500" />
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-gold text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+          >
+            Resume
+            <TbFileDownload className="text-text size-4 md:size-5" />
+          </a>
           </div>
         </div>
 
@@ -268,7 +270,7 @@ export default function Hero() {
           <img
             src="/images/heroImg.png"
             alt="Ace Taiwo"
-            className="w-80 h-80 md:w-[50vw] md:h-[70vh] rounded-2xl object-cover shadow-lg"
+            className="w-60 h-60 md:w-[50vw] md:h-[70vh] rounded-2xl object-cover shadow-lg"
           />
         </div>
       </div>
