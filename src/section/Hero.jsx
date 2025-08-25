@@ -13,6 +13,58 @@ const NOTCH_MID_Y_PCT = (NOTCH_Y * 100) / 2;       // 3.75 (center of notch heig
 const GAP_FROM_NOTCH = 1.5;                          // % gap to the right of the notch
 const HERO_RIGHT_PADDING = 2;                      // % padding from hero's right edge
 
+const isDarkMode = true;
+
+const textVariant = {
+  hidden: { y: 20, opacity: 0},
+  visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+          duration: 0.8,
+          ease: 'easeOut',
+      },
+  },
+};
+
+const imageVariants = {
+  hidden: { x: 50, opacity: 0, },
+  visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+          duration: 1,
+          ease: 'easeOut',
+          delay: 0.5,
+      },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+      opacity: 1,
+      transition: {
+          staggerChildren: 0.2,
+          delayChildren: 0.3,
+      },
+  }, 
+};
+
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut", 
+    },
+  },
+};
+
+
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -169,18 +221,42 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* === New Hero Content === */}
+      <div className="relative z-10 flex flex-col justify-center items-start min-h-screen px-6 md:px-20">
+        {/* Heading */}
+        <h1 className="uppercase text-xs md:text-sm font-medium text-text leading-snug">
+          Full Stack Web Developer
+        </h1>
 
+        {/* Subheading */}
+        <p className="mt-2 text-2xl md:text-4xl font-extrabold  text-text max-w-2xl">
+          I build scalable, modern web apps from frontend to backend.
+        </p>
 
+        {/* Intro */}
+        <p className="mt-2 text-base md:text-lg text-gray-400">
+          Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,
+          a developer based in Nigeria with a passion for code.
+        </p>
 
-      {/* Example hero content below the notch */}
-      {/* <div className="pt-6 md:pt-8"> 
-        <div className="h-[60vh] flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold">Welcome to my portfolio</h1>
-            <p className="mt-4 text-lg md:text-xl text-gray-700">Full Stack Developer</p>
-          </div>
+        {/* CTA buttons */}
+        <div className="mt-6 flex gap-4">
+          <a
+            href="/resume.pdf"
+            className="px-6 py-3 rounded-xl  bg-gold text-background font-medium hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
+          >
+            See My Work
+          </a>
+          <a
+            href="/resume.pdf"
+            className="px-6 py-3 rounded-xl border border-gold text-text font-medium hover:bg-gold hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:text-background transition"
+          >
+            Resume
+          </a>
+          
         </div>
-      </div> */}
+      </div>
+    
     </section>
   );
 }
