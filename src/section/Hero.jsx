@@ -3,6 +3,7 @@ import Navbar from "../components/NavBar";
 import { TbNorthStar, TbFileDownload } from "react-icons/tb";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 import { motion, AnimatePresence } from "motion/react";
+import WobblySphere from "../components/WobblySphere";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
@@ -237,10 +238,18 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Subheading */}
-          <p className="mt-2 text-2xl md:text-5xl font-extrabold text-text max-w-2xl">
-            I build scalable, modern web apps — from intuitive frontends to robust backends.
+          <p className="mt-2 text-2xl md:text-5xl font-extrabold max-w-2xl text-text">
+            I build{" "}
+            <span className="bg-gradient-to-r from-gold via-purple3 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
+              scalable
+            </span>
+            ,{" "}
+            <span className="bg-gradient-to-r from-accent via-gold to-purple3 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
+              modern
+            </span>{" "}
+            web apps — from intuitive frontends to robust backends.
           </p>
+
 
           {/* Intro */}
           <p className="mt-2 text-base md:text-lg text-gray-400">
@@ -250,55 +259,63 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="mt-2 md:mt-6 flex gap-2 md:gap-4">
-          {/* <a
-            href="#projects"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-gold text-background font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          > */}
             <a
               href="#projects"
               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-purple2 text-black font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
             >
-          <p className="hidden md:flex">See</p>My Work
-          <RiArrowDownDoubleFill className='text-black size-4 md:size-5 animate-bounce' />
-          </a>
-          {/* <a
-            href="#"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-gold text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          > */}
-          <a
-            href="#"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
-          >
-            Resume
-            <TbFileDownload className="text-text size-4 md:size-5" />
-          </a>
+            <p className="hidden md:flex">See</p>My Work
+            <RiArrowDownDoubleFill className='text-black size-4 md:size-5 animate-bounce' />
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+            >
+              Resume
+              <TbFileDownload className="text-text size-4 md:size-5" />
+            </a>
           </div>
-        </div>
 
+        </div>
+        
         {/* === Right: Hero Image === */}
-        <div className="flex-1 flex justify-center md:justify-end">
+        {/* <div className="flex-1 flex justify-center md:justify-end">
           <img
             src="/images/heroImg.png"
             alt="Ace Taiwo"
-            className="w-64 h-64 md:w-[50vw] md:h-[70vh] rounded-2xl object-cover shadow-lg"
+            className="w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg"
           />
-        </div>
+        </div> */}
+        <div className="flex-1 flex justify-center md:justify-end relative">
+      {/* Animated Blob Behind */}
+      <WobblySphere />
+
+      {/* Hero Image */}
+      <img
+        src="/images/heroImg.png"
+        alt="Ace Taiwo"
+        className="relative w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg z-10"
+      />
+    </div>
       </div>
-              <motion.div
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 180, 360],
-                  }}
-                  transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: 'linear',
-                  }}
-                  className={`absolute top-20 right-20 w-64 h-64 rounded-full blur-xl opacity-10
-                      bg-gold
-                  `}
-                />
-    
+
+      {/* Glowing rotating div colors */}
+      <motion.div
+        animate={{
+          rotate: 360,
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute top-[50vh]  md:top-32 md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity-20"
+      >
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-70" />
+          <div className="md:w-32 md:h-32 w-20 h-20 bg-purple2 rounded-full md:blur-xl opacity-70 md:ml-16 ml-3" />
+        </div>
+      </motion.div>
+
     </section>
   );
 }
