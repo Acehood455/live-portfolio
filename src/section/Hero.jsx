@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 import { TbNorthStar, TbFileDownload } from "react-icons/tb";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
+import { motion, AnimatePresence } from "motion/react";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
@@ -283,7 +284,20 @@ export default function Hero() {
           />
         </div>
       </div>
-
+              <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                  className={`absolute top-20 right-20 w-64 h-64 rounded-full blur-xl opacity-10
+                      bg-gold
+                  `}
+                />
     
     </section>
   );
