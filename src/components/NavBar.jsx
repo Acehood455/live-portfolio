@@ -87,7 +87,7 @@ export default function Navbar({ inNotch = false }) {
           <div className="flex flex-col">
             <a
               href="#"
-              className="text-text md:py-3 md:pt-1 text-base text-[clamp(1.5rem,1.5vw+0.5rem,2.5rem)] md:text-[clamp(1.6rem,1.5vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
+              className="text-text md:py-3 md:pt-1 text-base text-[clamp(1.5rem,1.5vw+0.5rem,2.5rem)] md:text-[clamp(1.3rem,1.3vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
             >
               Ace Taiwo
             </a>
@@ -156,7 +156,7 @@ export default function Navbar({ inNotch = false }) {
                   flex items-center gap-2 px-1 py-1 
                   bg-purple2 text-text font-semibold 
                   rounded-full  
-                  transition-colors duration-300"
+                  transition-colors duration-300 shadow-2xl backdrop-blur-xl"
         aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
         {/* Icon with its own circle */}
