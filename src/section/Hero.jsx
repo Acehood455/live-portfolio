@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 import { TbNorthStar, TbFileDownload } from "react-icons/tb";
+import { RiArrowDownDoubleFill } from "react-icons/ri";
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0; // 5% from left
@@ -199,11 +200,11 @@ export default function Hero() {
         }}
       >
         {/* Contact button */}
-        <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] hover:scale-95 hover:translate-y-0.5 duration-300 cursor-pointer">
-            <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
-            <span className="relative z-10 text-background font-semibold">
-              Contact Me
-            </span>
+        <a
+          href="#contact"
+          className="inline-flex items-center text-[clamp(1rem,1vw+0.5rem,2rem)] gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+        >
+          Contact Me
         </a>
 
         {/* Purple dot + text */}
@@ -248,25 +249,25 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="mt-2 md:mt-6 flex gap-2 md:gap-4">
-          <a
+          {/* <a
             href="#projects"
             className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-gold text-background font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          >
-            {/* <a
+          > */}
+            <a
               href="#projects"
               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-purple2 text-black font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
-            > */}
+            >
           <p className="hidden md:flex">See</p>My Work
-          <img src="/images/arrow-down.svg" alt="arrow" className=" size-4 md:size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500" />
+          <RiArrowDownDoubleFill className='text-black size-4 md:size-5 animate-bounce' />
           </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-gold text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
-          >
           {/* <a
             href="#"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-gold text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] transition"
           > */}
+          <a
+            href="#"
+            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+          >
             Resume
             <TbFileDownload className="text-text size-4 md:size-5" />
           </a>

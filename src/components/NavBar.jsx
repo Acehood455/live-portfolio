@@ -125,11 +125,11 @@ export default function Navbar({ inNotch = false }) {
 
             <li className={`block md:flex items-center gap-3  whitespace-nowrap md:${scrolled ? "block" : "hidden"}`}>
               {/* Contact button */}
-              <a href="#contact" className="group relative overflow-hidden text-[clamp(1rem,1vw+0.5rem,2rem)] px-4 py-2 font-semibold rounded-lg hover:scale-95 hover:translate-y-0.5 duration-500 hover:shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] cursor-pointer">
-                  <div className="absolute inset-0 bg-gold transition-all duration-700 rounded-lg"></div>
-                  <span className="relative z-10 text-background font-semibold">
-                    Contact Me
-                  </span>
+              <a
+                href="#contact"
+                className="inline-flex items-center text-[clamp(1rem,1vw+0.5rem,2rem)]  px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+              >
+                Contact Me
               </a>
 
               {/* Purple dot on floating navbar */}
@@ -152,74 +152,112 @@ export default function Navbar({ inNotch = false }) {
       {/* Mobile Button */}
       <button
         onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-8 right-5 z-50  md:hidden shadow-[0px_4px_16px_0_rgba(211,187,54,.90)] bg-gold rounded-full p-3 text-background hover:text-text-900 transition-colors duration-300"
-        aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+        className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 md:hidden 
+                  flex items-center gap-2 px-1 py-1 
+                  bg-purple2 text-text font-semibold 
+                  rounded-full  
+                  transition-colors duration-300"
+        aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
-        {mobileMenuOpen ? <HiX size={20} /> : <HiMenu size={20} />}
+        {/* Icon with its own circle */}
+        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-background text-text">
+          {mobileMenuOpen ? <HiX size={18} /> : <HiMenu size={18} />}
+        </span>
+
+        <span className="pr-2 text-background">Menu</span>
       </button>
+
 
       {/* Mobile overlay menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            key="drawer"
-            initial={{ opacity: 0, scale: 0.2, x: 100, y: 100 }}
-            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, scale: 0.2, x: 100, y: 100 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 25,
-            }}
-            className="fixed md:hidden bottom-11 right-7 items-center flex flex-col text-lg font-semibold w-48"
-          >
-            <svg className="absolute inset-0 w-full h-full">
-              <defs>
-                <clipPath
-                  id="right__bottom__corner__menu"
-                  clipPathUnits="objectBoundingBox"
-                >
-                  <path
-                    d="
-                      M 0.05 0                    
-                      L 0.95 0                    
-                      A 0.05 0.05 0 0 1 1 0.05    
-                      L 1 0.73                    
-                      A 0.05 0.05 0 0 1 0.95 0.78
-                      A 0.18 0.18 0 0 0 0.76 0.95 
-                      A 0.05 0.05 0 0 1 0.71 1
-                      L 0.05 1                 
-                      A 0.05 0.05 0 0 1 0 0.95    
-                      L 0 0.05                    
-                      A 0.05 0.05 0 0 1 0.05 0    
-                      Z
-                    "
-                  />
-                </clipPath>
-              </defs>
-              <foreignObject
-                width="100%"
-                height="100%"
-                clipPath="url(#right__bottom__corner__menu)"
-              >
-                <div className="w-full h-full md:hidden shadow-[0px_4px_32px_0_rgba(211,187,54,.90)] bg-gold" />
-              </foreignObject>
-            </svg>
-            <div className="flex flex-col items-center space-y-6 text-lg font-semibold p-6">
-              {links.map((section) => (
-                <a
-                  key={section}
-                  href={`#${section.toLowerCase()}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="hover:text-text-900 transition-colors duration-300 z-10 text-background"
-                >
-                  {section}
-                </a>
-              ))}
-            </div>
-          </motion.div>
+          <>
+            {/* Dark overlay */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.8 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-background z-40 md:hidden"
+            />
+
+            {/* Overlay menu */}
+            <motion.div
+              key="drawer"
+              initial={{ opacity: 0, scale: 0.8, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 50 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+              }}
+              className="fixed bottom-7 inset-x-0 flex justify-center md:hidden z-50"
+            >
+              <div className="relative flex flex-col items-center text-lg font-semibold w-56">
+                <svg className="absolute inset-0 w-full h-full">
+                  <defs>
+                    <clipPath id="mobile__pill__menu" clipPathUnits="objectBoundingBox">
+                      <path
+                        d="
+                          M 0.05 0                    
+                          L 0.95 0                    
+                          A 0.05 0.05 0 0 1 1 0.05    
+                          L 1 0.95                    
+                          A 0.05 0.05 0 0 1 0.95 1
+
+                          L 0.75 1
+                          A 0.02 0.02 0 0 1 0.73 0.98
+                          A 0.11 0.09 0 0 0 0.62 0.89
+                          L 0.37 0.89
+                          A 0.10 0.11 0 0 0 0.27 0.98
+                          A 0.02 0.02 0 0 1 0.25 1
+                          
+                          L 0.05 1                 
+                          A 0.05 0.05 0 0 1 0 0.95    
+                          L 0 0.05                    
+                          A 0.05 0.05 0 0 1 0.05 0    
+                          Z
+                        "
+                      />
+
+                    </clipPath>
+                  </defs>
+                  <foreignObject
+                    width="100%"
+                    height="100%"
+                    clipPath="url(#mobile__pill__menu)"
+                  >
+                    <div className="w-full h-full shadow-[0px_4px_32px_0_rgba(156,39,176,.75)] bg-purple2" />
+                  </foreignObject>
+                </svg>
+
+                <div className="flex flex-col items-center space-y-3 text-lg font-semibold p-6 z-10">
+                  {links.map((section) => (
+                    <a
+                      key={section}
+                      href={`#${section.toLowerCase()}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="transition-colors duration-300 hover:scale-90 text-background"
+                    >
+                      {section}
+                      <span className="block h-0.5 bg-background origin-center transition-transform duration-300 scale-x-75"></span>
+                    </a>
+                  ))}
+                  <a href='#contact' onClick={() => setMobileMenuOpen(false)} className="hover:scale-90 pb-3">
+                    Contact
+                    <span className="block h-0.5 bg-background origin-center transition-transform duration-300 scale-x-75"></span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+          </>
         )}
       </AnimatePresence>
+
     </>
   );
 }
