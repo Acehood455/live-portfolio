@@ -132,15 +132,16 @@
 
 
 body {
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Bricolage Grotesque', 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
   background-color: #28202c;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Bricolage Grotesque', 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
 }
+
 
 html {font-size: 100%;} /* 16px */
 
@@ -180,4 +181,14 @@ small {font-size: 0.750rem; /* 12px */}
 }
 .animate-pulseDot {
   animation: pulseDot 1.5s infinite ease-in-out;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
 }
