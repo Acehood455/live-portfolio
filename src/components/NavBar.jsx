@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { GiHamburger } from "react-icons/gi";
 
 export default function Navbar({ inNotch = false }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -156,12 +157,12 @@ export default function Navbar({ inNotch = false }) {
                   flex items-center gap-2 px-1 py-1 
                   bg-purple2 text-text font-semibold 
                   rounded-full  
-                  transition-colors duration-300 shadow-2xl backdrop-blur-xl"
+                  transition-colors duration-300 shadow-2xl"
         aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
       >
         {/* Icon with its own circle */}
         <span className="flex items-center justify-center w-8 h-8 rounded-full bg-background text-text">
-          {mobileMenuOpen ? <HiX size={18} /> : <HiMenu size={18} />}
+          {mobileMenuOpen ? <HiX size={18} /> : <GiHamburger size={18} />}
         </span>
 
         <span className="pr-2 text-background">Menu</span>
