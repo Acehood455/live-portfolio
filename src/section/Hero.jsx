@@ -101,10 +101,8 @@ export default function Hero() {
                 L 0.99 0.90
                 A 0.01 0.01 0 0 1 1 0.91
                 
-                L 1 0.95
-                A 0.05 0.05 0 0 1 0.95 1
-                L 0.05 1
-                A 0.05 0.05 0 0 1 0 0.95
+                L 1 1
+                L 0 1
 
                 L 0 0.70
                 A 0.01 0.01 0 0 1 0.01 0.69
@@ -145,10 +143,8 @@ export default function Hero() {
                 L 0.99 0.90
                 A 0.01 0.01 0 0 1 1 0.91
                 
-                L 1 0.95
-                A 0.05 0.05 0 0 1 0.95 1
-                L 0.05 1
-                A 0.05 0.05 0 0 1 0 0.95
+                L 1 1
+                L 0 1
 
                 L 0 0.70
                 A 0.01 0.01 0 0 1 0.01 0.69
@@ -226,7 +222,7 @@ export default function Hero() {
       </div>
 
 
-
+      {/* Main Hero Content - Text and Image */}
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center md:justify-between px-6 md:px-14 py-20 md:min-h-screen gap-6 md:gap-2">
         {/* === Left: Hero Content === */}
         <div className="flex flex-col justify-center items-start flex-1">
@@ -240,11 +236,11 @@ export default function Hero() {
 
           <p className="mt-2 text-2xl md:text-5xl font-extrabold max-w-2xl text-text">
             I build{" "}
-            <span className="bg-gradient-to-r from-gold via-purple3 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
+            <span className="bg-gradient-to-r from-gold2 via-purple4 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
               scalable
             </span>
             ,{" "}
-            <span className="bg-gradient-to-r from-accent via-gold to-purple3 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
+            <span className="bg-gradient-to-r from-accent via-gold2 to-purple4 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
               modern
             </span>{" "}
             web apps — from intuitive frontends to robust backends.
@@ -278,24 +274,17 @@ export default function Hero() {
         </div>
         
         {/* === Right: Hero Image === */}
-        {/* <div className="flex-1 flex justify-center md:justify-end">
+        <div className="flex-1 flex justify-center md:justify-end relative">
+          {/* Animated Blob Behind */}
+          <WobblySphere />
+
+          {/* Hero Image */}
           <img
             src="/images/heroImg.png"
             alt="Ace Taiwo"
-            className="w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg"
+            className="relative w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg z-10"
           />
-        </div> */}
-        <div className="flex-1 flex justify-center md:justify-end relative">
-      {/* Animated Blob Behind */}
-      <WobblySphere />
-
-      {/* Hero Image */}
-      <img
-        src="/images/heroImg.png"
-        alt="Ace Taiwo"
-        className="relative w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg z-10"
-      />
-    </div>
+        </div>
       </div>
 
       {/* Glowing rotating div colors */}
@@ -308,7 +297,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[50vh]  md:top-32 md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity-20"
+        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity-20"
       >
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-70" />
