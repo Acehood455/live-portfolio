@@ -297,7 +297,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:80 md:opacity-20 z-10"
+        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:50 md:opacity-20"
       >
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-70" />
