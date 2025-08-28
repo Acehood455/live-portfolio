@@ -81,7 +81,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section  className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
+    <section id='hero' className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"

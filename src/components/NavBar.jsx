@@ -62,7 +62,7 @@ export default function Navbar({ inNotch = false }) {
         : "#0d0b0f",
       backdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)",
       WebkitBackdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)", // Safari fix
-      // border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
+      border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
       boxShadow: scrolled
         ? "0 8px 24px rgba(0,0,0,0.2)"
         : "none",
