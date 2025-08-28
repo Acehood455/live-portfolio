@@ -229,12 +229,12 @@ export default function Hero() {
           {/* Heading */}
           <div className="flex items-center gap-2">
             <TbNorthStar size={17} className="text-purple2" />
-            <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text leading-snug">
+            <h1 className="uppercase tracking-widest text-sm md:text-sm font-medium text-text leading-snug">
               Full Stack Developer
             </h1>
           </div>
 
-          <p className="mt-2 text-2xl md:text-5xl font-extrabold max-w-2xl text-text">
+          <p className="mt-2 text-3xl md:text-5xl font-extrabold max-w-2xl text-text">
             I build{" "}
             <span className="bg-gradient-to-r from-gold2 via-purple4 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
               scalable
@@ -297,7 +297,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:50 md:opacity-20"
+        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-20"
       >
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-70" />
