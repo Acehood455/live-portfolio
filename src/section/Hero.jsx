@@ -83,6 +83,7 @@ export default function Hero() {
   return (
     <section id='hero' className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
+      <div className="md:hidden bg-cardColor w-full h-7 rounded-t-2xl z-10"></div>
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
         preserveAspectRatio="none"
@@ -92,9 +93,9 @@ export default function Hero() {
             <path
               d="
                 M 0.03 0
-                L 0.97 0
+                L 0.95 0
                 
-                A 0.03 0.03 0 0 1 1 0.03
+                A 0.05 0.05 0 0 1 1 0.05
 
                 L 1 0.50
                 A 0.01 0.01 0 0 1 0.99 0.51
@@ -109,8 +110,8 @@ export default function Hero() {
                 L 0.01 0.30
                 A 0.01 0.01 0 0 1 0.0 0.29
                 
-                L 0 0.03
-                A 0.03 0.03 0 0 1 0.03 0
+                L 0 0.05
+                A 0.05 0.05 0 0 1 0.05 0
                 Z
               "
             />
@@ -171,7 +172,6 @@ export default function Hero() {
 
       {/* NAVBAR container positioned exactly at the notch (percent-based) */}
       <div
-        // Use percentages derived from objectBoundingBox coords so scaling matches the SVG
         className="absolute z-20 hidden md:block"
         style={{
           left: `${NOTCH_X_START * 100}%`,
@@ -181,7 +181,6 @@ export default function Hero() {
           pointerEvents: "auto",
         }}
       >
-        {/* Navbar must be able to fill this container (h-full w-full) */}
         <Navbar inNotch />
       </div>
 
@@ -191,9 +190,9 @@ export default function Hero() {
           scrolled ? "hidden" : "hidden md:flex"
         }`}
         style={{
-          top: `${NOTCH_MID_Y_PCT}%`,                          // vertically center to notch
-          left: `calc(${NOTCH_RIGHT_PCT}% + ${GAP_FROM_NOTCH}%)`, // start at notch right edge + small gap
-          right: `${HERO_RIGHT_PADDING}%`,                     // let it expand but keep padding on the right
+          top: `${NOTCH_MID_Y_PCT}%`,                          
+          left: `calc(${NOTCH_RIGHT_PCT}% + ${GAP_FROM_NOTCH}%)`,
+          right: `${HERO_RIGHT_PADDING}%`,                    
           transform: "translateY(-50%)",
         }}
       >
@@ -297,7 +296,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[50vh]  md:top-[40vh] md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:50 md:opacity-20"
+        className="absolute top-[50vh]  md:top-[40vh] left-5 md:left-10 md:w-96 md:h-96 w-44 h-44 rounded-full blur-xl md:blur-2xl opacity:50 md:opacity-20"
       >
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-50" />
