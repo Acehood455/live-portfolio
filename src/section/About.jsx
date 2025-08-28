@@ -1,40 +1,12 @@
 import React from 'react'
 import { TbNorthStar } from 'react-icons/tb'
+import SectionTitle from '../components/SectionTitle'
 
 const About = () => {
   return (
-    // <section id='about' className='min-h-screen text-text max-w-[95%] md:max-w-[97%] mx-auto bg'>
-    //   <div className="bg-white py-16">
-    //     <div className="bg-body -bottom-1 left-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-xl  text-sm font-medium">
-    //       About
-    //     </div>
-    //   </div>
-    // </section>
-  <section id="about" className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto">
-    <div className="w-full">
-      <div className="relative rounded-b-2xl bg-cardColor p-10">
-        <div className="absolute bottom-0 left-6 md:left-14">
-          <div className="before:content-[''] before:absolute before:bottom-0 before:-left-2 before:w-2 before:h-2 before:bg-body"/>
-          <div className="after:content-[''] after:absolute after:bottom-0 after:-right-2 after:w-2 after:h-2 after:bg-body"/>
-          <span
-            className="
-              relative inline-flex items-center gap-2 px-4 py-2 bg-body text-sm font-medium rounded-t-xl
-              before:content-[''] before:absolute before:bottom-0 before:-left-2 before:w-2 before:h-2 before:bg-cardColor before:rounded-br-xl
-              after:content-[''] after:absolute after:bottom-0 after:-right-2 after:w-2 after:h-2 after:bg-cardColor after:rounded-bl-xl
-            "
-          >
-            <div className="flex items-center gap-2">
-              <TbNorthStar size={17} className="text-purple2" />
-              <h1 className="uppercase tracking-widest text-xs md:text-sm font-medium text-text ">
-                About Me
-              </h1>
-            </div>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+    <section id="about" className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto">
+      <SectionTitle title='About Me' outerColor='cardColor' innerColor='body' rounded='2xl' hasRoundDown={false} />
+    </section>
   )
   // return (
   //   <section className="max-w-6xl mx-auto px-6 py-12">
