@@ -103,9 +103,6 @@ export default function Navbar({ inNotch = false }) {
               <span className="text-sm text-text font-light rounded-full px-1">
                 Open
               </span>
-              {/* <span className="text-sm text-text font-light bg-text/10 backdrop-blur-sm border border-text/20 rounded-full px-1 animate-pulse">
-                Open to Opportunities
-              </span> */}
             </div>
           </div>
           
