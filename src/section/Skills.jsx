@@ -21,14 +21,13 @@ const Skills = () => {
       <div className="flex justify-center pt-5 md:pt-8">
         <div className="text-text text-center max-w-[95%] md:max-w-[60%]">
           <p className="font-semibold">
-            Here are some of the skills and tools I&apos;ve picked up along the
-            way, and I&apos;m more familiar with.
+            Here are some of the skills and tools I&apos;m more familiar with. PS. I added a little explanation for the non-techies.
           </p>
         </div>
       </div>
 
       {/* Masonry Grid */}
-      <div className="text-text relative mt-2 md:mt-10 mx-auto max-w-[95%] md:max-w-[60%] 
+      <div className="text-text relative mt-3 md:mt-10 mx-auto max-w-[95%] md:max-w-[80%] 
       columns-2 sm:columns-3 lg:columns-4 xl:columns-5 gap-2 md:gap-3 px-4 md:px-8 overflow-visible">
         {skills.map((skill) => (
           <div
