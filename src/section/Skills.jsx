@@ -71,8 +71,8 @@ const Skills = () => {
                                     before:content-[''] before:absolute before:-bottom-3 before:left-1 before:w-3 before:h-3 before:bg-cardColor
                                     after:content-[''] after:absolute after:-bottom-3 after:left-1 after:w-3 after:h-3 after:bg-cardColor2 after:rounded-tl-2xl" />
                  
-              <div className="absolute md:w-20 md:h-20 top-5 left-5 md:top-8 md:left-8 w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-70">
-                <div className="md:w-10 md:h-10 w-20 h-20 bg-gold2 rounded-full z-20  md:blur-xl opacity-40 md:opacity-80" />
+              <div className="absolute md:w-20 md:h-20 top-10 left-5 md:top-8 md:left-8 w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-70">
+                <div className="md:w-10 md:h-10 w-10 h-10 bg-gold2 rounded-full z-20  md:blur-xl opacity-40 md:opacity-80" />
               </div>
 
               <img
