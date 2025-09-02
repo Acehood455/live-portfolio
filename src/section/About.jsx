@@ -15,7 +15,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-11 gap-2">
           {/* About Me Text */}
           <div
-            className="relative md:col-span-4 h-full"
+            className="relative md:col-span-4 h-full rounded-2xl border-accent border-t-[1px] border-l-[1px]"
             onMouseMove={(e) => {
               const rect = e.currentTarget.getBoundingClientRect();
               setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -77,7 +77,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative break-inside-avoid bg-cardColor rounded-2xl shadow transition-all duration-300 
-                            hover:scale-[1.02] hover:shadow-xl overflow-hidden flex flex-col p-2"
+                            hover:scale-[1.02] hover:shadow-xl overflow-hidden flex flex-col p-2 border-accent border-l-[1px] border-t-[1px]"
                 >
                   {/* Image with zoom on hover */}
                   <div className="relative overflow-hidden rounded-lg">
@@ -96,7 +96,7 @@ const About = () => {
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-lg text-text font-semibold pb-6 mt-2">
+                  <h4 className="text-xs md:text-lg text-text font-semibold pb-6 mt-2">
                     {cert.title}
                   </h4>
 
