@@ -1,26 +1,7 @@
 import React from "react"
 import SectionTitle from '../components/SectionTitle'
+import { skills } from "../constants"
 
-const skills = [
-  {
-    id: 1,
-    name: "React",
-    img: "/images/skills/react.png",
-    description: "Building fast and interactive UIs with reusable components.",
-  },
-  {
-    id: 2,
-    name: "Node.js",
-    img: "/images/skills/node.png",
-    description: "Writing scalable backend APIs with JavaScript.",
-  },
-  {
-    id: 3,
-    name: "TailwindCSS",
-    img: "/images/skills/tailwind.png",
-    description: "Designing responsive and modern interfaces quickly.",
-  },
-]
 
 const Skills = () => {
   return (
@@ -63,6 +44,7 @@ const Skills = () => {
             </div>
 
             <div className="bg-cardColor rounded-br-2xl relative pr-1 pb-1 inline-block -ml-4 -mt-8 ">
+              {/* Corner Pseudo Elements */}
               <span className="pointer-events-none absolute inset-0 
                                     before:content-[''] before:absolute before:top-4 before:-right-3 before:w-3 before:h-3 before:bg-cardColor
                                     after:content-[''] after:absolute after:top-4 after:-right-3 after:w-3 after:h-3 after:bg-cardColor2 after:rounded-tl-2xl" />
@@ -71,8 +53,9 @@ const Skills = () => {
                                     before:content-[''] before:absolute before:-bottom-3 before:left-1 before:w-3 before:h-3 before:bg-cardColor
                                     after:content-[''] after:absolute after:-bottom-3 after:left-1 after:w-3 after:h-3 after:bg-cardColor2 after:rounded-tl-2xl" />
                  
-              <div className="absolute md:w-20 md:h-20 top-10 left-5 md:top-8 md:left-8 w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-70">
-                <div className="md:w-10 md:h-10 w-10 h-10 bg-gold2 rounded-full z-20  md:blur-xl opacity-40 md:opacity-80" />
+              {/* Blob */}
+              <div className="absolute md:w-20 md:h-20 top-10 left-5 md:top-8 md:left-8 w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-50">
+      <div className={`md:w-20 md:h-20 w-10 h-10 rounded-full z-20 md:blur-xl opacity-50 ${skill.color}`} />
               </div>
 
               <img

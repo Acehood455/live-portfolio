@@ -1,5 +1,3 @@
-// constants/index.js
-
 export const certificates = [
   {
     id: 1,
@@ -36,5 +34,31 @@ export const certificates = [
     title: "Back End DevelopmentAnd APIs",
     img: "/images/certificates/6_bedaa.PNG",
     url: "https://www.freecodecamp.org/certification/acetaiwo/back-end-development-and-apis",
+  },
+];
+
+
+
+export const skills = [
+  {
+    id: 1,
+    name: "React",
+    img: "/images/skills/react.png",
+    description: "Building fast and interactive UIs with reusable components.",
+    color: "bg-sky-400", // React blue
+  },
+  {
+    id: 2,
+    name: "Node.js",
+    img: "/images/skills/node.png",
+    description: "Writing scalable backend APIs with JavaScript.",
+    color: "bg-green-500", // Node green
+  },
+  {
+    id: 3,
+    name: "TailwindCSS",
+    img: "/images/skills/tailwind.png",
+    description: "Designing responsive and modern interfaces quickly.",
+    color: "bg-cyan-400", // Tailwind cyan
   },
 ];
