@@ -17,6 +17,7 @@ module.exports = {
         background: '#060609',
         accent: '#a68ab7',
         cardColor: '#0d0b0f',
+        cardColor2: '#120f15',
         body: '#28202c',
  
 },
