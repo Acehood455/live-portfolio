@@ -54,7 +54,7 @@ const Skills = () => {
                  
               {/* Blob */}
               <div className="absolute md:w-20 md:h-20 top-10 left-5 md:top-8 md:left-8 w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity:40 md:opacity-50">
-      <div className={`md:w-20 md:h-20 w-10 h-10 rounded-full z-20 md:blur-xl opacity-50 ${skill.color}`} />
+                <div className={`md:w-20 md:h-20 w-10 h-10 rounded-full z-20 md:blur-xl opacity-50 ${skill.color}`} />
               </div>
 
               <img
@@ -79,88 +79,3 @@ const Skills = () => {
 }
 
 export default Skills
-
-
-
-
-
-// import React from 'react'
-// import { FaReact, FaNodeJs, FaGithub } from 'react-icons/fa'
-// import { SiNextdotjs, SiTailwindcss, SiPrisma, SiPostgresql } from 'react-icons/si'
-// import SectionTitle from '../components/SectionTitle'
-
-// // Example skills array (replace with constants later)
-// const skills = [
-//   {
-//     name: "React",
-//     description: "Interactive UIs with components & hooks.",
-//     icon: <FaReact className="text-sky-400 text-2xl" />,
-//   },
-//   {
-//     name: "Next.js",
-//     description: "Full-stack framework for modern apps. Great for SEO, API routes, and server-side rendering.",
-//     icon: <SiNextdotjs className="text-black dark:text-white text-2xl" />,
-//   },
-//   {
-//     name: "Tailwind CSS",
-//     description: "Utility-first styling for rapid UI dev. Helps keep styling consistent and responsive.",
-//     icon: <SiTailwindcss className="text-sky-500 text-2xl" />,
-//   },
-//   {
-//     name: "Node.js",
-//     description: "Backend runtime for scalable apps. Perfect for REST APIs and real-time applications.",
-//     icon: <FaNodeJs className="text-green-500 text-2xl" />,
-//   },
-//   {
-//     name: "Prisma",
-//     description: "Next-gen ORM for databases. Simplifies complex queries with type safety.",
-//     icon: <SiPrisma className="text-indigo-500 text-2xl" />,
-//   },
-//   {
-//     name: "PostgreSQL",
-//     description: "Relational database for structured data. Great for analytics and production workloads.",
-//     icon: <SiPostgresql className="text-blue-500 text-2xl" />,
-//   },
-//   {
-//     name: "Git & GitHub",
-//     description: "Version control & collaboration for modern dev teams.",
-//     icon: <FaGithub className="text-gray-800 dark:text-gray-200 text-2xl" />,
-//   },
-// ]
-
-// const Skills = () => {
-//   return (
-//     <section
-//       id="skills"
-//       className="relative bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
-//     >
-//       <SectionTitle
-//         title="Skills"
-//         outerColor="body"
-//         innerColor="cardColor"
-//         rounded="none"
-//         hasRoundDown={true}
-//       />
-
-//       {/* Masonry Grid */}
-//       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 p-6">
-//         {skills.map((skill, i) => (
-//           <div
-//             key={i}
-//             className="break-inside-avoid bg-body rounded-2xl shadow p-5 flex flex-col transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
-//           >
-//             <div className="flex items-center gap-3">
-//               {skill.icon}
-//               <h3 className="text-lg font-semibold text-text">{skill.name}</h3>
-//             </div>
-//             <p className="text-sm text-muted mt-3 leading-relaxed">
-//               {skill.description}
-//             </p>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default Skills

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import SectionTitle from '../components/SectionTitle'
 import { certificates } from '../constants'
+import { PiPaperclipHorizontalBold } from "react-icons/pi";
+import { motion } from "framer-motion"
 
 const About = () => {
   const [pos, setPos] = useState({ x: -999, y: -99 });
@@ -47,8 +49,30 @@ const About = () => {
                 maskRepeat: "no-repeat",
               }}
             >
+              <motion.div
+                className="absolute text-gold2 -top-1 -right-2 rotate-90 w-16 h-16 md:h-24 md:w-24 opacity-40"
+                animate={{ rotate: [88, 90, 92, 90, 88] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
+              >
+                <PiPaperclipHorizontalBold className="w-full h-full" />
+              </motion.div>
+
+              <div className="absolute bottom-1 left-3">
+                <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
+                  ✨ I occassionaly read Chinese Fantasy in my spare time {';)'}
+                </div>
+              </div>
+
               <p className="mb-4 [text-indent:1.5rem]">
-                My name is <span className="font-semibold">Ace Taiwo</span>, but I'm sure you've figured that out by now. 
+                My name is {' '}
+                <span className="font-semibold bg-gradient-to-r from-purple2 via-gold2 to-accent bg-clip-text text-transparent">
+                  Ace Taiwo
+                </span>
+                , but I'm sure you've figured that out by now. 
                 I am a self-taught full-stack developer who enjoys coding. I love building clean, responsive, 
                 and user-friendly applications; what real developer doesn't?
               </p>
@@ -87,12 +111,7 @@ const About = () => {
                       className="w-full transition-transform duration-500 group-hover:scale-105"
                     />
 
-                    {/* Shimmer sweep */}
-                    <span className="pointer-events-none absolute inset-0 
-                      before:content-[''] before:absolute before:inset-0 
-                      before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent 
-                      before:translate-x-[-100%] before:skew-x-12
-                      before:transition-transform before:duration-700 group-hover:before:translate-x-[100%]" />
+                    
                   </div>
 
                   {/* Title */}
@@ -116,6 +135,14 @@ const About = () => {
                                     before:content-[''] before:absolute before:bottom-0 before:-left-3 before:w-3 before:h-3 before:bg-body
                                     after:content-[''] after:absolute after:bottom-0 after:-left-3 after:w-3 after:h-3 after:bg-cardColor after:rounded-br-2xl" />
                   </p>
+
+                  {/* Shimmer sweep */}
+                  <span className="pointer-events-none absolute inset-0 
+                      before:content-[''] before:absolute before:inset-0 
+                      before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent 
+                      before:translate-x-[-100%] before:skew-x-12
+                      before:transition-transform before:duration-700 group-hover:before:translate-x-[100%]" 
+                  />
                 </a>
 
               ))}
