@@ -30,9 +30,9 @@ const Skills = () => {
       {/* Masonry Grid */}
       <div
         className="text-text relative mt-3 md:mt-10 mx-auto 
-                  max-w-[95%] md:max-w-[80%]  
+                  max-w-[97%] md:max-w-[80%]  
                   columns-2 sm:columns-3 lg:columns-4 xl:columns-5 
-                  gap-2 md:gap-4 px-4 md:px-8 overflow-visible group"
+                  gap-4 px-4 md:px-8 overflow-visible group"
       >
         {skills.map((skill) => (
           <CardContainer
