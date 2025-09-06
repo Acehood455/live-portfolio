@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiX } from "react-icons/hi";
 import { GiHamburger } from "react-icons/gi";
 
 export default function Navbar({ inNotch = false }) {
@@ -11,7 +11,7 @@ export default function Navbar({ inNotch = false }) {
 
   const links = ["About", "Skills", "Projects"];
 
-  // 📏 Measure notch placeholder when inNotch
+  //  Measure notch placeholder when inNotch
   useEffect(() => {
     if (inNotch && notchRef.current) {
       const measure = () => {
@@ -56,7 +56,7 @@ export default function Navbar({ inNotch = false }) {
       top: scrolled ? "0.5rem" : "1rem",
       left: "50%",
       transform: "translateX(-50%)",
-      width: scrolled ? (inNotch ? "70%" : "90%") : "95%",
+      width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
       backgroundColor: scrolled 
         ? "rgba(40, 32, 44, 0.5)"   
         : "#0d0b0f",
@@ -108,7 +108,7 @@ export default function Navbar({ inNotch = false }) {
           
           
 
-          <ul className="flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center space-x-10">
+          <ul className="flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center space-x-5">
             {links.map((section) => (
               <li key={section} className="group hidden md:flex">
                 <a

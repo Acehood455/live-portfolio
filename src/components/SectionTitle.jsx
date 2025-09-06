@@ -33,7 +33,7 @@ const SectionTitle = ({ title, outerColor, innerColor, rounded, hasRoundDown }) 
     <div className="w-full">
       <div
         className={clsx(
-          `relative p-12`,
+          `relative p-12 md:p-6`,
           roundedMap[rounded],
           bgMap[outerColor],
           hasRoundDown &&
@@ -62,7 +62,7 @@ const SectionTitle = ({ title, outerColor, innerColor, rounded, hasRoundDown }) 
           </>
         )}
 
-        <div className="absolute bottom-0 left-6 md:left-14">
+        <div className="absolute bottom-0 left-6 md:left-7">
           <div
             className={clsx(
               `before:content-[''] before:absolute before:bottom-0 before:-left-2 before:w-2 before:h-2`,
