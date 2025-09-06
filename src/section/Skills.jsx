@@ -19,10 +19,10 @@ const Skills = () => {
       />
 
       {/* Intro */}
-      <div className="flex justify-center pt-5 md:pt-8">
-        <div className="text-text text-center max-w-[95%] md:max-w-[60%]">
+      <div className="flex justify-center pt-5 md:pt-8 mb-5">
+        <div className="text-text text-center max-w-[97%] md:max-w-[60%]">
           <p className="font-semibold">
-            Here are some of the skills and tools I&apos;m more familiar with. PS. I added a little explanation for the non-techies.
+            Here are some of the skills and tools I&apos;m more familiar with. PS. I added a little explanation for  non developers {';)'}
           </p>
         </div>
       </div>

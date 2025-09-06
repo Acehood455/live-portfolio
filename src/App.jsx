@@ -4,6 +4,7 @@ import Navbar from './components/NavBar'
 import Hero from './section/Hero'
 import About from './section/About'
 import Skills from './section/Skills'
+import Projects from './section/Projects'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
+      <Projects />
     </div>
   )
 }
