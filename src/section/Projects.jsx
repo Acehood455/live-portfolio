@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
+      className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto "
     >
       <SectionTitle
         title="My Works"
