@@ -108,7 +108,7 @@ export default function Navbar({ inNotch = false }) {
           
           
 
-          <ul className="flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center space-x-5">
+          <ul className={`flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center ${inNotch ? 'space-x-7' : 'space-x-10'}`}>
             {links.map((section) => (
               <li key={section} className="group hidden md:flex">
                 <a
