@@ -207,50 +207,39 @@ small {font-size: 0.750rem; /* 12px */}
 
 /* Position pagination container */
 .swiper-pagination {
-  @apply absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center justify-center gap-1 z-50;
-}
-
-/* Position pagination container */
-.swiper-pagination {
-  position: absolute !important;
-  bottom: 1.2rem !important; 
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 0.25rem !important; /* same as gap-1 */
-  z-index: 50 !important;
-}
-
-
-/* Base pagination dash */
-.swiper-pagination-bullet,
-.custom-bullet {
-  display: inline-block;
-  width: 28px !important;     
-  height: 4px !important;     
-  border-radius: 9999px !important;
-  background-color: #df99ff !important; 
-  margin: 0 1px !important;
-  transition: all 0.3s ease;  
-}
-
-/* Active bullet (longer + darker) */
-.swiper-pagination-bullet-active,
-.custom-bullet.swiper-pagination-bullet-active {
-  width: 35px !important;          
-  background-color: #be33ff !important; 
-}
-
-/* Past bullets (via JS seen class) */
-.custom-bullet.seen {
-  background-color: #4d0070 !important;
+  @apply !absolute !bottom-16 !px-6 md:!bottom-6 !left-1/2 !-translate-x-1/2 !flex items-center !justify-center !gap-1 !z-50;
 }
 
 .custom-prev.swiper-button-disabled,
 .custom-next.swiper-button-disabled {
-  opacity: 0.6 !important;
+  /* opacity: 0.9 !important; */
   cursor: not-allowed !important;
   pointer-events: none !important;
+}
+
+/* Reset Swiper defaults */
+.swiper-pagination-bullet {
+  background: none !important;
+  opacity: 1 !important;
+}
+
+/* Base pagination dash */
+.custom-bullet {
+  display: inline-block;
+  width: 28px !important;
+  height: 4px !important;
+  border-radius: 9999px !important;
+  background-color: #df99ff !important; /* light purple default */
+  margin: 0 2px !important;
+  transition: all 0.3s ease;
+}
+/* Seen bullets (past slides, stays darker) */
+.custom-bullet.seen {
+  background-color: #4d0070 !important; /* deep purple */
+}
+
+/* Active bullet (longer + brighter) */
+.custom-bullet.swiper-pagination-bullet-active {
+  width: 38px !important;
+  background-color: #be33ff !important; /* vivid purple */
 }

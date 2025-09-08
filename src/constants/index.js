@@ -1,3 +1,6 @@
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer } from "react-icons/si";
+
 export const certificates = [
   {
     id: 1,
@@ -37,85 +40,6 @@ export const certificates = [
   },
 ];
 
-
-//     img: "/images/skills/html.png",
-//     description:
-//       "The foundation of every website — it’s like the skeleton that holds all the text, images, and links together.",
-//     color: "bg-orange-500",
-//   },
-//   {
-//     id: 2,
-//     name: "CSS",
-//     img: "/images/skills/css.png",
-//     description:
-//       "The design language of the web — it controls colors, layouts, and how a site looks on phones and laptops.",
-//     color: "bg-blue-500",
-//   },
-//   {
-//     id: 3,
-//     name: "JavaScript",
-//     img: "/images/skills/js.png",
-//     description:
-//       "The brain of a website — it makes buttons clickable, forms interactive, and pages come alive with movement.",
-//     color: "bg-yellow-400",
-//   },
-//   {
-//     id: 4,
-//     name: "React",
-//     img: "/images/skills/react.png",
-//     description:
-//       "A tool for building websites like Lego blocks — it lets me create reusable pieces that make sites faster and smoother.",
-//     color: "bg-sky-400",
-//   },
-//   {
-//     id: 5,
-//     name: "Tailwind CSS",
-//     img: "/images/skills/tailwind.png",
-//     description:
-//       "A modern design toolkit that helps me style websites quickly while keeping them clean, consistent, and responsive.",
-//     color: "bg-cyan-400",
-//   },
-//   {
-//     id: 6,
-//     name: "Node.js",
-//     img: "/images/skills/node.png",
-//     description:
-//       "Lets websites do more than just show pages — it powers things like login systems, data storage, and online payments.",
-//     color: "bg-green-500",
-//   },
-//   {
-//     id: 7,
-//     name: "Next.js",
-//     img: "/images/skills/nextjs.png",
-//     description:
-//       "A powerful framework that makes websites load super fast, feel smooth, and even work like mobile apps.",
-//     color: "bg-gray-500",
-//   },
-//   {
-//     id: 8,
-//     name: "PostgreSQL",
-//     img: "/images/skills/postgres.png",
-//     description:
-//       "A database system — think of it like a giant organized notebook where websites keep all their important data safe.",
-//     color: "bg-indigo-500",
-//   },
-//   {
-//     id: 9,
-//     name: "Git",
-//     img: "/images/skills/github.png",
-//     description:
-//       "A version control tool — like a time machine that keeps track of every change in code so nothing gets lost.",
-//     color: "bg-red-500",
-//   },
-//   {
-//     id: 10,
-//     name: "AI",
-//     img: "/images/skills/chatgpt.png",
-//     description:
-//       "Using artificial intelligence tools to build smarter apps — from chatbots to systems that learn and adapt.",
-//     color: "bg-purple-500",
-//   },
-// ];
 export const skills = [
   {
     id: 1,
@@ -236,5 +160,179 @@ export const skills = [
     description:
       "A developer-friendly cloud platform — it lets me deploy apps and databases without worrying about servers.",
     color: "bg-emerald-500",
+  },
+];
+
+export const techConfig = {
+  React: { 
+    icon: FaReact, 
+    badge: "border-cyan-500 bg-cyan-300/30", 
+    iconColor: "text-cyan-500", 
+  },
+  "Next.js": { 
+    icon: SiNextdotjs, 
+    badge: "border-gray-900 bg-gray-700/50", 
+    iconColor: "text-gray-900", 
+  },
+  Tailwind: { 
+    icon: SiTailwindcss, 
+    badge: "border-sky-500 bg-sky-300/30", 
+    iconColor: "text-sky-500", 
+  },
+  "Framer Motion": { 
+    icon: SiFramer, 
+    badge: "border-pink-500 bg-pink-300/30", 
+    iconColor: "text-pink-500", 
+  },
+  "Node.js": { 
+    icon: FaNodeJs, 
+    badge: "border-green-600 bg-green-400/30", 
+    iconColor: "text-green-600", 
+    text: "text-black" 
+  },
+  MongoDB: { 
+    icon: SiMongodb, 
+    badge: "border-emerald-600 bg-emerald-400/30", 
+    iconColor: "text-emerald-600", 
+  },
+  Stripe: { 
+    icon: SiStripe, 
+    badge: "border-indigo-600 bg-indigo-600/50", 
+    iconColor: "text-indigo-600", 
+  },
+};
+
+export const projects = [
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description:
+      "A modern developer portfolio built with Next.js, Tailwind, and Framer Motion.",
+    stack: "Fullstack",
+    video: "/videos/portfolio/test.mp4",
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    tech: ["Next.js", "Tailwind", "Framer Motion"],
+    live: "https://your-portfolio.com",
+    github: "https://github.com/yourname/portfolio",
+  },
+  {
+    id: 2,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-green-400 via-emerald-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 11,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-green-400 via-emerald-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 3,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-green-400 via-yellow-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 4,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-red-400 via-emerald-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 5,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-blue-400 via-emerald-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 6,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-blue-400 via-red-500 to-gray-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 7,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-brown-400 via-emerald-500 to-yellow-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 8,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-blue-pink via-red-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 9,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-indigo-400 via-emerald-500 to-violet-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
+  },
+  {
+    id: 10,
+    title: "E-Commerce App",
+    description:
+      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
+    stack: "MERN",
+    video: "/videos/test.mp4",
+    gradient: "from-yellow-400 via-lime-500 to-teal-600",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    live: "https://ecommerce-demo.com",
+    github: "https://github.com/yourname/ecommerce",
   },
 ];
