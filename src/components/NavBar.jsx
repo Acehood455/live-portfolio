@@ -125,7 +125,7 @@ export default function Navbar({ inNotch = false }) {
               {/* Contact button */}
               <a
                 href="#contact"
-                className="inline-flex items-center text-[clamp(1rem,1vw+0.5rem,2rem)]  px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+                className="inline-flex items-center text-[clamp(1rem,1vw+0.5rem,2rem)]  px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border-2 border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
               >
                 Contact Me
               </a>

@@ -192,3 +192,65 @@ small {font-size: 0.750rem; /* 12px */}
 .animate-gradient {
   animation: gradient 6s ease infinite;
 }
+/* 
+.custom-bullet {
+  @apply w-6 h-1 bg-gray-400 rounded-full transition-colors duration-300;
+}
+.custom-bullet-active {
+  @apply bg-gray-800;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active ~ .custom-bullet {
+  @apply bg-gray-600;
+} */
+
+
+/* Position pagination container */
+.swiper-pagination {
+  @apply absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center justify-center gap-1 z-50;
+}
+
+/* Position pagination container */
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 1.2rem !important; 
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.25rem !important; /* same as gap-1 */
+  z-index: 50 !important;
+}
+
+
+/* Base pagination dash */
+.swiper-pagination-bullet,
+.custom-bullet {
+  display: inline-block;
+  width: 28px !important;     
+  height: 4px !important;     
+  border-radius: 9999px !important;
+  background-color: #df99ff !important; 
+  margin: 0 1px !important;
+  transition: all 0.3s ease;  
+}
+
+/* Active bullet (longer + darker) */
+.swiper-pagination-bullet-active,
+.custom-bullet.swiper-pagination-bullet-active {
+  width: 35px !important;          
+  background-color: #be33ff !important; 
+}
+
+/* Past bullets (via JS seen class) */
+.custom-bullet.seen {
+  background-color: #4d0070 !important;
+}
+
+.custom-prev.swiper-button-disabled,
+.custom-next.swiper-button-disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
