@@ -192,18 +192,6 @@ small {font-size: 0.750rem; /* 12px */}
 .animate-gradient {
   animation: gradient 6s ease infinite;
 }
-/* 
-.custom-bullet {
-  @apply w-6 h-1 bg-gray-400 rounded-full transition-colors duration-300;
-}
-.custom-bullet-active {
-  @apply bg-gray-800;
-}
-
-.swiper-pagination-bullet.swiper-pagination-bullet-active ~ .custom-bullet {
-  @apply bg-gray-600;
-} */
-
 
 /* Position pagination container */
 .swiper-pagination {

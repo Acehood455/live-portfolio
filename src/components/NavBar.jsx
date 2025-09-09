@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { HiX } from "react-icons/hi";
 import { GiHamburger } from "react-icons/gi";
+import ScrollAwareWrapper from "./ScrollAwareWrapper";
 
 export default function Navbar({ inNotch = false }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -148,22 +149,26 @@ export default function Navbar({ inNotch = false }) {
       </nav>
 
       {/* Mobile Button */}
-      <button
-        onClick={() => setMobileMenuOpen((open) => !open)}
-        className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 md:hidden 
-                  flex items-center gap-2 px-1 py-1 
-                  bg-purple2 text-text font-semibold 
-                  rounded-full  
-                  transition-colors duration-300 shadow-2xl"
-        aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
-      >
-        {/* Icon with its own circle */}
-        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-background text-text">
-          {mobileMenuOpen ? <HiX size={18} /> : <GiHamburger size={18} />}
-        </span>
+      <div className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 md:hidden ">
+        <ScrollAwareWrapper>
+          <button
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            className="
+                      flex items-center gap-2 px-1 py-1 
+                      bg-purple2 text-text font-semibold 
+                      rounded-full  
+                      transition-colors duration-300 shadow-2xl"
+            aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+          >
+            {/* Icon with its own circle */}
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-background text-text">
+              {mobileMenuOpen ? <HiX size={18} /> : <GiHamburger size={18} />}
+            </span>
 
-        <span className="pr-2 text-background">Menu</span>
-      </button>
+            <span className="pr-2 text-background">Menu</span>
+          </button>
+        </ScrollAwareWrapper>
+      </div>
 
 
       {/* Mobile overlay menu */}
