@@ -3,6 +3,7 @@ import SectionTitle from "../components/SectionTitle";
 import { FaPaperPlane, FaEnvelope, FaWhatsapp, FaTelegram, FaGithub, FaXTwitter } from "react-icons/fa6";
 import { LiaConnectdevelop } from "react-icons/lia";
 import emailjs from "@emailjs/browser";
+import Footer from "./Footer";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -45,7 +46,7 @@ const Contact = () => {
   return (
     <section
   id="contact"
-  className="relative bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
+  className="relative bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto mb-5 rounded-b-2xl"
 >
   <SectionTitle
     title="Contact"
@@ -150,7 +151,7 @@ const Contact = () => {
 
 
 
-        
+
       </div>
 
       {/* Contacts - 3/4 height */}
@@ -234,15 +235,14 @@ const Contact = () => {
       </div>
     </div>
   </div>
+
+  <Footer />
 </section>
 
   );
 };
 
 export default Contact;
-
-
-// import React, { useRef, useState } from "react";
 // import SectionTitle from "../components/SectionTitle";
 // import { FaPaperPlane, FaEnvelope, FaWhatsapp, FaTelegram, FaGithub, FaXTwitter } from "react-icons/fa6";
 // import emailjs from "@emailjs/browser";
