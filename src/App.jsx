@@ -1,10 +1,11 @@
 import React from 'react'
-import BackgroundVideo from './components/BackgroundVideo'
-import Navbar from './components/NavBar'
+// import BackgroundVideo from './components/BackgroundVideo'
+// import Navbar from './components/NavBar'
 import Hero from './section/Hero'
 import About from './section/About'
 import Skills from './section/Skills'
 import Projects from './section/Projects'
+import Contact from './section/Contact'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   )
 }
