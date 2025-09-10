@@ -39,12 +39,20 @@ module.exports = {
           "0%": { transform: "scale(1)", opacity: "0.6" },
           "100%": { transform: "scale(3.5)", opacity: "0" },
         },
+        "gradient-x": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         float: "float 3s ease-in-out infinite alternate",
         pulseDot: "pulseDot 1.5s infinite ease-in-out",
         pulsePill: "pulseDot 1.5s infinite ease-in-out",
         ripple: "ripple 2s infinite ease-out",
+        "gradient-x": "gradient-x 6s ease infinite",
+      },
+      backgroundSize: {
+        "200%": "200% 200%",
       },
     },
   },

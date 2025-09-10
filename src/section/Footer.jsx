@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Left: copyright */}
         <p className="text-sm opacity-70 text-center md:text-left">
-          © {new Date().getFullYear()} Your Ace Taiwo. All rights reserved.
+          © {new Date().getFullYear()} Ace Taiwo. All rights reserved.
         </p>
 
         {/* Middle: nav links (optional) */}
