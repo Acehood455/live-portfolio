@@ -162,7 +162,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__corner__folder__look)">
-          <div className="w-full h-full bg-cardColor" />
+          <div className="w-full h-full bg-cardColor picture" />
         </foreignObject>
       </svg>
 

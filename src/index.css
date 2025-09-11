@@ -231,3 +231,30 @@ small {font-size: 0.750rem; /* 12px */}
   width: 38px !important;
   background-color: #be33ff !important; /* vivid purple */
 }
+
+.picture {
+  position: relative; 
+  overflow: hidden; 
+}
+
+.picture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0.0000045%, #0d0b0f 0.0005%);
+  mix-blend-mode: overlay;
+  transition: 0.8s;
+  cursor: pointer;
+  border-radius: inherit; 
+}
+
+.pictureElements {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0.0000045%, #0d0b0f 0.0005%);
+  mix-blend-mode: overlay;
+  transition: 0.8s;
+  cursor: pointer;
+  border-radius: inherit; 
+}

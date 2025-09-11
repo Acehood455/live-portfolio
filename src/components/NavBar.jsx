@@ -84,8 +84,8 @@ export default function Navbar({ inNotch = false }) {
         />
       )}
 
-      <nav className={surfaceClasses} style={style}>
-        <div className="flex items-center justify-between h-full w-full px-4">
+      <nav className={`${surfaceClasses}`} style={style}>
+        <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''} flex items-center justify-between h-full w-full px-4`}>
           <div className="flex flex-col">
             <a
               href="#"

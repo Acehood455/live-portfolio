@@ -283,6 +283,9 @@ const Contact = () => {
   </div>
 
   <Footer />
+
+  <div className="picture">
+  </div>
 </section>
 
   );
