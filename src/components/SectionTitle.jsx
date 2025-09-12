@@ -151,23 +151,38 @@ const SectionTitle = ({ title, outerColor, innerColor, rounded, hasRoundDown }) 
             {/* Bottom-left cut */}
             <div
               className={clsx(
-                "bg-white absolute -bottom-4 left-0 w-4 h-4 rounded-tl-2xl",
-                // bgMap[innerColor]
+                "absolute -bottom-4 left-0 w-4 h-4",
+                bgMap[outerColor]
               )}
             />
             <div
               className={clsx(
-                "bg-white absolute -bottom-4 left-0 w-4 h-4 rounded-tl-2xl",
-                // bgMap[innerColor]
+                "absolute -bottom-4 left-0 w-4 h-4 rounded-tl-2xl",
+                bgMap[innerColor]
               )}
-            />
+            >
+              {innerColor === "cardColor" && (
+                  <div className="pictureElements" />
+                )}
+            </div>
+
             {/* Bottom-right cut */}
             <div
               className={clsx(
-                "bg-white absolute -bottom-4 right-0 w-4 h-4",
-                // bgMap[outerColor]
+                "absolute -bottom-4 right-0 w-4 h-4",
+                bgMap[outerColor]
               )}
             />
+            <div
+              className={clsx(
+                "absolute -bottom-4 right-0 w-4 h-4 rounded-tr-2xl",
+                bgMap[innerColor]
+              )}
+            >
+              {innerColor === "cardColor" && (
+                  <div className="pictureElements" />
+                )}
+            </div>
           </>
         )}
 

@@ -36,7 +36,7 @@ const FooterDivider = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-cardColor text-text py-6 mt-1 md:mt-3 relative rounded-b-2xl">
+    <footer className="bg-cardColor picture text-text py-6 mt-1 md:mt-3 relative rounded-b-2xl">
         <FooterDivider />
         
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">

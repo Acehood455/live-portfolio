@@ -17,7 +17,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-11 gap-2">
           {/* About Me Text */}
           <div
-            className="relative md:col-span-4 h-full rounded-2xl shadow-[-6px_-6px_10px_rgba(223,153,255,0.3)]"
+            className="relative md:col-span-4 h-full rounded-2xl shadow-[-4px_-4px_8px_rgba(223,153,255,0.3)]"
             onMouseMove={(e) => {
               const rect = e.currentTarget.getBoundingClientRect();
               setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -25,7 +25,7 @@ const About = () => {
             onMouseLeave={() => setPos({ x: -999, y: -999 })}
           >
             {/* Back card with alternate text */}
-            <div className="absolute inset-0 bg-purple rounded-3xl shadow p-5 text-background">
+            <div className="absolute  inset-0 bg-purple rounded-3xl shadow p-5 text-background">
               <p className="mb-4 [text-indent:1.5rem]">
                  <span className="font-bold">👀 My inner thoughts. </span>
               </p>
@@ -41,7 +41,7 @@ const About = () => {
 
             {/* Front card with mask cut-out */}
             <div
-              className="relative bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
+              className="relative picture bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
               style={{
                 WebkitMaskImage: `radial-gradient( circle 70px at ${pos.x}px ${pos.y}px, transparent 99%, black 100%)`,
                 WebkitMaskRepeat: "no-repeat",
@@ -61,33 +61,30 @@ const About = () => {
                 <PiPaperclipHorizontalBold className="w-full h-full" />
               </motion.div>
 
-              <div className="absolute bottom-1 left-3">
-                <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
-                  ✨ I occassionaly read Chinese Fantasy in my spare time {';)'}
-                </div>
-              </div>
 
-              <p className="mb-4 [text-indent:1.5rem]">
-                My name is {' '}
-                <span className="font-semibold bg-gradient-to-r from-purple2 via-gold2 to-accent bg-clip-text text-transparent">
-                  Ace Taiwo
-                </span>
-                , but I'm sure you've figured that out by now. 
-                I am a self-taught full-stack developer who enjoys coding. I love building clean, responsive, 
-                and user-friendly applications; what real developer doesn't?
-              </p>
-              <p className="mb-4">
-                I started my coding journey by exploring online resources and seemed to gain immense satisfaction with
-                turning ideas into real projects.
-              </p>
-              <p className="mb-4">
-                So far 2 clients have trusted me with connecting them with a wider world and through these 
-                I've gained hands-on experience in creating layouts, solving real world challenges, 
-                and working with popular libraries.
-              </p>
-              <p>
-                These are the certifications I have accrued on my journey so far.
-              </p>
+              <div className="z-10">
+                <p className="mb-4 [text-indent:1.5rem] z-10">
+                  My name is {' '}
+                  <span className="font-semibold bg-gradient-to-r from-purple2 via-gold2 to-accent bg-clip-text text-transparent">
+                    Ace Taiwo
+                  </span>
+                  , but I'm sure you've figured that out by now. 
+                  I am a self-taught full-stack developer who enjoys coding. I love building clean, responsive, 
+                  and user-friendly applications; what real developer doesn't?
+                </p>
+                <p className="mb-4 z-10">
+                  I started my coding journey by exploring online resources and seemed to gain immense satisfaction with
+                  turning ideas into real projects.
+                </p>
+                <p className="mb-4 z-10">
+                  So far 2 clients have trusted me with connecting them with a wider world and through these 
+                  I've gained hands-on experience in creating layouts, solving real world challenges, 
+                  and working with popular libraries.
+                </p>
+                <p className='z-10'>
+                  These are the certifications I have accrued on my journey so far.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -100,7 +97,7 @@ const About = () => {
                   href={cert.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative break-inside-avoid bg-cardColor rounded-2xl transition-all duration-300 
+                  className="group relative break-inside-avoid picture bg-cardColor rounded-2xl transition-all duration-300 
                             hover:scale-[1.02] overflow-hidden flex flex-col p-2
                             shadow-[-3px_-3px_8px_rgba(223,153,255,0.2)] hover:shadow-[-4px_-4px_10px_rgba(223,153,255,0.25)]"
                 >
@@ -116,7 +113,7 @@ const About = () => {
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-xs md:text-lg text-text font-semibold pb-6 mt-2">
+                  <h4 className="text-xs md:text-lg text-text font-semibold pb-6 mt-2 z-10">
                     {cert.title}
                   </h4>
 
@@ -128,13 +125,15 @@ const About = () => {
                     </span>
 
                     {/* Corner masks - top right and bottom left */}
-                    <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:-top-3 before:right-0 before:w-3 before:h-3 before:bg-body
-                                    after:content-[''] after:absolute after:-top-3 after:right-0 after:w-3 after:h-3 after:bg-cardColor after:rounded-br-2xl" />
+                    <div className="absolute -top-3 right-0 w-3 h-3 bg-body"/>
+                    <div className="absolute -top-3 right-0 w-3 h-3 bg-cardColor rounded-br-2xl">
+                      <div className="pictureElements" />
+                    </div>
 
-                    <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:bottom-0 before:-left-3 before:w-3 before:h-3 before:bg-body
-                                    after:content-[''] after:absolute after:bottom-0 after:-left-3 after:w-3 after:h-3 after:bg-cardColor after:rounded-br-2xl" />
+                    <div className="absolute bottom-0 -left-3 w-3 h-3 bg-body"/>
+                    <div className="absolute bottom-0 -left-3 w-3 h-3 bg-cardColor rounded-br-2xl">
+                      <div className="pictureElements" />
+                    </div>
                   </p>
 
                   {/* Shimmer sweep */}

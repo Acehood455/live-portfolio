@@ -84,7 +84,7 @@ export default function Hero() {
     <section id='hero' className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       {/* Masking the awkward top radius */}
-      <div className="md:hidden bg-cardColor w-full h-7 rounded-t-2xl z-10"></div>
+      <div className="md:hidden bg-cardColor picture w-full h-7 rounded-t-2xl z-10"></div>
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
         preserveAspectRatio="none"
@@ -120,7 +120,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__mobile)">
-          <div className="w-full h-full bg-cardColor" />
+          <div className="w-full h-full bg-cardColor picture" />
         </foreignObject>
       </svg>
       

@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
+      className="relative bg-cardColor picture min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
     >
       <SectionTitle
         title="My Skills"
@@ -19,7 +19,7 @@ const Skills = () => {
       />
 
       {/* Intro */}
-      <div className="flex justify-center pt-5 md:pt-8 mb-5">
+      <div className="flex justify-center pt-5 md:pt-8 mb-5 z-10">
         <div className="text-text text-center max-w-[97%] md:max-w-[60%]">
           <p className="font-semibold">
             Here are some of the skills and tools I&apos;m more familiar with. PS. I added a little explanation for  non developers {';)'}
@@ -32,7 +32,7 @@ const Skills = () => {
         className="text-text relative mt-3 md:mt-10 mx-auto 
                   max-w-[97%] md:max-w-[80%]  
                   columns-2 sm:columns-3 lg:columns-4 xl:columns-5 
-                  gap-4 px-4 md:px-8 overflow-visible group"
+                  gap-4 px-4 md:px-8 overflow-visible group z-10"
       >
         {skills.map((skill) => (
           <CardContainer
@@ -66,19 +66,6 @@ const Skills = () => {
               {/* Folded corner + Skill icon */}
               <CardItem translateZ={60} className="inline-block -ml-4 -mt-8">
                 <div className="rounded-br-2xl relative pr-1 pb-1">
-                  {/* Corner pseudo elements */}
-                  {/* <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:top-4 before:-right-3 
-                                    before:w-3 before:h-3 
-                                    after:content-[''] after:absolute after:top-4 after:-right-3 
-                                    after:w-3 after:h-3 after:bg-cardColor2 after:rounded-tl-2xl" />
-
-                  <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:-bottom-3 before:left-1 
-                                    before:w-3 before:h-3 
-                                    after:content-[''] after:absolute after:-bottom-3 after:left-1 
-                                    after:w-3 after:h-3 after:bg-cardColor2 after:rounded-tl-2xl" /> */}
-
                   {/* Blob glow */}
                   <div className="absolute md:w-20 md:h-20 top-10 left-5 md:top-8 md:left-8 
                                   w-24 h-24 z-10 rounded-full blur-xl md:blur-2xl opacity-40 md:opacity-50">

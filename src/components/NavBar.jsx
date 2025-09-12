@@ -59,8 +59,8 @@ export default function Navbar({ inNotch = false }) {
       transform: "translateX(-50%)",
       width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
       backgroundColor: scrolled 
-        ? "rgba(40, 32, 44, 0.5)"   
-        : "#0d0b0f",
+        && "rgba(40, 32, 44, 0.5)"  , 
+        // : "#0d0b0f",
       backdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)",
       WebkitBackdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)", // Safari fix
       border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
@@ -85,8 +85,8 @@ export default function Navbar({ inNotch = false }) {
       )}
 
       <nav className={`${surfaceClasses}`} style={style}>
-        <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''} flex items-center justify-between h-full w-full px-4`}>
-          <div className="flex flex-col">
+        <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''}  flex items-center justify-between h-full w-full px-4`}>
+          <div className="flex flex-col z-10">
             <a
               href="#"
               className="text-text md:py-3 md:pt-1 text-base text-[clamp(1.5rem,1.5vw+0.5rem,2.5rem)] md:text-[clamp(1.3rem,1.3vw+0.5rem,2.5rem)] font-semibold transition-transform duration-200 hover:scale-110"
@@ -109,7 +109,7 @@ export default function Navbar({ inNotch = false }) {
           
           
 
-          <ul className={`flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center ${inNotch ? 'space-x-7' : 'space-x-10'}`}>
+          <ul className={`flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center z-10 ${inNotch ? 'space-x-7' : 'space-x-10'}`}>
             {links.map((section) => (
               <li key={section} className="group hidden md:flex">
                 <a

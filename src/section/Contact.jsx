@@ -97,7 +97,7 @@ const Contact = () => {
   return (
     <section
   id="contact"
-  className="relative bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto mb-5 rounded-b-2xl"
+  className="relative picture bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto mb-5 rounded-b-2xl"
 >
   <SectionTitle
     title="Contact"
@@ -110,7 +110,7 @@ const Contact = () => {
   {/* Bento Grid */}
   <div className="grid md:grid-cols-2 gap-4 h-full p-4 mt-5 rounded-2xl items-stretch">
     {/* Left - Contact Form */}
-    <div className="flex flex-col justify-center p-4 bg-cardColor2 rounded-xl shadow-lg ">
+    <div className="flex flex-col justify-center p-4 bg-cardColor2 rounded-xl shadow-lg z-10">
       <h2 className="text-text flex items-center gap-2 text-lg mb-4 font-semibold">
         <LiaConnectdevelop size={12} className="text-purple2" />
         Lets Connect
@@ -201,13 +201,13 @@ const Contact = () => {
       </div>
 
       {/* Contacts - 3/4 height */}
-      <div className="bg-cardColor2 rounded-xl p-4 flex flex-col shadow-md h-full md:h-3/4 ">
+      <div className="bg-cardColor2 rounded-xl p-3 flex flex-col shadow-md h-full md:h-3/4 z-10">
         <h3 className="text-sm flex font-semibold text-text items-center gap-2 mb-2 text-center">
           <LiaConnectdevelop size={12} className="text-purple2" />
           Want a more familiar form of contact?
         </h3>
 
-        <div className="grid grid-cols-1 gap-2 md:gap-1">
+        <div className="grid grid-cols-1 gap-2 md:gap-[6px]">
           {/* Email */}
           <a
             href="mailto:you@example.com"
@@ -283,9 +283,6 @@ const Contact = () => {
   </div>
 
   <Footer />
-
-  <div className="picture">
-  </div>
 </section>
 
   );

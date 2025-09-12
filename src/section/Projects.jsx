@@ -45,7 +45,7 @@ const Projects = () => {
             }
           });
         }}
-        className="relative mt-2 md:mt-5 bg-cardColor md:max-w-[95%] h-[84vh] md:h-[88vh] rounded-2xl mx-auto"
+        className="relative mt-2 md:mt-5 picture bg-cardColor md:max-w-[95%] h-[84vh] md:h-[88vh] rounded-2xl mx-auto"
         spaceBetween={40}
         slidesPerView={1}
       >
@@ -136,14 +136,15 @@ const Projects = () => {
         {/* Navigation arrows (bottom-right) */}
         <div className="absolute bottom-0 rounded-tl-2xl bg-body right-0 px-4 py-1 flex items-center gap-3 z-50">
           {/* Corner masks - top right and bottom left */}
-          <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:-top-3 before:right-0 before:w-3 before:h-3 before:bg-body
-                                    after:content-[''] after:absolute after:-top-3 after:right-0 after:w-3 after:h-3 after:bg-cardColor after:rounded-br-2xl" />
+          <div className="absolute -top-3 right-0 w-3 h-3 bg-body"/>
+          <div className="absolute -top-3 right-0 w-3 h-3 bg-cardColor rounded-br-2xl">
+            <div className="pictureElements" />
+          </div>
 
-          <span className="pointer-events-none absolute inset-0 
-                                    before:content-[''] before:absolute before:bottom-0 before:-left-3 before:w-3 before:h-3 before:bg-body
-                                    after:content-[''] after:absolute after:bottom-0 after:-left-3 after:w-3 after:h-3 after:bg-cardColor after:rounded-br-2xl" />
-                  
+          <div className="absolute bottom-0 -left-3 w-3 h-3 bg-body"/>
+          <div className="absolute bottom-0 -left-3 w-3 h-3 bg-cardColor rounded-br-2xl">
+            <div className="pictureElements" />
+          </div>
           <button
             className="custom-prev inline-flex items-center justify-center w-10 h-10 rounded-full border border-cardColor bg-background text-text 
                       hover:scale-95 duration-300 transition
