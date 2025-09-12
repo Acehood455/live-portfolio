@@ -47,9 +47,10 @@ const Footer = () => {
 
         {/* Middle: nav links (optional) */}
         <div className="flex gap-4 text-sm opacity-80">
+          <a href="#" className="hover:text-purple2 transition">Home</a>
           <a href="#about" className="hover:text-purple2 transition">About</a>
+          <a href="#skills" className="hover:text-purple2 transition">Skills</a>
           <a href="#projects" className="hover:text-purple2 transition">Projects</a>
-          <a href="#contact" className="hover:text-purple2 transition">Contact</a>
         </div>
 
         {/* Right: social icons */}

@@ -195,7 +195,7 @@ small {font-size: 0.750rem; /* 12px */}
 
 /* Position pagination container */
 .swiper-pagination {
-  @apply !absolute !bottom-16 !px-6 md:!bottom-6 !left-1/2 !-translate-x-1/2 !flex items-center !justify-center !gap-1 !z-50;
+  @apply !absolute !bottom-14 !px-6 md:!bottom-6 !left-1/2 !-translate-x-1/2 !flex items-center !justify-center !gap-1 !z-50;
 }
 
 .custom-prev.swiper-button-disabled,
