@@ -257,28 +257,3 @@ small {font-size: 0.750rem; /* 12px */}
   border-radius: inherit; 
 }
 
-/* Noise overlay */
-.noise-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-radius: inherit;
-
-  /* Slightly larger steps than your original */
-  background: repeating-conic-gradient(#0000 0.0005%, #0d0b0f 0.005%);
-  mix-blend-mode: overlay;
-  opacity: 0.35; /* adjust visibility */
-  transition: opacity 0.8s ease;
-  will-change: transform, opacity;
-  transform: translateZ(0); /* force GPU */
-}
-
-
-/* Fallback if blend-mode not supported */
-@supports not (mix-blend-mode: overlay) {
-  .noise-overlay {
-    background: url("data:image/png;base64,iVBORw0...") repeat;
-    background-size: 200px 200px;
-    opacity: 0.15;
-  }
-}

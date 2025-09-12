@@ -41,7 +41,7 @@ const About = () => {
 
             {/* Front card with mask cut-out */}
             <div
-              className="relative  bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
+              className="relative picture bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
               style={{
                 WebkitMaskImage: `radial-gradient( circle 70px at ${pos.x}px ${pos.y}px, transparent 99%, black 100%)`,
                 WebkitMaskRepeat: "no-repeat",
@@ -49,16 +49,15 @@ const About = () => {
                 maskRepeat: "no-repeat",
               }}
             >
-              <div className="noise-overlay" />
-            <div className="absolute bottom-1 left-3">
+            <div className="absolute bottom-2 left-3">
                 <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
-                  ✨ I occassionaly read Chinese Fantasy in my spare time {';)'}
+                  ✨ I tinker with electronics in my spare time {';)'}
                 </div>
               </div>
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-50" />
-                <div className="md:w-32 md:h-32 w-20 h-20 bg-purple2 rounded-full md:blur-xl opacity-50 md:ml-16 ml-3" />
-              </div>
+              
+              <div className="md:w-32 md:h-32 w-20 h-20 absolute -left-10 -top-10 bg-gradient-to-r from-purple to-gold rounded-full blur-xl md:blur-2xl opacity-40 md:opacity-40" />
+              <div className="md:w-32 md:h-32 w-20 h-20 absolute -right-10 -bottom-10 bg-gradient-to-r from-gold to-purple rounded-full blur-xl md:blur-2xl opacity-40 md:opacity-20" />
+
               <motion.div
                 className="absolute text-gold2 -top-1 -right-2 rotate-90 w-16 h-16 md:h-24 md:w-24 opacity-40"
                 animate={{ rotate: [88, 90, 92, 90, 88] }}
