@@ -49,6 +49,16 @@ const About = () => {
                 maskRepeat: "no-repeat",
               }}
             >
+              <div className="noise-overlay" />
+            <div className="absolute bottom-1 left-3">
+                <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
+                  ✨ I occassionaly read Chinese Fantasy in my spare time {';)'}
+                </div>
+              </div>
+              <div className="absolute inset-0 flex justify-center items-center">
+                <div className="md:w-32 md:h-32 w-20 h-20 bg-gold rounded-full  md:blur-xl opacity-50" />
+                <div className="md:w-32 md:h-32 w-20 h-20 bg-purple2 rounded-full md:blur-xl opacity-50 md:ml-16 ml-3" />
+              </div>
               <motion.div
                 className="absolute text-gold2 -top-1 -right-2 rotate-90 w-16 h-16 md:h-24 md:w-24 opacity-40"
                 animate={{ rotate: [88, 90, 92, 90, 88] }}
