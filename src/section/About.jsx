@@ -41,7 +41,7 @@ const About = () => {
 
             {/* Front card with mask cut-out */}
             <div
-              className="relative picture bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
+              className="relative  bg-cardColor rounded-2xl shadow flex flex-col p-5 h-full text-text"
               style={{
                 WebkitMaskImage: `radial-gradient( circle 70px at ${pos.x}px ${pos.y}px, transparent 99%, black 100%)`,
                 WebkitMaskRepeat: "no-repeat",
