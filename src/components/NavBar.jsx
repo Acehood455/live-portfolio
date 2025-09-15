@@ -225,7 +225,6 @@ export default function Navbar({ inNotch = false }) {
                           Z
                         "
                       />
-
                     </clipPath>
                   </defs>
                   <foreignObject

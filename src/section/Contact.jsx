@@ -211,7 +211,7 @@ const Contact = () => {
           {/* Email */}
           <a
             href="mailto:acetaiwo8@gmail.com"
-            target="_blank"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#EA4335] hover:bg-[#EA4335]/10 duration-300"
