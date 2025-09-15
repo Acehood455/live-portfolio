@@ -17,7 +17,7 @@ const About = () => {
       <motion.div 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }} className="py-5 md:py-10"
+        viewport={{ once: false, amount: 0.3 }} className="py-5 md:py-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-11 gap-2">
           {/* About Me Text */}
@@ -112,60 +112,65 @@ const About = () => {
           >
             <div className="columns-2 md:columns-3 gap-2 space-y-4">
               {certificates.map((cert, i) => (
-                <motion.a
+                <motion.div 
                   key={cert.id}
                   custom={i}
                   variants={fadeInUp}
-                  href={cert.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative break-inside-avoid picture bg-cardColor rounded-2xl transition-all duration-300 
-                            hover:scale-[1.02] overflow-hidden flex flex-col p-2
-                            shadow-[-3px_-3px_8px_rgba(223,153,255,0.2)] hover:shadow-[-4px_-4px_10px_rgba(223,153,255,0.25)]"
+                  className=""
                 >
-                  {/* Image with zoom on hover */}
-                  <div className="relative overflow-hidden rounded-lg">
-                    <img
-                      src={cert.img}
-                      alt={`${cert.title} Certificate`}
-                      className="w-full transition-transform duration-500 group-hover:scale-105"
-                    />
-
+                  <a
                     
-                  </div>
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative break-inside-avoid picture bg-cardColor rounded-2xl transition-all duration-300 
+                              hover:scale-[1.02] overflow-hidden flex flex-col p-2
+                              shadow-[-3px_-3px_8px_rgba(223,153,255,0.2)] hover:shadow-[-4px_-4px_10px_rgba(223,153,255,0.25)]"
+                  >
+                    {/* Image with zoom on hover */}
+                    <div className="relative overflow-hidden rounded-lg">
+                      <img
+                        src={cert.img}
+                        alt={`${cert.title} Certificate`}
+                        className="w-full transition-transform duration-500 group-hover:scale-105"
+                      />
 
-                  {/* Title */}
-                  <h4 className="text-xs md:text-lg text-text font-semibold pb-6 mt-2 z-10">
-                    {cert.title}
-                  </h4>
-
-                  {/* View link */}
-                  <div className="absolute bottom-0 right-0 text-sm bg-body px-2 py-1 
-                                rounded-tl-2xl rounded-br-2xl text-gold2 shadow transition-transform duration-300">
-                    <span className="relative font-bold z-10 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      View →
-                    </span>
-
-                    {/* Corner masks - top right and bottom left */}
-                    <div className="absolute -top-3 right-0 w-3 h-3 bg-body"/>
-                    <div className="absolute -top-3 right-0 w-3 h-3 bg-cardColor rounded-br-2xl">
-                      <div className="pictureElements" />
+                      
                     </div>
 
-                    <div className="absolute bottom-0 -left-3 w-3 h-3 bg-body"/>
-                    <div className="absolute bottom-0 -left-3 w-3 h-3 bg-cardColor rounded-br-2xl">
-                      <div className="pictureElements" />
-                    </div>
-                  </div>
+                    {/* Title */}
+                    <h4 className="text-xs md:text-lg text-text font-semibold pb-6 mt-2 z-10">
+                      {cert.title}
+                    </h4>
 
-                  {/* Shimmer sweep */}
-                  <span className="pointer-events-none absolute inset-0 
-                      before:content-[''] before:absolute before:inset-0 
-                      before:bg-gradient-to-r before:from-transparent before:via-purple4/10 before:to-transparent 
-                      before:translate-x-[-100%] before:skew-x-12
-                      before:transition-transform before:duration-700 group-hover:before:translate-x-[100%]" 
-                  />
-                </motion.a>
+                    {/* View link */}
+                    <div className="absolute bottom-0 right-0 text-sm bg-body px-2 py-1 
+                                  rounded-tl-2xl rounded-br-2xl text-gold2 shadow transition-transform duration-300">
+                      <span className="relative font-bold z-10 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        View →
+                      </span>
+
+                      {/* Corner masks - top right and bottom left */}
+                      <div className="absolute -top-3 right-0 w-3 h-3 bg-body"/>
+                      <div className="absolute -top-3 right-0 w-3 h-3 bg-cardColor rounded-br-2xl">
+                        <div className="pictureElements" />
+                      </div>
+
+                      <div className="absolute bottom-0 -left-3 w-3 h-3 bg-body"/>
+                      <div className="absolute bottom-0 -left-3 w-3 h-3 bg-cardColor rounded-br-2xl">
+                        <div className="pictureElements" />
+                      </div>
+                    </div>
+
+                    {/* Shimmer sweep */}
+                    <span className="pointer-events-none absolute inset-0 
+                        before:content-[''] before:absolute before:inset-0 
+                        before:bg-gradient-to-r before:from-transparent before:via-purple4/10 before:to-transparent 
+                        before:translate-x-[-100%] before:skew-x-12
+                        before:transition-transform before:duration-700 group-hover:before:translate-x-[100%]" 
+                    />
+                  </a>
+                </motion.div>
 
               ))}
             </div>

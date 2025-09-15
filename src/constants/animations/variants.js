@@ -34,6 +34,17 @@ export const textVariant = {
     },
   };
   
+export const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // delay between each card
+        delayChildren: 0.2,   // wait before first one
+      },
+    },
+  };
+
 export const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 1) => ({
