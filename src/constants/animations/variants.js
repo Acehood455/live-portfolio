@@ -39,8 +39,7 @@ export const staggerContainer = {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // delay between each card
-        delayChildren: 0.2,   // wait before first one
+        staggerChildren: 0.3,
       },
     },
   };

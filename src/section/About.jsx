@@ -17,7 +17,7 @@ const About = () => {
       <motion.div 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} className="py-5 md:py-10"
+        viewport={{ once: false, amount: 0.4 }} className="py-5 md:py-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-11 gap-2">
           {/* About Me Text */}
