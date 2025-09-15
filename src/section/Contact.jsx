@@ -132,7 +132,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="How would you like to be addressed?"
             required
-            className="w-full p-3 rounded-lg border text-text bg-background text-sm"
+            className="w-full p-3 rounded-lg border-2 border-text text-text bg-background text-sm"
           />
         </div>
 
@@ -148,7 +148,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="What’s your email address?"
             required
-            className="w-full p-3 rounded-lg border text-text bg-background text-sm"
+            className="w-full p-3 rounded-lg border-2 border-text text-text bg-background text-sm"
           />
         </div>
 
@@ -164,7 +164,7 @@ const Contact = () => {
             placeholder="How can I help you?"
             rows="4"
             required
-            className="w-full p-3 rounded-lg text-text border bg-background text-sm"
+            className="w-full p-3 rounded-lg text-text border-2 border-text bg-background text-sm"
           />
         </div>
 
@@ -210,7 +210,8 @@ const Contact = () => {
         <div className="grid grid-cols-1 gap-2 md:gap-[6px]">
           {/* Email */}
           <a
-            href="mailto:you@example.com"
+            href="mailto:acetaiwo8@gmail.com"
+            target="_blank"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#EA4335] hover:bg-[#EA4335]/10 duration-300"
@@ -218,13 +219,14 @@ const Contact = () => {
             <FaEnvelope className="text-[#EA4335] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">Email</span>
-              <span className="text-xs opacity-70">you@example.com</span>
+              <span className="text-xs opacity-70">acetaiwo8@gmail.com</span>
             </div>
           </a>
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/2348136546116"
+            target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#25D366] hover:bg-[#25D366]/10 duration-300"
@@ -232,13 +234,14 @@ const Contact = () => {
             <FaWhatsapp className="text-[#25D366] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">WhatsApp</span>
-              <span className="text-xs opacity-70">+123 456 7890</span>
+              <span className="text-xs opacity-70">+234 813 6546 116</span>
             </div>
           </a>
 
           {/* Telegram */}
           <a
-            href="https://t.me/username"
+            href="https://t.me/acetaiwo"
+            target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#229ED9] hover:bg-[#229ED9]/10 duration-300"
@@ -246,13 +249,14 @@ const Contact = () => {
             <FaTelegram className="text-[#229ED9] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">Telegram</span>
-              <span className="text-xs opacity-70">@username</span>
+              <span className="text-xs opacity-70">@acetaiwo</span>
             </div>
           </a>
 
           {/* Twitter */}
           <a
-            href="https://x.com/username"
+            href="https://x.com/acetaiwo"
+            target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-black hover:bg-black/10 duration-300 "
@@ -260,13 +264,14 @@ const Contact = () => {
             <FaXTwitter className="text-black text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">X</span>
-              <span className="text-xs opacity-70">@username</span>
+              <span className="text-xs opacity-70">@AceTaiwo</span>
             </div>
           </a>
 
           {/* GitHub */}
           <a
-            href="https://github.com/username"
+            href="https://github.com/Acehood455"
+            target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
                        hover:translate-x-3 hover:scale-[1.02]  hover:border hover:border-[#333] hover:bg-[#333]/10 duration-300"
@@ -274,7 +279,7 @@ const Contact = () => {
             <FaGithub className="text-[#333] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">GitHub</span>
-              <span className="text-xs opacity-70">username</span>
+              <span className="text-xs opacity-70">Acehood455</span>
             </div>
           </a>
         </div>

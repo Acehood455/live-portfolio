@@ -127,7 +127,7 @@ const About = () => {
                   </h4>
 
                   {/* View link */}
-                  <p className="absolute bottom-0 right-0 text-sm bg-body px-2 py-1 
+                  <div className="absolute bottom-0 right-0 text-sm bg-body px-2 py-1 
                                 rounded-tl-2xl rounded-br-2xl text-gold2 shadow transition-transform duration-300">
                     <span className="relative font-bold z-10 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       View →
@@ -143,7 +143,7 @@ const About = () => {
                     <div className="absolute bottom-0 -left-3 w-3 h-3 bg-cardColor rounded-br-2xl">
                       <div className="pictureElements" />
                     </div>
-                  </p>
+                  </div>
 
                   {/* Shimmer sweep */}
                   <span className="pointer-events-none absolute inset-0 

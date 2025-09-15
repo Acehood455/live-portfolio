@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Left: copyright */}
         <p className="text-sm opacity-70 text-center md:text-left">
-          © {new Date().getFullYear()} Ace Taiwo. All rights reserved.
+          © {new Date().getFullYear()} <span className="text-purple4">Ace Taiwo.</span> All rights reserved.
         </p>
 
         {/* Middle: nav links (optional) */}
@@ -55,13 +55,13 @@ const Footer = () => {
 
         {/* Right: social icons */}
         <div className="flex gap-4 text-lg">
-          <a href="https://github.com/username" target="_blank" className="hover:text-[#333] transition">
+          <a href="https://github.com/Acehood455" target="_blank" className="hover:text-[#333] z-10 transition">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/username" target="_blank" className="hover:text-[#0A66C2] transition">
+          <a href="https://linkedin.com/in/ace-taiwo-046a6b384" target="_blank" className="hover:text-[#0A66C2] z-10 transition">
             <FaLinkedin />
           </a>
-          <a href="https://x.com/username" target="_blank" className="hover:text-black transition">
+          <a href="https://x.com/acetaiwo" target="_blank" className="hover:text-black z-10 transition">
             <FaXTwitter />
           </a>
         </div>

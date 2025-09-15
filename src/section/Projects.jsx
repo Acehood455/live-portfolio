@@ -56,7 +56,7 @@ const Projects = () => {
           >
             {/* Gradient Card */}
             <div
-              className={`m-4 h-[85%] md:h-[85%] bg-gradient-to-br ${project.gradient} rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row gap-6`}
+              className={`m-4 h-[85%] md:h-[85%] z-20 bg-gradient-to-br ${project.gradient} rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row gap-6`}
             >
               {/* Video container */}
               <div className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden rounded-xl">
@@ -134,30 +134,35 @@ const Projects = () => {
         ))}
 
         {/* Navigation arrows (bottom-right) */}
-        <div className="absolute bottom-0 rounded-tl-2xl bg-body right-0 px-4 py-1 flex items-center gap-3 z-50">
+        <div className="absolute bottom-0 rounded-tl-2xl bg-body right-0 px-4 py-1 flex items-center gap-3 z-30">
           {/* Corner masks - top right and bottom left */}
-          <div className="absolute -top-2 right-0 w-2 h-2 bg-body"/>
-          <div className="absolute -top-2 right-0 w-2 h-2 bg-cardColor rounded-br-2xl">
-            <div className="pictureElements" />
+          <div className="absolute -top-2 right-0 w-2 h-2 bg-body z-0"/>
+          <div className="absolute -top-2 right-0 w-2 h-2 bg-cardColor rounded-br-2xl z-0">
+            <div className="pictureElements z-0" />
           </div>
 
           <div className="absolute bottom-0 -left-2 w-2 h-2 bg-body"/>
           <div className="absolute bottom-0 -left-2 w-2 h-2 bg-cardColor rounded-br-2xl">
             <div className="pictureElements" />
           </div>
+
           <button
-            className="custom-prev inline-flex items-center justify-center w-8 h-8 rounded-full border border-cardColor bg-background text-text 
+            className="custom-prev inline-flex items-center justify-center 
+                      size-4 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)] 
+                      rounded-full border border-cardColor bg-background text-text 
                       hover:scale-95 duration-300 transition
                       disabled:opacity-60 disabled:scale-90 disabled:cursor-not-allowed"
           >
-            <FaArrowLeft className='size-4'/>
+            <FaArrowLeft className='size-4 md:size-[clamp(1.3rem,1.3vw+0.75rem,3.5rem)]'/>
           </button>
           <button
-            className="custom-next inline-flex items-center justify-center w-8 h-8 rounded-full border border-cardColor bg-background text-text 
+            className="custom-next inline-flex items-center justify-center 
+                      size-4 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)]
+                      rounded-full border border-cardColor bg-background text-text 
                       hover:scale-95 duration-300 transition
                       disabled:opacity-60 disabled:scale-90 disabled:cursor-not-allowed"
           >
-            <FaArrowRight className='size-4'/>
+            <FaArrowRight className='size-4 md:size-[clamp(1.3rem,1.3vw+0.75rem,3.5rem)]'/>
           </button>
         </div>
       </Swiper>

@@ -1,4 +1,4 @@
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaBrain } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer } from "react-icons/si";
 
 export const certificates = [
@@ -200,6 +200,12 @@ export const techConfig = {
     badge: "border-indigo-600 bg-indigo-600/50", 
     iconColor: "text-indigo-600", 
   },
+  AI: {
+    icon: FaBrain,
+    badge: "border-purple3 bg-purple3/30",
+    iconColor: "text-purple3",
+  },
+  
 };
 
 export const projects = [
@@ -211,7 +217,7 @@ export const projects = [
     stack: "Fullstack",
     video: "/videos/portfolio/test.mp4",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
+    tech: ["Next.js", "Tailwind", "Framer Motion", "AI"],
     live: "https://your-portfolio.com",
     github: "https://github.com/yourname/portfolio",
   },
@@ -223,7 +229,7 @@ export const projects = [
     stack: "MERN",
     video: "/videos/test.mp4",
     gradient: "from-green-400 via-emerald-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    tech: ["React", "Node.js", "MongoDB", "Stripe", "AI"],
     live: "https://ecommerce-demo.com",
     github: "https://github.com/yourname/ecommerce",
   },
