@@ -105,9 +105,7 @@ const About = () => {
           </div>
 
           {/* Certificates Masonry */}
-          <motion.div
-            custom={4} // comes in after text
-            variants={fadeInUp}
+          <div
             className="md:col-span-7"
           >
             <div className="columns-2 md:columns-3 gap-2 space-y-4">
@@ -118,14 +116,14 @@ const About = () => {
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.3 }} 
-                  className=""
+                  viewport={{ once: false, amount: 0.2 }} 
+                  className="break-inside-avoid"
                 >
                   <a
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative break-inside-avoid picture bg-cardColor rounded-2xl transition-all duration-300 
+                    className="group relative picture bg-cardColor rounded-2xl transition-all duration-300 
                               hover:scale-[1.02] overflow-hidden flex flex-col p-2
                               shadow-[-3px_-3px_8px_rgba(223,153,255,0.2)] hover:shadow-[-4px_-4px_10px_rgba(223,153,255,0.25)]"
                   >
@@ -176,7 +174,7 @@ const About = () => {
 
               ))}
             </div>
-          </motion.div>
+          </div>
           
         </div>
       </motion.div>
