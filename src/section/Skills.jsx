@@ -34,7 +34,6 @@ const Skills = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0 }}
         className="text-text relative mt-3 md:mt-10 mx-auto 
                   max-w-[97%] md:max-w-[80%]  
                   columns-2 sm:columns-3 lg:columns-4 xl:columns-5 
@@ -42,14 +41,15 @@ const Skills = () => {
       >
         {skills.map((skill, i) => (
           <motion.div
-            custom={i}
+            key={skill.id}
             variants={fadeInUp}
-            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }} 
+            custom={i}
+            className="break-inside-avoid mb-5 inline-block w-full"
           >
-            <CardContainer
-              key={skill.id}
-              className="break-inside-avoid mb-5 inline-block w-full"
-            >
+            <CardContainer>
               <CardBody
                 className="relative py-4 px-3 rounded-2xl bg-cardColor2
                           shadow-md hover:shadow-xl transition-shadow

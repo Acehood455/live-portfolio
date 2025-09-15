@@ -116,10 +116,12 @@ const About = () => {
                   key={cert.id}
                   custom={i}
                   variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.3 }} 
                   className=""
                 >
                   <a
-                    
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
