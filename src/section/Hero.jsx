@@ -2,73 +2,21 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 import { TbNorthStar, TbFileDownload } from "react-icons/tb";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import WobblySphere from "../components/WobblySphere";
+import { textVariant, imageVariant, containerVariant, itemVariant } from "../constants/animations/variants"; 
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
-const NOTCH_X_START = 0; // 5% from left
-const NOTCH_X_END   = 0.63; // 60% across
-const NOTCH_Y       = 0.075; // 9% down from top (notch vertical size)
+const NOTCH_X_START = 0;
+const NOTCH_X_END   = 0.63; 
+const NOTCH_Y       = 0.075; 
 
 
-// === compute notch-derived positions once per render
-const NOTCH_RIGHT_PCT = NOTCH_X_END * 100;         // 63
-const NOTCH_MID_Y_PCT = (NOTCH_Y * 100) / 2;       // 3.75 (center of notch height)
-const GAP_FROM_NOTCH = 1.5;                          // % gap to the right of the notch
-const HERO_RIGHT_PADDING = 2;                      // % padding from hero's right edge
-
-const isDarkMode = true;
-
-const textVariant = {
-  hidden: { y: 20, opacity: 0},
-  visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-          duration: 0.8,
-          ease: 'easeOut',
-      },
-  },
-};
-
-const imageVariants = {
-  hidden: { x: 50, opacity: 0, },
-  visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-          duration: 1,
-          ease: 'easeOut',
-          delay: 0.5,
-      },
-  },
-};
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-      opacity: 1,
-      transition: {
-          staggerChildren: 0.2,
-          delayChildren: 0.3,
-      },
-  }, 
-};
-
-
-const itemVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut", 
-    },
-  },
-};
-
-
+// compute notch-derived positions once per render
+const NOTCH_RIGHT_PCT = NOTCH_X_END * 100;         
+const NOTCH_MID_Y_PCT = (NOTCH_Y * 100) / 2;     
+const GAP_FROM_NOTCH = 1.5;                       
+const HERO_RIGHT_PADDING = 2;
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -225,7 +173,12 @@ export default function Hero() {
       {/* Main Hero Content - Text and Image */}
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center md:justify-between px-6 md:px-14 py-20 md:min-h-screen gap-6 md:gap-2">
         {/* === Left: Hero Content === */}
-        <div className="flex flex-col justify-center items-start flex-1">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }} 
+          className="flex flex-col justify-center items-start flex-1">
           {/* Heading */}
           <div className="flex items-center gap-2">
             <TbNorthStar size={17} className="text-purple2" />
@@ -234,7 +187,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p className="mt-2 text-3xl md:text-5xl font-extrabold max-w-2xl text-text">
+          <motion.p variants={textVariant} className="mt-2 text-3xl md:text-5xl font-extrabold max-w-2xl text-text">
             I build{" "}
             <span className="bg-gradient-to-r from-gold2 via-purple4 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
               scalable
@@ -244,17 +197,17 @@ export default function Hero() {
               modern
             </span>{" "}
             web apps — from intuitive frontends to robust backends.
-          </p>
+          </motion.p>
 
 
           {/* Intro */}
-          <p className="mt-2 text-base md:text-lg text-gray-400">
+          <motion.p variants={textVariant} className="mt-2 text-base md:text-lg text-gray-400">
             Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,  
             a developer from Nigeria passionate about building impactful digital products.
-          </p>
+          </motion.p>
 
           {/* CTA buttons */}
-          <div className="mt-2 md:mt-6 flex gap-2 md:gap-4">
+          <motion.div variants={itemVariant} className="mt-2 md:mt-6 flex gap-2 md:gap-4">
             <a
               href="#projects"
               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg bg-purple2 text-black font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
@@ -269,12 +222,17 @@ export default function Hero() {
               Resume
               <TbFileDownload className="text-text size-4 md:size-5" />
             </a>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
         
         {/* === Right: Hero Image === */}
-        <div className="flex-1 flex justify-center md:justify-end relative">
+        <motion.div
+          variants={imageVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }} 
+          className="flex-1 flex justify-center md:justify-end relative">
           {/* Animated Blob Behind */}
           <WobblySphere />
 
@@ -284,7 +242,7 @@ export default function Hero() {
             alt="Ace Taiwo"
             className="relative w-64 h-64 md:w-[50vw] md:h-[80vh] rounded-2xl object-cover shadow-lg z-10"
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* Glowing rotating div colors */}

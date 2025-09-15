@@ -3,6 +3,7 @@ import SectionTitle from '../components/SectionTitle'
 import { certificates } from '../constants'
 import { PiPaperclipHorizontalBold } from "react-icons/pi";
 import { motion } from "motion/react"
+import { fadeInUp } from '../constants/animations/variants';
 
 const About = () => {
   const [pos, setPos] = useState({ x: -999, y: -99 });
@@ -13,7 +14,11 @@ const About = () => {
     <section id="about" className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto">
       <SectionTitle title='About Me' outerColor='cardColor' innerColor='body' rounded='2xl' hasRoundDown={false} />
       
-      <div className="py-5 md:py-10">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }} className="py-5 md:py-10"
+      >
         <div className="grid grid-cols-1 md:grid-cols-11 gap-2">
           {/* About Me Text */}
           <div
@@ -71,8 +76,10 @@ const About = () => {
               </motion.div>
 
 
-              <div className="z-10">
-                <p className="mb-4 [text-indent:1.5rem] z-10">
+              <div 
+                className="z-10"
+              >
+                <motion.p custom={0} variants={fadeInUp} className="mb-4 [text-indent:1.5rem] z-10">
                   My name is {' '}
                   <span className="font-semibold bg-gradient-to-r from-purple2 via-gold2 to-accent bg-clip-text text-transparent">
                     Ace Taiwo
@@ -80,29 +87,35 @@ const About = () => {
                   , but I'm sure you've figured that out by now. 
                   I am a self-taught full-stack developer who enjoys coding. I love building clean, responsive, 
                   and user-friendly applications; what real developer doesn't?
-                </p>
-                <p className="mb-4 z-10">
+                </motion.p>
+                <motion.p custom={1} variants={fadeInUp} className="mb-4 z-10">
                   I started my coding journey by exploring online resources and seemed to gain immense satisfaction with
                   turning ideas into real projects.
-                </p>
-                <p className="mb-4 z-10">
+                </motion.p>
+                <motion.p custom={2} variants={fadeInUp} className="mb-4 z-10">
                   So far 2 clients have trusted me with connecting them with a wider world and through these 
                   I've gained hands-on experience in creating layouts, solving real world challenges, 
                   and working with popular libraries.
-                </p>
-                <p className='z-10'>
+                </motion.p>
+                <motion.p custom={3} variants={fadeInUp} className='z-10'>
                   These are the certifications I have accrued on my journey so far.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
 
           {/* Certificates Masonry */}
-          <div className="md:col-span-7">
+          <motion.div
+            custom={4} // comes in after text
+            variants={fadeInUp}
+            className="md:col-span-7"
+          >
             <div className="columns-2 md:columns-3 gap-2 space-y-4">
-              {certificates.map((cert) => (
-                <a
+              {certificates.map((cert, i) => (
+                <motion.a
                   key={cert.id}
+                  custom={i}
+                  variants={fadeInUp}
                   href={cert.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -152,14 +165,14 @@ const About = () => {
                       before:translate-x-[-100%] before:skew-x-12
                       before:transition-transform before:duration-700 group-hover:before:translate-x-[100%]" 
                   />
-                </a>
+                </motion.a>
 
               ))}
             </div>
-          </div>
+          </motion.div>
           
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
