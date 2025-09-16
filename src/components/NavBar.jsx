@@ -34,46 +34,46 @@ export default function Navbar({ inNotch = false }) {
 
   const surfaceClasses = "z-50 transition-all duration-500 rounded-xl";
 
-  // Style logic
-  let style = {};
-  if (inNotch && notchRect && !scrolled) {
-    // Match notch anchor before scroll
-    style = {
-      position: "fixed",
-      top: `${notchRect.top}px`,
-      left: `${notchRect.left}px`,
-      width: `${notchRect.width}px`,
-      height: `${notchRect.height}px`,
-      backgroundColor: "#0d0b0f",
-      backdropFilter: "blur(0px)",
-      boxShadow: "none",
-      transition: "all 0.5s ease",
-    };
-  } 
-  else {
-    // Floating nav (desktop or mobile after scroll)
-    style = {
-      position: "fixed",
-      top: scrolled ? "0.5rem" : "1rem",
-      left: "50%",
-      transform: "translateX(-50%)",
-      width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
-      backgroundColor: scrolled 
-        && "rgba(40, 32, 44, 0.5)"  , 
-        // : "#0d0b0f",
-      backdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)",
-      WebkitBackdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)", // Safari fix
-      border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
-      boxShadow: scrolled
-        ? "0 8px 24px rgba(0,0,0,0.2)"
-        : "none",
-      // borderRadius: "1rem", // optional, softer edges
-      transition: "all 0.5s ease",
-      paddingTop: '0.15rem',
-      paddingBottom: '0.15rem',
-    };
-  }
-  
+  // // Style logic
+  // let style = {};
+  // if (inNotch && notchRect && !scrolled) {
+  //   // Match notch anchor before scroll
+  //   style = {
+  //     position: "fixed",
+  //     top: `${notchRect.top}px`,
+  //     left: `${notchRect.left}px`,
+  //     width: `${notchRect.width}px`,
+  //     height: `${notchRect.height}px`,
+  //     backgroundColor: "#0d0b0f",
+  //     backdropFilter: "blur(0px)",
+  //     boxShadow: "none",
+  //     transition: "all 0.5s ease",
+  //   };
+  // } 
+  // else {
+  //   // Floating nav (desktop or mobile after scroll)
+  //   style = {
+  //     position: "fixed",
+  //     top: scrolled ? "0.5rem" : "1rem",
+  //     left: "50%",
+  //     transform: "translateX(-50%)",
+  //     width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
+  //     backgroundColor: scrolled 
+  //       && "rgba(40, 32, 44, 0.5)"  , 
+  //       // : "#0d0b0f",
+  //     backdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)",
+  //     WebkitBackdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)", // Safari fix
+  //     border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
+  //     boxShadow: scrolled
+  //       ? "0 8px 24px rgba(0,0,0,0.2)"
+  //       : "none",
+  //     // borderRadius: "1rem", // optional, softer edges
+  //     transition: "all 0.5s ease",
+  //     paddingTop: '0.15rem',
+  //     paddingBottom: '0.15rem',
+  //   };
+  // }
+
   return (
     <>
       {/* 👻 Ghost anchor inside hero (only when inNotch) */}
@@ -85,11 +85,51 @@ export default function Navbar({ inNotch = false }) {
       )}
 
       <nav 
-        key={scrolled ? "floating" : "inNotch"} 
-        className={`${surfaceClasses}`} 
-        style={style}
+        className={`${surfaceClasses} overflow-hidden`} 
+        style={{
+          ...(inNotch && notchRect && !scrolled
+            ? {
+                // inNotch
+                position: "fixed",
+                top: `${notchRect.top}px`,
+                left: `${notchRect.left}px`,
+                width: `${notchRect.width}px`,
+                height: `${notchRect.height}px`,
+                backgroundColor: "#0d0b0f",
+                backdropFilter: "blur(0px)",
+                boxShadow: "none",
+                transition: "all 0.5s ease",
+              }
+            : {
+                // Floating
+                position: "fixed",
+                top: scrolled ? "0.5rem" : "1rem",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
+                backgroundColor: scrolled
+                  ? "rgba(40, 32, 44, 0.5)"
+                  : "transparent",
+                backdropFilter: scrolled
+                  ? "blur(14px) saturate(150%)"
+                  : "blur(0px)",
+                WebkitBackdropFilter: scrolled
+                  ? "blur(14px) saturate(150%)"
+                  : "blur(0px)",
+                border: scrolled
+                  ? "1px solid rgba(255, 255, 255, 0.15)"
+                  : "none",
+                boxShadow: scrolled
+                  ? "0 8px 24px rgba(0,0,0,0.2)"
+                  : "none",
+                transition: "all 0.5s ease",
+                paddingTop: "0.15rem",
+                paddingBottom: scrolled ? "0.15rem" : "0.20rem",
+              }),
+        }}
+      
       >
-        <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''}  flex items-center justify-between h-full w-full px-4`}>
+        <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''} flex items-center justify-between h-full w-full px-4`}>
           <div className="flex flex-col z-10">
             <a
               href="#"
