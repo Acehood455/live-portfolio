@@ -48,12 +48,12 @@ const Footer = () => {
         className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
       >
         {/* Left: copyright */}
-        <motion.p variants={itemVariant} className="text-sm opacity-70 text-center md:text-left">
+        <motion.p variants={itemVariant} className="text-sm opacity-70 text-center md:text-left z-10">
           © {new Date().getFullYear()} <span className="text-purple4">Ace Taiwo.</span> All rights reserved.
         </motion.p>
 
         {/* Middle: nav links (optional) */}
-        <motion.div variants={itemVariant} className="flex gap-4 text-sm opacity-80">
+        <motion.div variants={itemVariant} className="flex gap-4 text-sm opacity-80 z-10">
           <a href="#" className="hover:text-purple2 transition">Home</a>
           <a href="#about" className="hover:text-purple2 transition">About</a>
           <a href="#skills" className="hover:text-purple2 transition">Skills</a>
