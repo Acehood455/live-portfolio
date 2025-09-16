@@ -56,7 +56,8 @@ const About = () => {
             >
             <div className="absolute bottom-2 left-3">
                 <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
-                  ✨ I tinker with electronics in my spare time {';)'}
+                  ✨ I tinker with electronics in my spare time. 
+                  Constructing a power bank here, fixing up a pressing iron there. {';)'}
                 </div>
               </div>
               
