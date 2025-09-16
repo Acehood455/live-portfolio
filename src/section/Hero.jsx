@@ -4,7 +4,7 @@ import { TbNorthStar, TbFileDownload } from "react-icons/tb";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 import { motion } from "motion/react";
 import WobblySphere from "../components/WobblySphere";
-import { textVariant, imageVariant, containerVariant, itemVariant } from "../constants/animations/variants"; 
+import { textVariant, imageVariant, containerVariant, itemVariant, slideFromRight } from "../constants/animations/variants"; 
 
 // These match the numbers in your clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0;
@@ -32,7 +32,7 @@ export default function Hero() {
     <section id='hero' className="relative min-h-screen mt-3 md:mt-4 w-full max-w-[95%] md:max-w-[97%] mx-auto">
       {/* Mobile */}
       {/* Masking the awkward top radius */}
-      <div className="md:hidden bg-cardColor picture w-full h-7 rounded-t-2xl z-10"></div>
+      <div className="md:hidden picture bg-cardColor picture w-full h-9 rounded-t-2xl z-10"></div>
       <svg
         className="absolute inset-0 w-full h-full -z-10 md:hidden"
         preserveAspectRatio="none"
@@ -68,7 +68,7 @@ export default function Hero() {
         </defs>
 
         <foreignObject width="100%" height="100%" clipPath="url(#hero__mobile)">
-          <div className="w-full h-full bg-cardColor picture" />
+          <div className="w-full h-full bg-cardColor picture" /> 
         </foreignObject>
       </svg>
       
@@ -125,8 +125,8 @@ export default function Hero() {
         style={{
           left: `${NOTCH_X_START * 100}%`,
           width: `${(NOTCH_X_END - NOTCH_X_START) * 100}%`,
-          top: `0%`,                         // place at very top of hero container
-          height: `${NOTCH_Y * 100}%`,      // height equals notch vertical size
+          top: `0%`,                         
+          height: `${NOTCH_Y * 100}%`,      
           pointerEvents: "auto",
         }}
       >

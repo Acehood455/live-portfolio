@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { containerVariant, itemVariant } from "../constants/animations/variants";
 
 const FooterDivider = () => {
   return (
@@ -39,22 +40,28 @@ const Footer = () => {
     <footer className="bg-cardColor picture text-text py-6 mt-1 md:mt-3 relative rounded-b-2xl">
         <FooterDivider />
         
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
         {/* Left: copyright */}
-        <p className="text-sm opacity-70 text-center md:text-left">
+        <motion.p variants={itemVariant} className="text-sm opacity-70 text-center md:text-left">
           © {new Date().getFullYear()} <span className="text-purple4">Ace Taiwo.</span> All rights reserved.
-        </p>
+        </motion.p>
 
         {/* Middle: nav links (optional) */}
-        <div className="flex gap-4 text-sm opacity-80">
+        <motion.div variants={itemVariant} className="flex gap-4 text-sm opacity-80">
           <a href="#" className="hover:text-purple2 transition">Home</a>
           <a href="#about" className="hover:text-purple2 transition">About</a>
           <a href="#skills" className="hover:text-purple2 transition">Skills</a>
           <a href="#projects" className="hover:text-purple2 transition">Projects</a>
-        </div>
+        </motion.div>
 
         {/* Right: social icons */}
-        <div className="flex gap-4 text-lg">
+        <motion.div variants={itemVariant} className="flex gap-4 text-lg">
           <a href="https://github.com/Acehood455" target="_blank" className="hover:text-[#333] z-10 transition">
             <FaGithub />
           </a>
@@ -64,8 +71,8 @@ const Footer = () => {
           <a href="https://x.com/acetaiwo" target="_blank" className="hover:text-black z-10 transition">
             <FaXTwitter />
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 };

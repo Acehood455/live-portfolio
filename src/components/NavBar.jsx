@@ -34,7 +34,7 @@ export default function Navbar({ inNotch = false }) {
 
   const surfaceClasses = "z-50 transition-all duration-500 rounded-xl";
 
-  // ✨ Style logic
+  // Style logic
   let style = {};
   if (inNotch && notchRect && !scrolled) {
     // Match notch anchor before scroll
@@ -84,7 +84,11 @@ export default function Navbar({ inNotch = false }) {
         />
       )}
 
-      <nav className={`${surfaceClasses}`} style={style}>
+      <nav 
+        key={scrolled ? "floating" : "inNotch"} 
+        className={`${surfaceClasses}`} 
+        style={style}
+      >
         <div className={`${inNotch && notchRect && !scrolled ? 'picture rounded-xl' : ''}  flex items-center justify-between h-full w-full px-4`}>
           <div className="flex flex-col z-10">
             <a
@@ -106,8 +110,6 @@ export default function Navbar({ inNotch = false }) {
               </span>
             </div>
           </div>
-          
-          
 
           <ul className={`flex text-[clamp(1rem,1vw+0.5rem,2rem)] items-center z-10 ${inNotch ? 'space-x-7' : 'space-x-10'}`}>
             {links.map((section) => (

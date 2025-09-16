@@ -4,6 +4,8 @@ import { FaPaperPlane, FaEnvelope, FaWhatsapp, FaTelegram, FaGithub, FaXTwitter 
 import { LiaConnectdevelop } from "react-icons/lia";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
+import { motion } from "motion/react";
+import { containerVariant, slideFromLeft, slideFromRight } from "../constants/animations/variants";
 
 
 const AnimatedNoiseGradient = () => {
@@ -108,19 +110,27 @@ const Contact = () => {
   />
 
   {/* Bento Grid */}
-  <div className="grid md:grid-cols-2 gap-4 h-full p-4 mt-5 rounded-2xl items-stretch">
+  <motion.div 
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.2 }} 
+    className="grid md:grid-cols-2 gap-4 h-full p-4 mt-5 rounded-2xl items-stretch"
+  >
     {/* Left - Contact Form */}
-    <div className="flex flex-col justify-center p-4 bg-cardColor2 rounded-xl shadow-lg z-10">
-      <h2 className="text-text flex items-center gap-2 text-lg mb-4 font-semibold">
+    <motion.div 
+      variants={containerVariant}
+      className="flex flex-col justify-center p-4 bg-cardColor2 rounded-xl shadow-lg z-10"
+    >
+      <motion.h2 variants={slideFromLeft} className="text-text flex items-center gap-2 text-lg mb-4 font-semibold">
         <LiaConnectdevelop size={12} className="text-purple2" />
         Lets Connect
-      </h2>
-      <form
+      </motion.h2>
+      <motion.form
         ref={formRef}
         onSubmit={handleSubmit}
         className="w-full flex flex-col gap-4"
       >
-        <div>
+        <motion.div variants={slideFromLeft}>
           <label htmlFor="name" className="block text-text mb-1 text-base font-medium">
             Your Name
           </label>
@@ -134,9 +144,9 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-lg border-2 border-text text-text bg-background text-sm"
           />
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={slideFromLeft}>
           <label htmlFor="email" className="block text-text mb-1 text-base font-medium">
             Your Email
           </label>
@@ -150,9 +160,9 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-lg border-2 border-text text-text bg-background text-sm"
           />
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={slideFromLeft}>
           <label htmlFor="message" className="block text-text mb-1 text-base font-medium">
             Your Message
           </label>
@@ -166,15 +176,15 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-lg text-text border-2 border-text bg-background text-sm"
           />
-        </div>
+        </motion.div>
 
         {success && (
-          <div className="p-2 rounded-lg border border-green-300 bg-green-100 text-green-700 text-xs font-medium animate-fade-in">
+          <motion.div variants={slideFromLeft} className="p-2 rounded-lg border border-green-300 bg-green-100 text-green-700 text-xs font-medium animate-fade-in">
             ✅ Message sent successfully! Thank you for reaching out. I would get back to you as soon as possible.
-          </div>
+          </motion.div>
         )}
 
-        <button
+        <motion.button variants={slideFromLeft}
           type="submit"
           disabled={loading}
           className="inline-flex items-center justify-center gap-2 px-3 py-2 
@@ -189,27 +199,34 @@ const Contact = () => {
               <span>Send</span>
             </>
           )}
-        </button>
-      </form>
-    </div>
+        </motion.button>
+      </motion.form>
+    </motion.div>
 
     {/* Right - Image + Alternative Contacts */}
-    <div className="flex flex-col gap-3 h-full">
+    <motion.div 
+      variants={containerVariant} 
+      className="flex flex-col gap-3 h-full"
+    >
       {/* Top Image - strict 1/4 height */}
-      <div className="bg-cardColor2 rounded-xl flex items-center justify-center shadow-md p-2 h-1/4 min-h-[100px] relative">
+      <motion.div variants={slideFromRight} className="bg-cardColor2 rounded-xl flex items-center justify-center shadow-md p-2 h-1/4 min-h-[100px] relative">
         <AnimatedNoiseGradient />
-      </div>
+      </motion.div>
 
       {/* Contacts - 3/4 height */}
-      <div className="bg-cardColor2 rounded-xl p-3 flex flex-col shadow-md h-full md:h-3/4 z-10">
-        <h3 className="text-sm flex font-semibold text-text items-center gap-2 mb-2 text-center">
+      <motion.div 
+        variants={containerVariant} 
+        className="bg-cardColor2 rounded-xl p-3 flex flex-col shadow-md h-full md:h-3/4 z-10"
+      >
+        <motion.h3 variants={slideFromRight} className="text-sm flex font-semibold text-text items-center gap-2 mb-2 text-center">
           <LiaConnectdevelop size={12} className="text-purple2" />
           Want a more familiar form of contact?
-        </h3>
+        </motion.h3>
 
         <div className="grid grid-cols-1 gap-2 md:gap-[6px]">
           {/* Email */}
-          <a
+          <motion.a 
+            variants={slideFromRight}
             href="mailto:acetaiwo8@gmail.com"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
@@ -221,10 +238,11 @@ const Contact = () => {
               <span className="font-medium text-sm">Email</span>
               <span className="text-xs opacity-70">acetaiwo8@gmail.com</span>
             </div>
-          </a>
+          </motion.a>
 
           {/* WhatsApp */}
-          <a
+          <motion.a 
+            variants={slideFromRight}
             href="https://wa.me/2348136546116"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
@@ -236,10 +254,11 @@ const Contact = () => {
               <span className="font-medium text-sm">WhatsApp</span>
               <span className="text-xs opacity-70">+234 813 6546 116</span>
             </div>
-          </a>
+          </motion.a>
 
           {/* Telegram */}
-          <a
+          <motion.a 
+            variants={slideFromRight}
             href="https://t.me/acetaiwo"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
@@ -251,10 +270,11 @@ const Contact = () => {
               <span className="font-medium text-sm">Telegram</span>
               <span className="text-xs opacity-70">@acetaiwo</span>
             </div>
-          </a>
+          </motion.a>
 
           {/* Twitter */}
-          <a
+          <motion.a 
+            variants={slideFromRight}
             href="https://x.com/acetaiwo"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
@@ -266,10 +286,11 @@ const Contact = () => {
               <span className="font-medium text-sm">X</span>
               <span className="text-xs opacity-70">@AceTaiwo</span>
             </div>
-          </a>
+          </motion.a>
 
           {/* GitHub */}
-          <a
+          <motion.a 
+            variants={slideFromRight}
             href="https://github.com/Acehood455"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
@@ -281,11 +302,11 @@ const Contact = () => {
               <span className="font-medium text-sm">GitHub</span>
               <span className="text-xs opacity-70">Acehood455</span>
             </div>
-          </a>
+          </motion.a>
         </div>
-      </div>
-    </div>
-  </div>
+      </motion.div>
+    </motion.div>
+  </motion.div>
 
   <Footer />
 </section>

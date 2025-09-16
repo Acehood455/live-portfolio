@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { projects, techConfig } from "../constants";
+import { motion } from "motion/react";
+import { childVariants, containerVariant, staggerchildVariantsContainer } from "../constants/animations/variants";
 
 
 const Projects = () => {
@@ -55,11 +57,15 @@ const Projects = () => {
             className="!h-full flex items-center justify-center"
           >
             {/* Gradient Card */}
-            <div
+            <motion.div
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }} 
               className={`m-4 h-[85%] md:h-[85%] z-20 bg-gradient-to-br ${project.gradient} rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row gap-6`}
             >
               {/* Video container */}
-              <div className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden rounded-xl">
+              <motion.div variants={childVariants} className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden rounded-xl">
                 <span className="absolute uppercase top-2 left-2 border border-gray-400 bg-gray-200/50 text-xs md:text-sm font-semibold px-3 py-1 rounded-full text-background z-10">
                   {project.stack}
                 </span>
@@ -71,15 +77,21 @@ const Projects = () => {
                   playsInline
                   className="w-full h-full object-cover rounded-xl"
                 />
-              </div>
+              </motion.div>
 
               {/* Content container */}
-              <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col px-3 gap-1 md:gap-4 text-background justify-center overflow-y-auto">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="text-sm font-normal md:text-base opacity-90">{project.description}</p>
+              <motion.div 
+                variants={staggerchildVariantsContainer}
+                className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col px-3 gap-1 md:gap-4 text-background justify-center overflow-y-auto"
+              >
+                <motion.h3 variants={childVariants} className="text-2xl font-bold">{project.title}</motion.h3>
+                <motion.p variants={childVariants} className="text-sm font-normal md:text-base opacity-90">{project.description}</motion.p>
 
                 {/* Tech badges */}
-                <div className="flex flex-wrap gap-2">
+                <motion.div 
+                  variants={childVariants} 
+                  className="flex flex-wrap gap-2"
+                >
                   {project.tech.map((tech) => {
                         const { icon: Icon, badge, iconColor } = techConfig[tech] || {
                       icon: null,
@@ -95,10 +107,10 @@ const Projects = () => {
                       </span>
                     );
                   })}
-                </div>
+                </motion.div>
 
                 {/* Buttons */}
-                <div className="flex gap-4 mt-2">
+                <motion.div variants={childVariants} className="flex gap-4 mt-2">
                   <a
                     href={project.live}
                     target="_blank"
@@ -127,9 +139,9 @@ const Projects = () => {
                   >
                     Repo <FaGithub size={16} />
                   </a>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </SwiperSlide>
         ))}
 
