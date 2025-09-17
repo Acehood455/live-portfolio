@@ -160,7 +160,7 @@ const Projects = () => {
 
           <button
             className="custom-prev inline-flex items-center justify-center 
-                      size-4 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)] 
+                      size-8 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)] 
                       rounded-full border border-cardColor bg-background text-text 
                       hover:scale-95 duration-300 transition
                       disabled:opacity-60 disabled:scale-90 disabled:cursor-not-allowed"
@@ -169,7 +169,7 @@ const Projects = () => {
           </button>
           <button
             className="custom-next inline-flex items-center justify-center 
-                      size-4 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)]
+                      size-8 md:size-[clamp(2.6rem,2.6vw+1.5rem,7rem)]
                       rounded-full border border-cardColor bg-background text-text 
                       hover:scale-95 duration-300 transition
                       disabled:opacity-60 disabled:scale-90 disabled:cursor-not-allowed"
