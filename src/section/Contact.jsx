@@ -23,7 +23,7 @@ const AnimatedNoiseGradient = () => {
         style={{
           zIndex: 10,
           opacity: 1,           
-          mixBlendMode: "multiply" // experiment: multiply, overlay, soft-light
+          mixBlendMode: "multiply" 
         }}
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
@@ -88,7 +88,7 @@ const Contact = () => {
       setForm({ name: "", email: "", message: "" });
       setSuccess(true);
 
-      setTimeout(() => setSuccess(false), 20000); // hide success after 5s
+      setTimeout(() => setSuccess(false), 20000); // hide success after 20s
     } catch (error) {
       console.error("EmailJS Error:", error);
     } finally {
@@ -99,7 +99,7 @@ const Contact = () => {
   return (
     <section
   id="contact"
-  className="relative picture bg-cardColor min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto mb-5 rounded-b-2xl"
+  className="relative picture bg-cardColor w-full max-w-[95%] md:max-w-[97%] mx-auto mb-5 rounded-b-2xl"
 >
   <SectionTitle
     title="Contact"
@@ -227,7 +227,7 @@ const Contact = () => {
           {/* Email */}
           <motion.a 
             variants={slideFromRight}
-            href="mailto:acetaiwo8@gmail.com"
+            href="mailto:hey@acetaiwo.com"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
@@ -236,7 +236,7 @@ const Contact = () => {
             <FaEnvelope className="text-[#EA4335] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">Email</span>
-              <span className="text-xs opacity-70">acetaiwo8@gmail.com</span>
+              <span className="text-xs opacity-70">hey@acetaiwo.com</span>
             </div>
           </motion.a>
 
@@ -279,9 +279,9 @@ const Contact = () => {
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
-                       hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-black hover:bg-black/10 duration-300 "
+                       hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-white hover:bg-white/10 duration-300 "
           >
-            <FaXTwitter className="text-black text-lg" />
+            <FaXTwitter className="text-white text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">X</span>
               <span className="text-xs opacity-70">@AceTaiwo</span>
@@ -295,9 +295,9 @@ const Contact = () => {
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
-                       hover:translate-x-3 hover:scale-[1.02]  hover:border hover:border-[#333] hover:bg-[#333]/10 duration-300"
+                       hover:translate-x-3 hover:scale-[1.02]  hover:border hover:border-slate-300 hover:bg-slate-300/10 duration-300"
           >
-            <FaGithub className="text-[#333] text-lg" />
+            <FaGithub className="text-slate-300 text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">GitHub</span>
               <span className="text-xs opacity-70">Acehood455</span>

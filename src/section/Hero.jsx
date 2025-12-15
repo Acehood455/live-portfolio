@@ -5,8 +5,9 @@ import { RiArrowDownDoubleFill } from "react-icons/ri";
 import { motion } from "motion/react";
 import WobblySphere from "../components/WobblySphere";
 import { textVariant, imageVariant, containerVariant, itemVariant, slideFromRight } from "../constants/animations/variants"; 
+import { FaGithub } from "react-icons/fa";
 
-// These match the numbers in your clipPath (objectBoundingBox coords)
+// These match the numbers in clipPath (objectBoundingBox coords)
 const NOTCH_X_START = 0;
 const NOTCH_X_END   = 0.63; 
 const NOTCH_Y       = 0.075; 
@@ -153,6 +154,20 @@ export default function Hero() {
           Contact Me
         </a>
 
+        {/* GitHub icon */}
+        <a
+          href="https://github.com/Acehood455"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+          className="inline-flex items-center justify-center 
+                    text-text hover:text-text/90
+                    transition duration-100
+                    hover:scale-105 hover:-translate-y-0.5"
+        >
+          <FaGithub className="text-[clamp(1.2rem,1.4vw+0.5rem,2rem)]" />
+        </a>
+
         {/* Purple dot + text */}
         <div className="flex items-center gap-2">
           <div className="relative flex items-center justify-center">
@@ -183,27 +198,27 @@ export default function Hero() {
           <div className="flex items-center gap-2">
             <TbNorthStar size={17} className="text-purple2" />
             <h1 className="uppercase tracking-widest text-sm md:text-sm font-medium text-text leading-snug">
-              Full Stack Developer
+              Full-Stack Developer
             </h1>
           </div>
 
           <motion.p variants={textVariant} className="mt-2 text-3xl md:text-5xl font-extrabold max-w-2xl text-text">
-            I build{" "}
+            I design and build{" "}
             <span className="bg-gradient-to-r from-gold2 via-purple4 to-accent bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
-              scalable
+              scalable,
             </span>
-            ,{" "}
+            {" "}
             <span className="bg-gradient-to-r from-accent via-gold2 to-purple4 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
               modern
             </span>{" "}
-            web apps — from intuitive frontends to robust backends.
+            web apps that solve real problems
           </motion.p>
 
 
           {/* Intro */}
           <motion.p variants={textVariant} className="mt-2 text-base md:text-lg text-gray-400">
             Hi, I'm <span className="font-semibold text-text">Ace Taiwo 👋</span>,  
-            a developer from Nigeria passionate about building impactful digital products.
+            a developer from Nigeria who enjoys turning ideas into reliable digital products.
           </motion.p>
 
           {/* CTA buttons */}

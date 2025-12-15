@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { HiX } from "react-icons/hi";
 import { GiHamburger } from "react-icons/gi";
 import ScrollAwareWrapper from "./ScrollAwareWrapper";
+import { FaGithub } from "react-icons/fa";
 
 export default function Navbar({ inNotch = false }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,46 +34,6 @@ export default function Navbar({ inNotch = false }) {
   }, []);
 
   const surfaceClasses = "z-50 transition-all duration-500 rounded-xl";
-
-  // // Style logic
-  // let style = {};
-  // if (inNotch && notchRect && !scrolled) {
-  //   // Match notch anchor before scroll
-  //   style = {
-  //     position: "fixed",
-  //     top: `${notchRect.top}px`,
-  //     left: `${notchRect.left}px`,
-  //     width: `${notchRect.width}px`,
-  //     height: `${notchRect.height}px`,
-  //     backgroundColor: "#0d0b0f",
-  //     backdropFilter: "blur(0px)",
-  //     boxShadow: "none",
-  //     transition: "all 0.5s ease",
-  //   };
-  // } 
-  // else {
-  //   // Floating nav (desktop or mobile after scroll)
-  //   style = {
-  //     position: "fixed",
-  //     top: scrolled ? "0.5rem" : "1rem",
-  //     left: "50%",
-  //     transform: "translateX(-50%)",
-  //     width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
-  //     backgroundColor: scrolled 
-  //       && "rgba(40, 32, 44, 0.5)"  , 
-  //       // : "#0d0b0f",
-  //     backdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)",
-  //     WebkitBackdropFilter: scrolled ? "blur(14px) saturate(150%)" : "blur(0px)", // Safari fix
-  //     border: scrolled ? "1px solid rgba(255, 255, 255, 0.15)" : "none",
-  //     boxShadow: scrolled
-  //       ? "0 8px 24px rgba(0,0,0,0.2)"
-  //       : "none",
-  //     // borderRadius: "1rem", // optional, softer edges
-  //     transition: "all 0.5s ease",
-  //     paddingTop: '0.15rem',
-  //     paddingBottom: '0.15rem',
-  //   };
-  // }
 
   return (
     <>
@@ -164,11 +125,26 @@ export default function Navbar({ inNotch = false }) {
               </li>
             ))}
 
-            <li className={`block md:flex items-center gap-3  whitespace-nowrap md:${scrolled ? "block" : "hidden"}`}>
+            <li className={`block md:flex items-center gap-1  whitespace-nowrap md:${scrolled ? "block" : "hidden"}`}>
+
+              {/* GitHub icon */}
+              <a
+                href="https://github.com/Acehood455"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
+                className="inline-flex items-center justify-center
+                 text-text hover:text-text/90
+                  transition duration-100
+                  hover:scale-105 mr-1 translate-y-[4px] "
+              >
+                <FaGithub className="text-[clamp(1.2rem,1.4vw+0.5rem,2rem)]" />
+              </a>
+              
               {/* Contact button */}
               <a
                 href="#contact"
-                className="inline-flex items-center text-[clamp(1rem,1vw+0.5rem,2rem)]  px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border-2 border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
+                className="inline-flex  text-[clamp(1rem,1vw+0.5rem,2rem)]  px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border-2 border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
               >
                 Contact Me
               </a>

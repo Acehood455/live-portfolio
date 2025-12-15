@@ -54,10 +54,9 @@ const About = () => {
                 maskRepeat: "no-repeat",
               }}
             >
-            <div className="absolute bottom-2 left-3">
-                <div className="bg-yellow-300 text-xs font-semibold md:text-sm text-center opacity-20 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
-                  ✨ I tinker with electronics in my spare time. 
-                  Constructing a power bank here, fixing up a pressing iron there. {';)'}
+              <div className="absolute bottom-2 left-3">
+                <div className="bg-blue-300 text-xs font-semibold md:text-sm text-center opacity-40 text-gray-800 px-3 py-1.5 rounded-tl-xl rounded-br-xl shadow-md rotate-[-7deg]">
+                  ✨ Hands-on problem solver — I build small electronics and fix everyday devices.
                 </div>
               </div>
               
@@ -76,32 +75,32 @@ const About = () => {
                 <PiPaperclipHorizontalBold className="w-full h-full" />
               </motion.div>
 
-
-              <div 
-                className="z-10"
-              >
+              <div className="z-10">
                 <motion.p custom={0} variants={fadeInUp} className="mb-4 [text-indent:1.5rem] z-10">
-                  My name is {' '}
+                  My name is {" "}
                   <span className="font-semibold bg-gradient-to-r from-purple2 via-gold2 to-accent bg-clip-text text-transparent">
-                    Ace Taiwo
+                    Ace Taiwo, {" "}
                   </span>
-                  , but I'm sure you've figured that out by now. 
-                  I am a self-taught full-stack developer who enjoys coding. I love building clean, responsive, 
-                  and user-friendly applications; what real developer doesn't?
+                  and I’m a self-taught full-stack developer who genuinely enjoys building things.
+                  I love creating clean, responsive, and user-friendly applications — the kind people enjoy using.
                 </motion.p>
+
                 <motion.p custom={1} variants={fadeInUp} className="mb-4 z-10">
-                  I started my coding journey by exploring online resources and seemed to gain immense satisfaction with
-                  turning ideas into real projects.
+                  I began my coding journey by exploring online resources and quickly found satisfaction in
+                  turning ideas into real, working projects.
                 </motion.p>
+
                 <motion.p custom={2} variants={fadeInUp} className="mb-4 z-10">
-                  So far 2 clients have trusted me with connecting them with a wider world and through these 
-                  I've gained hands-on experience in creating layouts, solving real world challenges, 
-                  and working with popular libraries.
+                  So far, I’ve worked with two clients, helping them reach a wider audience.
+                  Through these projects, I’ve gained hands-on experience building layouts,
+                  solving real-world problems, and working with modern tools and libraries.
                 </motion.p>
-                <motion.p custom={3} variants={fadeInUp} className='z-10'>
-                  These are the certifications I have accrued on my journey so far.
+
+                <motion.p custom={3} variants={fadeInUp} className="z-10">
+                  Below are some of the certifications I’ve earned along the way.
                 </motion.p>
               </div>
+
             </div>
           </div>
 

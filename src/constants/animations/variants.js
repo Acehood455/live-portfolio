@@ -67,6 +67,16 @@ export const staggerContainer = {
     },
   };
 
+export const skillsStaggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
 export const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 1) => ({
@@ -75,6 +85,19 @@ export const fadeInUp = {
       transition: {
         delay: i * 0.2, 
         duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+export const skillsFadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.05, 
+        duration: 0.3,
         ease: "easeOut",
       },
     }),

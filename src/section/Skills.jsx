@@ -3,7 +3,7 @@ import SectionTitle from '../components/SectionTitle'
 import { skills } from "../constants"
 import { CardBody, CardContainer, CardItem } from "../components/3dCard"
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "../constants/animations/variants"
+import { skillsFadeInUp, skillsStaggerContainer } from "../constants/animations/variants"
 
 
 const Skills = () => {
@@ -24,14 +24,14 @@ const Skills = () => {
       <div className="flex justify-center pt-5 md:pt-8 mb-5 z-10">
         <div className="text-text text-center max-w-[97%] md:max-w-[60%]">
           <p className="font-semibold">
-            Here are some of the skills and tools I&apos;m more familiar with. PS. I added a little explanation for  non developers {';)'}
+            Here are some of the tools and technologies I work with — plus simple explanations for non-developers.
           </p>
         </div>
       </div>
 
       {/* Masonry Grid */}
       <motion.div
-        variants={staggerContainer}
+        variants={skillsStaggerContainer}
         initial="hidden"
         whileInView="visible"
         className="text-text relative mt-3 md:mt-10 mx-auto 
@@ -42,7 +42,7 @@ const Skills = () => {
         {skills.map((skill, i) => (
           <motion.div
             key={skill.id}
-            variants={fadeInUp}
+            variants={skillsFadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.4 }} 

@@ -37,7 +37,7 @@ const FooterDivider = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-cardColor picture text-text py-6 mt-1 md:mt-3 relative rounded-b-2xl">
+    <footer className="bg-cardColor picture text-text py-8 mt-1 md:mt-3 relative rounded-b-2xl">
         <FooterDivider />
         
       <motion.div
@@ -62,13 +62,13 @@ const Footer = () => {
 
         {/* Right: social icons */}
         <motion.div variants={itemVariant} className="flex gap-4 text-lg">
-          <a href="https://github.com/Acehood455" target="_blank" className="hover:text-[#333] z-10 transition">
+          <a href="https://github.com/Acehood455" target="_blank" className="hover:text-[#3f3e3e] z-10 transition">
             <FaGithub />
           </a>
           <a href="https://linkedin.com/in/ace-taiwo-046a6b384" target="_blank" className="hover:text-[#0A66C2] z-10 transition">
             <FaLinkedin />
           </a>
-          <a href="https://x.com/acetaiwo" target="_blank" className="hover:text-black z-10 transition">
+          <a href="https://x.com/acetaiwo" target="_blank" className="hover:text-slate-500 z-10 transition">
             <FaXTwitter />
           </a>
         </motion.div>
