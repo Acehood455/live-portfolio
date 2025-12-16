@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaBrain } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite } from "react-icons/si";
 
 export const certificates = [
   {
@@ -205,6 +205,17 @@ export const techConfig = {
     badge: "border-purple3 bg-purple3/30",
     iconColor: "text-purple3",
   },
+  Vite: {
+    icon: SiVite,
+    badge: "border-yellow-500 bg-yellow-300/30",
+    iconColor: "text-yellow-500",
+  },
+
+  Appwrite: {
+    icon: SiAppwrite,
+    badge: "border-rose-600 bg-rose-400/30",
+    iconColor: "text-rose-600",
+  },
   
 };
 
@@ -221,6 +232,24 @@ export const projects = [
     live: "https://your-portfolio.com",
     github: "https://github.com/yourname/portfolio",
   },
+  {
+    id: 12,
+    title: "Movie Finder App",
+    description:
+      "A responsive movie discovery app built with React and Vite that allows users to search and explore movies with a clean, modern UI.",
+    stack: "Frontend",
+    video: "/videos/projects/movie-finder.mp4",
+    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind",
+      "Appwrite"
+    ],
+    live: "https://your-movie-finder-live-url.com",
+    github: "https://github.com/yourname/movie-finder-app",
+  },
+
   {
     id: 2,
     title: "E-Commerce App",
