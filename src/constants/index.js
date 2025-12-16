@@ -246,8 +246,8 @@ export const projects = [
       "Tailwind",
       "Appwrite"
     ],
-    live: "https://your-movie-finder-live-url.com",
-    github: "https://github.com/yourname/movie-finder-app",
+    live: "https://movie-finder-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/react-movie-finder-app",
   },
 
   {

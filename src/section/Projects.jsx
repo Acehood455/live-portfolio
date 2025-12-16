@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaArrowRight, FaPlay  } from "react-icons/fa";
 import { projects, techConfig } from "../constants";
 import { motion } from "motion/react";
 import { childVariants, containerVariant, staggerchildVariantsContainer } from "../constants/animations/variants";
 
 
 const Projects = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  
   return (
     <section
       id="projects"
-      className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto"
+      className="relative w-full max-w-[95%] md:max-w-[97%] mx-auto"
     >
       <SectionTitle
         title="My Works"
@@ -47,7 +51,7 @@ const Projects = () => {
             }
           });
         }}
-        className="relative mt-2 md:mt-5 picture bg-cardColor md:max-w-[95%] h-[84vh] md:h-[88vh] rounded-2xl mx-auto"
+        className="relative mt-2 md:mt-5 picture bg-cardColor md:max-w-[95%] h-[84vh] md:h-[75vh] rounded-2xl mx-auto"
         spaceBetween={40}
         slidesPerView={1}
       >
@@ -62,27 +66,74 @@ const Projects = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }} 
-              className={`m-4 h-[85%] md:h-[85%] z-20 bg-gradient-to-br ${project.gradient} rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row gap-6`}
+              className={`m-4 h-[85%] md:h-[85%] z-20 bg-gradient-to-br ${project.gradient} rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row gap-2`}
             >
               {/* Video container */}
-              <motion.div variants={childVariants} className="relative w-full md:w-1/2 h-1/2 md:h-full overflow-hidden rounded-xl">
-                <span className="absolute uppercase top-2 left-2 border border-gray-400 bg-gray-200/50 text-xs md:text-sm font-semibold px-3 py-1 rounded-full text-background z-10">
+              <motion.div
+                variants={childVariants}
+                className="relative w-full  md:w-[90%] aspect-video overflow-hidden rounded-xl bg-black"
+              >
+
+                <span
+                  className="
+                    absolute md:top-4 top-1 md:left-2 left-1 z-20
+                    uppercase
+                    text-[10px] md:text-xs
+                    font-semibold
+                    px-2 md:px-3
+                    py-0.5 md:py-1
+                    rounded-full
+                    bg-background/60 md:bg-text/60 backdrop-blur
+                    text-text md:text-background
+                    border border-background/20 md:border-text/30
+                  "
+                >
                   {project.stack}
                 </span>
+                {/* Play button (mobile-first) */}
+                  {!isPlaying && (
+                    <button
+                      aria-label="Play video"
+                      onClick={() => {
+                        videoRef.current?.play();
+                        setIsPlaying(true);
+                      }}
+                      className="
+                        absolute inset-0 z-20
+                        flex items-center justify-center
+                      "
+                    >
+                      <span className="
+                        flex items-center justify-center
+                        md:w-9 w-7 md:h-9 h-7
+                        rounded-full
+                        bg-black/60 backdrop-blur
+                        border border-white/20
+                        hover:scale-95 transition
+                      ">
+                        <FaPlay className="text-white text-xl ml-1" />
+                      </span>
+                    </button>
+                  )}
                 <video
                   src={project.video}
-                  autoPlay
-                  loop
+                  poster={`images/thumbnails/${project.id}.jpg`}
                   muted
+                  loop
                   playsInline
-                  className="w-full h-full object-cover rounded-xl"
+                  preload="metadata"
+                  className="w-full h-full object-contain"
+                  onMouseEnter={(e) => e.currentTarget.play()}
+                  onMouseLeave={(e) => e.currentTarget.pause()}
                 />
+
+
               </motion.div>
 
               {/* Content container */}
               <motion.div 
                 variants={staggerchildVariantsContainer}
-                className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col px-3 gap-1 md:gap-4 text-background justify-center overflow-y-auto"
+                className="w-full md:w-1/2 md:h-full flex flex-col px-3 gap-1 md:gap-4 text-background justify-center overflow-y-auto"
               >
                 <motion.h3 variants={childVariants} className="text-2xl font-bold">{project.title}</motion.h3>
                 <motion.p variants={childVariants} className="text-sm font-normal md:text-base opacity-90">{project.description}</motion.p>
@@ -127,7 +178,7 @@ const Projects = () => {
                       {/* Solid pulsing dot */}
                       <span className="w-2 h-2 bg-lime-500 rounded-full animate-pulseDot"></span>
                     </div>
-                    Live Demo <FaExternalLinkAlt size={14} />
+                    <span className="max-sm:hidden">Live</span> Demo <FaExternalLinkAlt size={14} />
                   </a>
 
                   <a
