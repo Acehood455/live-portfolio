@@ -239,7 +239,7 @@ export const projects = [
       "A responsive movie discovery app built with React and Vite that allows users to search and explore movies with a clean, modern UI.",
     stack: "Frontend",
     video: "/videos/projects/movie-finder.mp4",
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    gradient: "from-[#cecefb] via-[#f1a7ad] to-[rgba(23,31,112,0.2)]",
     tech: [
       "React",
       "Vite",
