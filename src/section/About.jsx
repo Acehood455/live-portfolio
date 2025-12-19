@@ -91,7 +91,7 @@ const About = () => {
                 </motion.p>
 
                 <motion.p custom={2} variants={fadeInUp} className="mb-4 z-10">
-                  So far, I’ve worked with two clients, helping them reach a wider audience.
+                  So far, I’ve worked with a couple of clients, helping them reach a wider audience.
                   Through these projects, I’ve gained hands-on experience building layouts,
                   solving real-world problems, and working with modern tools and libraries.
                 </motion.p>
