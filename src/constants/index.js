@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaBrain } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite, SiGreensock } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite, SiGreensock, SiSupabase, SiReactquery, SiZod, SiTypescript } from "react-icons/si";
 
 export const certificates = [
   {
@@ -217,27 +217,39 @@ export const techConfig = {
     iconColor: "text-rose-600",
   },
   GSAP: {
-  icon: SiGreensock,
-  badge: "border-lime-500 bg-lime-300/30",
-  iconColor: "text-lime-500",
-},
+    icon: SiGreensock,
+    badge: "border-lime-500 bg-lime-300/30",
+    iconColor: "text-lime-500",
+  },
+  Supabase: {
+    icon: SiSupabase,
+    badge: "border-emerald-600 bg-emerald-400/30",
+    iconColor: "text-emerald-600",
+  },
+
+  "React Query": {
+    icon: SiReactquery,
+    badge: "border-red-500 bg-red-400/30",
+    iconColor: "text-red-500",
+  },
+
+  Zod: {
+    icon: SiZod,
+    badge: "border-indigo-500 bg-indigo-400/30",
+    iconColor: "text-indigo-500",
+  },
+
+  TypeScript: {
+    icon: SiTypescript,
+    badge: "border-blue-600 bg-blue-400/30",
+    iconColor: "text-blue-600",
+  },
+
   
 };
 
 export const projects = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    description:
-      "A modern developer portfolio built with Next.js, Tailwind, and Framer Motion.",
-    stack: "Fullstack",
-    video: "/videos/portfolio/test.mp4",
-    gradient: "from-indigo-500 via-purple-500 to-pink-500",
-    tech: ["Next.js", "Tailwind", "Framer Motion", "AI"],
-    live: "https://your-portfolio.com",
-    github: "https://github.com/yourname/portfolio",
-  },
-  {
+ {
     id: 12,
     title: "Movie Finder App",
     description:
@@ -258,7 +270,7 @@ export const projects = [
     id: 13,
     title: "XORA AI Landing Page",
     description:
-      "An amazingly simple AI-powered video editing platform designed to be easy to use, quick to learn, and powerful for creators.",
+      "An amazingly simple AI-powered video editing platform landing page designed to be easy to use, quick to learn, and powerful for creators.",
     stack: "React + Vite",
     video: "/videos/projects/xora.mp4",
     gradient: "from-[#2EF2FF] via-[#3C52D9] to-[#1959AD]",
@@ -304,87 +316,27 @@ export const projects = [
     github: "https://github.com/Acehood455/Plant-Website",
   },
   {
-    id: 4,
-    title: "E-Commerce App",
+    id: 16,
+    title: "ProjectScope",
     description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-red-400 via-emerald-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
+      "An AI-powered research and survey platform that helps students and researchers create surveys, collect data, and collaborate with supervisors with clarity, control, and confidence.",
+    stack: "React + TypeScript",
+    video: "/videos/projects/projectscope.mp4",
+    gradient: "from-[#1f3d2b] via-[#00ffcc] to-[#00b38f]",
+
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind",
+      "Supabase",
+      "React Query",
+      "Zod",
+      "Framer Motion",
+      "AI"
+    ],
+    live: "https://project-scope-ace.vercel.app/",
+    github: "https://github.com/Acehood455/project-scope",
   },
-  {
-    id: 5,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-blue-400 via-emerald-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
-  {
-    id: 6,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-blue-400 via-red-500 to-gray-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
-  {
-    id: 7,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-brown-400 via-emerald-500 to-yellow-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
-  {
-    id: 8,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-blue-pink via-red-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
-  {
-    id: 9,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-indigo-400 via-emerald-500 to-violet-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
-  {
-    id: 10,
-    title: "E-Commerce App",
-    description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-yellow-400 via-lime-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
-  },
+  
 ];
