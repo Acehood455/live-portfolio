@@ -249,19 +249,23 @@ export const projects = [
     live: "https://movie-finder-ace-taiwo.netlify.app/",
     github: "https://github.com/Acehood455/react-movie-finder-app",
   },
-
   {
-    id: 2,
-    title: "E-Commerce App",
+    id: 13,
+    title: "XORA AI Landing Page",
     description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-green-400 via-emerald-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe", "AI"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
+      "An amazingly simple AI-powered video editing platform designed to be easy to use, quick to learn, and powerful for creators.",
+    stack: "React + Vite",
+    video: "/videos/projects/xora.mp4",
+    gradient: "from-[#2EF2FF] via-[#3C52D9] to-[#1959AD]",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind",
+    ],
+    live: "https://xora-ace-taiwo.netlify.app",
+    github: "https://github.com/Acehood455/Xora-SaaS-Landing-Page",
   },
+
   {
     id: 11,
     title: "E-Commerce App",
