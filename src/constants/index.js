@@ -276,7 +276,7 @@ export const projects = [
     description:
       "A next-generation gaming platform redefining play by introducing the metagame layer and unleashing the play economy through immersive experiences.",
     stack: "React + Vite",
-    video: "/videos/zentry.mp4",
+    video: "/videos/projects/zentry.mp4",
     gradient: "from-[#edff66] via-[#5724ff] to-[#4fb7dd]",
     tech: [
       "React",
@@ -288,16 +288,20 @@ export const projects = [
     github: "https://github.com/Acehood455/Zentry-inspired",
   },
   {
-    id: 3,
-    title: "E-Commerce App",
+    id: 15,
+    title: "Indoore Plants",
     description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-green-400 via-yellow-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
+      "A modern indoor plants website showcasing popular plants, reviews, and product highlights with smooth animations and a clean, nature-inspired UI.",
+    stack: "React + Vite",
+    video: "/videos/projects/indoore-plants.mp4",
+    gradient: "from-[#22c55e] via-[#16a34a] to-[#eab308]",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind"
+    ],
+    live: "https://indoore-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/Plant-Website",
   },
   {
     id: 4,
