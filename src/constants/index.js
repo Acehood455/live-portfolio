@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaBrain } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite, SiGreensock } from "react-icons/si";
 
 export const certificates = [
   {
@@ -216,6 +216,11 @@ export const techConfig = {
     badge: "border-rose-600 bg-rose-400/30",
     iconColor: "text-rose-600",
   },
+  GSAP: {
+  icon: SiGreensock,
+  badge: "border-lime-500 bg-lime-300/30",
+  iconColor: "text-lime-500",
+},
   
 };
 
@@ -265,18 +270,22 @@ export const projects = [
     live: "https://xora-ace-taiwo.netlify.app",
     github: "https://github.com/Acehood455/Xora-SaaS-Landing-Page",
   },
-
   {
-    id: 11,
-    title: "E-Commerce App",
+    id: 14,
+    title: "Zentry",
     description:
-      "A scalable e-commerce platform with authentication, payments, and admin dashboard.",
-    stack: "MERN",
-    video: "/videos/test.mp4",
-    gradient: "from-green-400 via-emerald-500 to-teal-600",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "https://ecommerce-demo.com",
-    github: "https://github.com/yourname/ecommerce",
+      "A next-generation gaming platform redefining play by introducing the metagame layer and unleashing the play economy through immersive experiences.",
+    stack: "React + Vite",
+    video: "/videos/zentry.mp4",
+    gradient: "from-[#edff66] via-[#5724ff] to-[#4fb7dd]",
+    tech: [
+      "React",
+      "Vite",
+      "GSAP",
+      "Tailwind",
+    ],
+    live: "https://zentry-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/Zentry-inspired",
   },
   {
     id: 3,
