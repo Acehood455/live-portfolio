@@ -11,7 +11,7 @@ const About = () => {
   return (
 
 
-    <section id="about" className="relative min-h-screen w-full max-w-[95%] md:max-w-[97%] mx-auto">
+    <section id="about" className="relative w-full max-w-[95%] md:max-w-[97%] mx-auto">
       <SectionTitle title='About Me' outerColor='cardColor' innerColor='body' rounded='2xl' hasRoundDown={false} />
       
       <motion.div 

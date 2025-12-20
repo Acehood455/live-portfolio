@@ -113,6 +113,14 @@ const Projects = () => {
         hasRoundDown={false}
       />
 
+      <div className="flex justify-center pt-5 md:pt-8 mb-5 z-10">
+        <div className="text-text text-center max-w-[97%] md:max-w-[60%]">
+          <p className="font-semibold">
+            This are some of the projects I've worked on.
+          </p>
+        </div>
+      </div>
+
       <Swiper
         modules={[Navigation, Pagination]}
         navigation={{

@@ -269,7 +269,7 @@ export const projects = [
     title: "LifeBuilder Schools Landing Page / Dashboard",
     description:
       "A modern school management platform built to support academic excellence, student growth, and administrative efficiency with secure dashboards and rich data visualization.",
-    stack: "Next.js + TypeScript",
+    stack: "Fullstack",
     video: "/videos/projects/lifebuilder.mp4",
     gradient: "from-[#e6e6ff] via-[#cc9933] to-[#8f28e4]",
     tech: [
@@ -286,77 +286,11 @@ export const projects = [
     github: "https://github.com/Acehood455/LifeBuilderModified2",
   },
   {
-    id: 12,
-    title: "Movie Finder App",
-    description:
-      "A responsive movie discovery app built with React and Vite that allows users to search and explore movies with a clean, modern UI.",
-    stack: "Frontend",
-    video: "/videos/projects/movie-finder.mp4",
-    gradient: "from-[#cecefb] via-[#f1a7ad] to-[rgba(23,31,112,0.2)]",
-    tech: [
-      "React",
-      "Vite",
-      "Tailwind",
-      "Appwrite"
-    ],
-    live: "https://movie-finder-ace-taiwo.netlify.app/",
-    github: "https://github.com/Acehood455/react-movie-finder-app",
-  },
-  {
-    id: 13,
-    title: "XORA AI Landing Page",
-    description:
-      "An amazingly simple AI-powered video editing platform landing page designed to be easy to use, quick to learn, and powerful for creators.",
-    stack: "React + Vite",
-    video: "/videos/projects/xora.mp4",
-    gradient: "from-[#2EF2FF] via-[#3C52D9] to-[#1959AD]",
-    tech: [
-      "React",
-      "Vite",
-      "Tailwind",
-    ],
-    live: "https://xora-ace-taiwo.netlify.app",
-    github: "https://github.com/Acehood455/Xora-SaaS-Landing-Page",
-  },
-  {
-    id: 14,
-    title: "Zentry",
-    description:
-      "A next-generation gaming platform redefining play by introducing the metagame layer and unleashing the play economy through immersive experiences.",
-    stack: "React + Vite",
-    video: "/videos/projects/zentry.mp4",
-    gradient: "from-[#edff66] via-[#5724ff] to-[#4fb7dd]",
-    tech: [
-      "React",
-      "Vite",
-      "GSAP",
-      "Tailwind",
-    ],
-    live: "https://zentry-ace-taiwo.netlify.app/",
-    github: "https://github.com/Acehood455/Zentry-inspired",
-  },
-  {
-    id: 15,
-    title: "Indoore Plants",
-    description:
-      "A modern indoor plants website showcasing popular plants, reviews, and product highlights with smooth animations and a clean, nature-inspired UI.",
-    stack: "React + Vite",
-    video: "/videos/projects/indoore-plants.mp4",
-    gradient: "from-[#22c55e] via-[#16a34a] to-[#eab308]",
-    tech: [
-      "React",
-      "Vite",
-      "Tailwind"
-    ],
-    live: "https://indoore-ace-taiwo.netlify.app/",
-    github: "https://github.com/Acehood455/Plant-Website",
-  },
-  {
     id: 16,
     title: "ProjectScope",
     description:
       "An AI-powered research and survey platform that helps students and researchers create surveys, collect data, and collaborate with supervisors with clarity, control, and confidence.",
-    stack: "React + TypeScript",
+    stack: "Fullstack",
     video: "/videos/projects/projectscope.mp4",
     gradient: "from-[#1f3d2b] via-[#00ffcc] to-[#00b38f]",
 
@@ -379,7 +313,7 @@ export const projects = [
     title: "DestinyGuide Ministries",
     description:
       "A faith-based life transformation platform designed to help individuals thrive from the inside out through guided personal growth.",
-    stack: "React + TypeScript + Express",
+    stack: "Fullstack",
     video: "/videos/projects/destinyguide.mp4",
     gradient: "from-[#ffd28a] via-[#ffbb4d] to-[#663f00]",
     tech: [
@@ -394,7 +328,71 @@ export const projects = [
     ],
     live: "https://destinyguide.org",
     github: "https://github.com/Acehood455/destiny-guide",
-  }
-
-  
+  },
+  {
+    id: 14,
+    title: "Zentry",
+    description:
+      "A next-generation gaming platform redefining play by introducing the metagame layer and unleashing the play economy through immersive experiences.",
+    stack: "Frontend",
+    video: "/videos/projects/zentry.mp4",
+    gradient: "from-[#edff66] via-[#5724ff] to-[#4fb7dd]",
+    tech: [
+      "React",
+      "Vite",
+      "GSAP",
+      "Tailwind",
+    ],
+    live: "https://zentry-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/Zentry-inspired",
+  },
+  {
+    id: 15,
+    title: "Indoore Plants",
+    description:
+      "A modern indoor plants website showcasing popular plants, reviews, and product highlights with smooth animations and a clean, nature-inspired UI.",
+    stack: "Frontend",
+    video: "/videos/projects/indoore-plants.mp4",
+    gradient: "from-[#22c55e] via-[#16a34a] to-[#eab308]",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind"
+    ],
+    live: "https://indoore-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/Plant-Website",
+  },
+  {
+    id: 13,
+    title: "XORA AI Landing Page",
+    description:
+      "An amazingly simple AI-powered video editing platform landing page designed to be easy to use, quick to learn, and powerful for creators.",
+    stack: "Frontend",
+    video: "/videos/projects/xora.mp4",
+    gradient: "from-[#2EF2FF] via-[#3C52D9] to-[#1959AD]",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind",
+    ],
+    live: "https://xora-ace-taiwo.netlify.app",
+    github: "https://github.com/Acehood455/Xora-SaaS-Landing-Page",
+  },
+  {
+    id: 12,
+    title: "Movie Finder App",
+    description:
+      "A responsive movie discovery app built with React and Vite that allows users to search and explore movies with a clean, modern UI.",
+    stack: "Frontend",
+    video: "/videos/projects/movie-finder.mp4",
+    gradient: "from-[#cecefb] via-[#f1a7ad] to-[rgba(23,31,112,0.2)]",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind",
+      "Appwrite"
+    ],
+    live: "https://movie-finder-ace-taiwo.netlify.app/",
+    github: "https://github.com/Acehood455/react-movie-finder-app",
+  },
 ];

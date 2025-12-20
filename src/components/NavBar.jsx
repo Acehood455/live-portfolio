@@ -67,7 +67,7 @@ export default function Navbar({ inNotch = false }) {
                 top: scrolled ? "0.5rem" : "1rem",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: scrolled ? (inNotch ? "60%" : "90%") : "95%",
+                width: scrolled ? (inNotch ? "65%" : "90%") : "95%",
                 backgroundColor: scrolled
                   ? "rgba(40, 32, 44, 0.5)"
                   : "transparent",
@@ -136,7 +136,7 @@ export default function Navbar({ inNotch = false }) {
                 className="inline-flex items-center justify-center
                  text-text hover:text-text/90
                   transition duration-100
-                  hover:scale-105 mr-1 translate-y-[4px] "
+                  hover:scale-105 mr-1 max-sm:translate-y-[4px] "
               >
                 <FaGithub className="text-[clamp(1.2rem,1.4vw+0.5rem,2rem)]" />
               </a>

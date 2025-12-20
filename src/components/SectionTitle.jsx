@@ -139,7 +139,7 @@ const SectionTitle = ({ title, outerColor, innerColor, rounded, hasRoundDown }) 
     <div className="w-full">
       <div
         className={clsx(
-          "relative p-12 md:p-6",
+          "relative p-12",
           roundedMap[rounded],
           bgMap[outerColor],
           outerColor === "cardColor" && "picture"
