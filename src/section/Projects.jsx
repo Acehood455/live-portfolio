@@ -72,7 +72,7 @@ const ProjectVideo = ({ project }) => {
           }}
           className="absolute inset-0 z-20 flex items-center justify-center"
         >
-          <span className="flex items-center justify-center w-7 md:w-12 h-7 md:h-12 rounded-full bg-black/60 border border-white/20">
+          <span className="flex items-center justify-center w-7 md:w-12 h-7 md:h-12 rounded-full bg-black/60 border-2 border-white/40">
             <FaPlay className="text-white text-xs md:text-lg ml-1" />
           </span>
         </button>
@@ -206,9 +206,9 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border-2 border-cardColor font-bold hover:scale-95 
-                        hover:translate-y-0.5 duration-300 text-text hover:bg-cardColor hover:text-text hover:shadow-[0px_4px_16px_0_rgba(13,11,15,.90)] transition"
+                        hover:translate-y-0.5 duration-300 text-cardColor hover:bg-cardColor hover:text-text hover:shadow-[0px_4px_16px_0_rgba(13,11,15,.90)] transition"
                     >
-                      Repo <FaGithub size={16} />
+                      <span className="max-sm:hidden">Github</span> Repo <FaGithub size={16} />
                     </a>
                   </motion.div>
               </motion.div>

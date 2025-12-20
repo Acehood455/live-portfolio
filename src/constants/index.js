@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaBrain } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite, SiGreensock, SiSupabase, SiReactquery, SiZod, SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiStripe, SiFramer, SiVite, SiAppwrite, SiGreensock, SiSupabase, SiReactquery, SiZod, SiTypescript, SiClerk, SiPrisma, SiPostgresql } from "react-icons/si";
 
 export const certificates = [
   {
@@ -244,12 +244,48 @@ export const techConfig = {
     badge: "border-blue-600 bg-blue-400/30",
     iconColor: "text-blue-600",
   },
+  Clerk: {
+    icon: SiClerk,
+    badge: "border-blue-600 bg-blue-400/30",
+    iconColor: "text-blue-600",
+  },
 
-  
+  Prisma: {
+    icon: SiPrisma,
+    badge: "border-indigo-600 bg-indigo-400/30",
+    iconColor: "text-indigo-600",
+  },
+
+  PostgreSQL: {
+    icon: SiPostgresql,
+    badge: "border-sky-600 bg-sky-400/30",
+    iconColor: "text-sky-600",
+  },
 };
 
 export const projects = [
- {
+  {
+    id: 11,
+    title: "LifeBuilder Schools Landing Page / Dashboard",
+    description:
+      "A modern school management platform built to support academic excellence, student growth, and administrative efficiency with secure dashboards and rich data visualization.",
+    stack: "Next.js + TypeScript",
+    video: "/videos/projects/lifebuilder.mp4",
+    gradient: "from-[#e6e6ff] via-[#cc9933] to-[#8f28e4]",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Clerk",
+      "Prisma",
+      "PostgreSQL",
+      "Zod",
+      "Framer Motion"
+    ],
+    live: "https://lifebuilderschools.com/",
+    github: "https://github.com/Acehood455/LifeBuilderModified2",
+  },
+  {
     id: 12,
     title: "Movie Finder App",
     description:
@@ -345,7 +381,7 @@ export const projects = [
       "A faith-based life transformation platform designed to help individuals thrive from the inside out through guided personal growth.",
     stack: "React + TypeScript + Express",
     video: "/videos/projects/destinyguide.mp4",
-    gradient: "from-[#ffd28a] via-[#8fcf8a] to-[#9aa7ff]",
+    gradient: "from-[#ffd28a] via-[#ffbb4d] to-[#663f00]",
     tech: [
       "React",
       "TypeScript",
