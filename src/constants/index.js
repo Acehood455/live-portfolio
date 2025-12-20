@@ -338,5 +338,27 @@ export const projects = [
     live: "https://project-scope-ace.vercel.app/",
     github: "https://github.com/Acehood455/project-scope",
   },
+  {
+    id: 17,
+    title: "DestinyGuide Ministries",
+    description:
+      "A faith-based life transformation platform designed to help individuals thrive from the inside out through guided personal growth.",
+    stack: "React + TypeScript + Express",
+    video: "/videos/projects/destinyguide.mp4",
+    gradient: "from-[#ffd28a] via-[#8fcf8a] to-[#9aa7ff]",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind",
+      "Supabase",
+      "React Query",
+      "Zod",
+      "Framer Motion"
+    ],
+    live: "https://destinyguide.org",
+    github: "https://github.com/Acehood455/destiny-guide",
+  }
+
   
 ];
