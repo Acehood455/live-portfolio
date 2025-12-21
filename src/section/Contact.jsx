@@ -179,7 +179,12 @@ const Contact = () => {
         </motion.div>
 
         {success && (
-          <motion.div variants={slideFromLeft} className="p-2 rounded-lg border border-green-300 bg-green-100 text-green-700 text-xs font-medium animate-fade-in">
+          <motion.div variants={slideFromLeft}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"  
+            className="p-3 rounded-lg border border-green-400 bg-green-100 text-green-700 text-xs font-medium animate-fade-in"
+          >
             ✅ Message sent successfully! Thank you for reaching out. I would get back to you as soon as possible.
           </motion.div>
         )}
