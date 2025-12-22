@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter, FaTelegram } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { containerVariant, itemVariant } from "../constants/animations/variants";
 
@@ -70,6 +70,9 @@ const Footer = () => {
           </a>
           <a href="https://x.com/acetaiwo" target="_blank" className="hover:text-slate-500 z-10 transition">
             <FaXTwitter />
+          </a>
+          <a href="https://t.me/acetaiwo" target="_blank" className="hover:text-[#229ed9] z-10 transition">
+            <FaTelegram />
           </a>
         </motion.div>
       </motion.div>

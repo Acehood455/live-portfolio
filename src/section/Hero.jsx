@@ -231,7 +231,8 @@ export default function Hero() {
             <RiArrowDownDoubleFill className='text-black size-4 md:size-5 animate-bounce' />
             </a>
             <a
-              href="#"
+              href="Ace_Taiwo_Fullstack_Developer_Resume.pdf"
+              target="_blank"
               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base rounded-lg border-2 border-purple2 text-text font-bold hover:scale-95 hover:translate-y-0.5 duration-300 hover:shadow-[0px_4px_16px_0_rgba(207,102,255,.90)] transition"
             >
               Resume

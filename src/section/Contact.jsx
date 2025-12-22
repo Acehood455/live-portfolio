@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
-import { FaPaperPlane, FaEnvelope, FaWhatsapp, FaTelegram, FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaPaperPlane, FaEnvelope, FaWhatsapp, FaGithub, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { LiaConnectdevelop } from "react-icons/lia";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
@@ -245,10 +245,27 @@ const Contact = () => {
             </div>
           </motion.a>
 
+          {/* LinkedIn */}
+          <motion.a 
+            variants={slideFromRight}
+            href="https://linkedin.com/in/ace-taiwo-046a6b384"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
+                      text-text shadow-sm transform transition 
+                      hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#0077B5] hover:bg-[#0077B5]/10 duration-300"
+          >
+            <FaLinkedin className="text-[#0077B5] text-lg" />
+            <div className="flex flex-col">
+              <span className="font-medium text-sm">LinkedIn</span>
+              <span className="text-xs opacity-70">AceTaiwo</span>
+            </div>
+          </motion.a>
+
           {/* WhatsApp */}
           <motion.a 
             variants={slideFromRight}
-            href="https://wa.me/2348136546116"
+            href="https://wa.me/2349025677869"
             target="_blank"
             className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
                        text-text shadow-sm transform transition 
@@ -257,25 +274,10 @@ const Contact = () => {
             <FaWhatsapp className="text-[#25D366] text-lg" />
             <div className="flex flex-col">
               <span className="font-medium text-sm">WhatsApp</span>
-              <span className="text-xs opacity-70">+234 813 6546 116</span>
+              <span className="text-xs opacity-70">+234 902 5677 869</span>
             </div>
           </motion.a>
 
-          {/* Telegram */}
-          <motion.a 
-            variants={slideFromRight}
-            href="https://t.me/acetaiwo"
-            target="_blank"
-            className="flex items-center gap-2 w-full px-2 py-2 rounded-lg bg-cardColor 
-                       text-text shadow-sm transform transition 
-                       hover:translate-x-3 hover:scale-[1.02] hover:border hover:border-[#229ED9] hover:bg-[#229ED9]/10 duration-300"
-          >
-            <FaTelegram className="text-[#229ED9] text-lg" />
-            <div className="flex flex-col">
-              <span className="font-medium text-sm">Telegram</span>
-              <span className="text-xs opacity-70">@acetaiwo</span>
-            </div>
-          </motion.a>
 
           {/* Twitter */}
           <motion.a 
